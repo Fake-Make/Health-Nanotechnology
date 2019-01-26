@@ -2,57 +2,60 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<!--
-	content="width=1180" name="viewport" id="viewport"
+	<!--content="width=1180" name="viewport" id="viewport"-->
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
--->
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 
 <body>
-<header>
-	<h1 class="invisible">Company - Нанотехнологии здоровья</h1>
-	<section class="header-top">
-		<!-- Правильно ли дать заголовок блоку, включая логотип, или следует дать заголовок блоку только с контактной информацией? С одной стороны можно отделить достаточно крупные блок от остального документа, соблюдая масштабы охвата заголовков второго уровня. С другой - заголовок должен соответствовать содержимому, а логотип вряд ли можно отнести к контактам компании -->
-		<h2 class="invisible">Контакты</h2>
-		<div class="logo"><img src="img/" alt="Company-logo"></div>
-		<div class="company-info">
-			<b>Нанотехнологии здоровья</b>
-			<p class="contacts">
-				<a href="#">info@company.ru</a>
-				<a href="#">+7 (383) 349-18-49</a>
-			</p>
+<header class="page-header">
+	<div class="wrapper">
+		<h1 class="invisible">Company - Нанотехнологии здоровья</h1>
+		<section class="header-top">
+			<!-- Правильно ли дать заголовок блоку, включая логотип, или следует дать заголовок блоку только с контактной информацией? С одной стороны можно отделить достаточно крупные блок от остального документа, соблюдая масштабы охвата заголовков второго уровня. С другой - заголовок должен соответствовать содержимому, а логотип вряд ли можно отнести к контактам компании -->
+			<h2 class="invisible">Контакты</h2>
+			<div class="header-logo">
+				<img src="img/logo.png" alt="Company-logo" width="95" height="75">
+				<span>Company</span>
+			</div>
+			<div class="company-info">
+				<b>Нанотехнологии здоровья</b>
+				<p class="contacts">
+					<a href="#">info@company.ru</a>
+					<a href="#">+7 (383) 349-18-49</a>
+				</p>
+			</div>
+		</section>
+
+		<div class="user-info">
+			<h2 class="invisible">Пользовательское меню</h2>
+			<!-- Вынес кнопку регистрации за форму, т.к. она не имеет к ней отношения и должна вести либо на другую страницу, либо к модальному окну.
+				 С другой стороны, кнопка выглядит однородной по отношению к кнопке "Войти" из формы и при перенаправлении на регистрацию могла бы подхватывать уже введённое пользователем имя из формы входа и заносить его в форму регистрации -->
+			<form method="POST" action="send">
+				<label for="user-name">Логин: </label>
+				<input type="text" name="user-name" id="user-name">
+
+				<label for="user-password">Пароль: </label>
+				<input type="password" name="user-password" id="user-password">
+				<input type="submit" name="submit">
+			</form>
+
+			<a href="#">Регистрация</a>
+
+			<b>В <a href="#">корзине</a> товаров – 12</b>
 		</div>
-	</section>
-
-	<div class="user-info">
-		<h2 class="invisible">Пользовательское меню</h2>
-		<!-- Вынес кнопку регистрации за форму, т.к. она не имеет к ней отношения и должна вести либо на другую страницу, либо к модальному окну.
-			 С другой стороны, кнопка выглядит однородной по отношению к кнопке "Войти" из формы и при перенаправлении на регистрацию могла бы подхватывать уже введённое пользователем имя из формы входа и заносить его в форму регистрации -->
-		<form method="POST" action="send">
-			<label for="user-name">Логин: </label>
-			<input type="text" name="user-name" id="user-name">
-
-			<label for="password">Пароль: </label>
-			<input type="password" name="user-password" id="user-password">
-			<input type="submit" name="submit">
-		</form>
-
-		<a href="#">Регистрация</a>
-
-		<b>В <a href="#">корзине</a> товаров – 12</b>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Доставка и оплата</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
 	</div>
-	<nav class="header-nav">
-		<ul>
-			<li><a href="#">Главная</a></li>
-			<li><a href="#">Каталог</a></li>
-			<li><a href="#">О компании</a></li>
-			<li><a href="#">Новости</a></li>
-			<li><a href="#">Доставка и оплата</a></li>
-			<li><a href="#">Контакты</a></li>
-		</ul>
-	</nav>
 </header>
 
 <section class="content">
@@ -62,49 +65,49 @@
 		<ul class="categories">
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-1.jpg" alt="category-image-1">
 					Электронные сигареты
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-2.jpg" alt="category-image-2">
 					Трубки
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-3.jpg" alt="category-image-3">
 					Жидкости для заправки
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-4.jpg" alt="category-image-4">
 					Аккумуляторы и атомайзеры
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-5.jpg" alt="category-image-5">
 					Картриджи
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-6.jpg" alt="category-image-6">
 					Зарядные устройства
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-7.jpg" alt="category-image-7">
 					Аксессуары
 				</a>
 			</li>
 			<li class="category">
 				<a href="#">
-					<img src="#" alt="category-image-1">
+					<img src="img/category-8.jpg" alt="category-image-1">
 					Подарочные наборы
 				</a>
 			</li>			
@@ -205,7 +208,7 @@
 	<p class="copyrigh">
 		Copyright C2007-2010
 		<br> C "Company", 2010
-		<br><img src="img/" alt="Company-logo">
+		<br><img src="img/logo.png" alt="Company-logo">
 	</p>
 	<nav class="footer-nav">
 		<ul>
