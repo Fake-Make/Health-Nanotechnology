@@ -1,0 +1,205 @@
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.invisible {
+	display: none
+}
+
+.wrapper {
+    margin: 0;
+    max-width: 944px;
+    padding: 0;
+    width: 100%;
+}
+
+.page-header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	background:
+		linear-gradient(-45deg, #333333 35%, #000000 35%, #000000 65%, #333333 65%);
+	/*
+	 linear-gradient(-45deg, #003333 20%, #000000 20%, #000000 30%, #003333 30%, #003333 70%, #000000 70%, #000000 80%, #003333 80%);
+	 */
+  background-size: 0.5em 0.5em;
+
+	border: 2px solid red;
+}
+
+/*
+.page-header::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.0) 80%);
+	z-index: 0;
+}*/
+
+.page-header .header-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 15px 0 11px 0;
+	width: 100%;
+
+	color: #e7eeef;
+}
+
+.page-header .header-top .header-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 12px 0 auto;
+	z-index: 1;
+
+	height: 200px;
+	width: 200px;
+
+	border: 1px solid #525252;
+	border-radius: 17px;
+	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
+	background-color: rgb(8, 8, 8);
+	box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.4),inset 0px 0px 73px 0px rgba(0, 0, 0, 0.004);
+
+	font-size: 24px;
+	text-transform: uppercase;
+	line-height: 0.75;
+	font-weight: 100;
+}
+
+.page-header .header-top .header-logo img {
+	margin: auto 50px 24px 63px;
+}
+
+.page-header .header-top .header-logo span {
+	margin-bottom: auto;
+	padding: 0 1px 0 1px;
+}
+
+.page-header .header-top .company-info {
+	position: relative;
+	border: 1px solid #525252;
+	border-radius: 17px;
+	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
+	
+	margin-right: auto;
+	border-image-slice: 1;
+
+	/*very bad idea*/
+	width: 100%;
+	max-width: 724px;
+	background: rgb(8, 8, 8) url(../img/contacts-bg.jpg) no-repeat;
+
+	box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.4);
+}
+
+.page-header .header-top .company-info b {
+	line-height: 0.75;
+	font-size: 24px;
+	font-style: italic;
+	letter-spacing: -1px;
+
+	position: absolute;
+	right: 102px;
+	top: 25px;
+	z-index: 2;
+}
+
+.page-header .header-top .company-info::before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	right: 0;
+
+	width: 437px;
+	height: 48px;
+
+	border-radius: 17px 0 0 17px;
+	background: rgba(0,0,0,0.5);
+}
+
+.page-header .header-top .company-info::after {
+	content: "";
+	position: absolute;
+	bottom: 7px;
+	left: 3px;
+
+	width: 386px;
+	height: 43px;
+	z-index: 0;
+
+	border-radius: 0 17px 17px 0;
+	background: rgba(0,0,0,0.5);
+}
+
+.page-header .header-top .company-info p {
+	position: absolute;
+	left: 27px;
+	bottom: 18px;
+	margin: 0;
+	z-index: 1;
+}
+
+.page-header .header-top .company-info p a:nth-child(1) {
+	text-decoration: none;
+	color: inherit;
+	font-size: 14px;
+	line-height: 1.286;
+}
+
+.page-header .header-top .company-info p a:nth-child(2) {
+	text-decoration: none;
+	color: inherit;
+	font-family: "Arial Narrow", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 1;
+	margin-left: 84px;
+}
+
+/*Адские муки закончились не особо удачно. А ведь это только начало*/
+
+
+
+
+.page-header .user-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+
+	font-family: "Tahoma", sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+
+  background: linear-gradient(-45deg, #243436 20%, #000000 20%, #000000 30%, #243436 30%, #243436 70%, #000000 70%, #000000 80%, #243436 80%);
+  background-size: 0.3em 0.3em;
+
+	height: 34px;
+
+	border: 1px solid #525252;
+	border-radius: 17px;
+}
+
+.page-header .user-info label {
+	font-weight: lighter;
+}
+
+/* ААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА */
+
+
+
+.page-header .header-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	border: 2px solid blue;
+}
