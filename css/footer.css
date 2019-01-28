@@ -1,0 +1,100 @@
+.page-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	background:
+		linear-gradient(-45deg, #333333 35%, #000000 35%, #000000 65%, #333333 65%);
+	background-size: 0.5em 0.5em;
+}
+
+.page-footer .wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 21px;
+}
+
+.page-footer .copyright {
+	margin-right: 0;
+}
+
+.page-footer .copyright span {
+	display: block;
+	font-size: 11px;
+	color: #999999;
+	margin-bottom: 5px;
+}
+
+.page-footer .copyright img {
+	margin: 15px 0 9px 0;
+	width: 36px;
+	height: 28px;
+}
+
+.page-footer .copyright span:last-child {
+	text-transform: uppercase;
+	font-size: 9px;
+}
+
+/* First part finaly finished, get ready to suicide navigation */
+
+.page-footer .footer-nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin-left: 100px;
+	width: 435px;
+}
+
+.page-footer .footer-nav li a {
+	font-size: 11px;
+	color: #ffffff;
+}
+
+/* Well... */
+
+.page-footer .developer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-left: auto;
+}
+
+.page-footer .developer span,
+.page-footer .developer a {
+	font-size: 11px;
+	color: #ffffff;
+}
+
+.page-footer .developer span {
+	display: block;
+}
+
+.page-footer .developer img {
+	margin: 50px 0 60px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

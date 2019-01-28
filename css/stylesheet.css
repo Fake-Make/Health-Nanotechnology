@@ -1,0 +1,295 @@
+.invisible {
+	display: none
+}
+
+.wrapper {
+    margin: 0;
+    max-width: 944px;
+    padding: 0;
+    width: 100%;
+}
+
+.page-header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	background:
+		linear-gradient(-45deg, #333333 35%, #000000 35%, #000000 65%, #333333 65%);
+	/*
+	 linear-gradient(-45deg, #003333 20%, #000000 20%, #000000 30%, #003333 30%, #003333 70%, #000000 70%, #000000 80%, #003333 80%);
+	 */
+	background-size: 0.5em 0.5em;
+}
+
+/* very bad idea to make a gradient like this
+.page-header::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.0) 80%);
+	z-index: 0;
+} */
+
+.page-header .header-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 15px 0 11px 0;
+	width: 100%;
+
+	color: #e7eeef;
+}
+
+.page-header .header-top .header-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 12px 0 auto;
+	z-index: 1;
+
+	height: 200px;
+	width: 200px;
+
+	border: 1px solid #525252;
+	border-radius: 17px;
+	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
+	background-color: rgb(8, 8, 8);
+	box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.4),inset 0px 0px 73px 0px rgba(0, 0, 0, 0.004);
+
+	font-size: 24px;
+	text-transform: uppercase;
+	line-height: 0.75;
+	font-weight: 100;
+}
+
+.page-header .header-top .header-logo img {
+	margin: auto 50px 24px 63px;
+}
+
+.page-header .header-top .header-logo span {
+	margin-bottom: auto;
+	padding: 0 1px 0 1px;
+}
+
+.page-header .header-top .company-info {
+	position: relative;
+	border: 1px solid #525252;
+	border-radius: 17px;
+	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
+	
+	margin-right: auto;
+	border-image-slice: 1;
+
+	/*very bad idea*/
+	width: 100%;
+	max-width: 724px;
+	background: rgb(8, 8, 8) url(../img/contacts-bg.jpg) no-repeat;
+
+	box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.4);
+}
+
+.page-header .header-top .company-info b {
+	line-height: 48px;
+	font-size: 24px;
+	font-style: italic;
+	letter-spacing: -1px;
+	display: flex;
+
+	/* bad idea */
+	width: 406px;
+
+	position: absolute;
+	right: 0;
+	top: 25px;
+
+	padding-left: 31px;
+
+	border-radius: 17px 0 0 17px;
+	background: rgba(0,0,0,0.5);
+}
+
+.page-header .header-top .company-info p {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 43px;
+
+	/* bad idea */
+	width: 323px;
+
+	left: 3px;
+	padding: 0 36px 0 27px;
+
+	bottom: 7px;
+	border-radius: 0 17px 17px 0;
+	background: rgba(0,0,0,0.5);
+}
+
+.page-header .header-top .company-info p a:nth-child(1) {
+	text-decoration: none;
+	color: inherit;
+	font-size: 14px;
+}
+
+.page-header .header-top .company-info p a:nth-child(2) {
+	text-decoration: none;
+	color: inherit;
+	font-family: "Arial Narrow", "Arial", sans-serif;
+	font-size: 18px;
+}
+
+/*Адские муки закончились не особо удачно. А ведь это только начало*/
+
+.page-header .user-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	z-index: 1;
+
+	font-family: "Tahoma", sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+
+	background: linear-gradient(-45deg, #243436 20%, #000000 20%, #000000 30%, #243436 30%, #243436 70%, #000000 70%, #000000 80%, #243436 80%);
+	background-size: 0.3em 0.3em;
+
+	height: 34px;
+	line-height: 34px;
+
+	border: 1px solid #525252;
+	border-radius: 17px;
+	box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.4);
+}
+
+.page-header .user-info label {
+	font-weight: lighter;
+	margin-left: 22px;
+}
+
+.page-header .user-info input[type="text"],
+.page-header .user-info input[type="password"] {
+	border: none;
+	border-radius: 5px;
+	width: 116px;
+	height: 22px;
+	margin: 7px 0 5px 0;
+	background-image: -moz-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+}
+
+.page-header .user-info input[type="password"] {
+  background-image: -moz-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+}
+
+.page-header .user-info input[type="submit"],
+.page-header .user-info form a {
+	border: none;
+	background: none;
+	color: inherit;
+	text-decoration: underline;
+	font-weight: bold;
+
+	padding: 0;
+	margin: 0 14px 0 14px;
+}
+
+.page-header .user-info .cart-label {
+	font-family: "Arial", sans-serif;
+	font-weight: normal;
+	position: relative;
+	margin: 14px 28px 8px 0;
+}
+
+.page-header .user-info .cart-label::before {
+	content: "";
+	position: absolute;
+	left: -29px;
+	top: 7px;
+
+	background: url(../img/cart-icon.png);
+	width: 20px;
+	height: 19px;
+}
+
+.page-header .user-info .cart-label a {
+	color: inherit;
+}
+
+.page-header .user-info .cart-label span {
+	font-weight: bold;
+}
+
+/* ААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА */
+
+.page-header .header-nav {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(../img/header-nav-bg.jpg) repeat-x;
+	
+	box-shadow: 0px 7px 13px -5px rgba(0, 0, 0, 0.7);
+}
+
+.page-header .header-nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	list-style: none;
+	padding: 0 27px 0 23px;
+}
+
+.page-header .header-nav a {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
