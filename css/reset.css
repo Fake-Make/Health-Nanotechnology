@@ -1,4 +1,4 @@
-/* Общие настройки для всего документа */
+﻿/* Общие настройки для всего документа */
 html, body, h1, h2, h3, p {
 	margin: 0;
 	padding: 0;
@@ -17,7 +17,6 @@ ul, li {
 
 .wrapper {
 	margin: 0;
-	max-width: 944px;
 	padding: 0;
-	width: 100%;
+	width: 944px;
 }
