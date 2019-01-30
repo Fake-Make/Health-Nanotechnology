@@ -1,3 +1,4 @@
+/* Общие настройки для всего документа */
 html, body, h1, h2, h3, p {
 	margin: 0;
 	padding: 0;
@@ -8,4 +9,15 @@ ul, li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.invisible {
+	display: none
+}
+
+.wrapper {
+	margin: 0;
+	max-width: 944px;
+	padding: 0;
+	width: 100%;
 }

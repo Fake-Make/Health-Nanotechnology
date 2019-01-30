@@ -1,3 +1,5 @@
+/* Основное содержание документа */
+
 .content {
 	display: flex;
 	flex-direction: column;
@@ -19,7 +21,7 @@
 	order: 3;
 }
 
-/* То, что было выше - нужно пофиксить */
+/* Блок иллюстрированных категорий */
 
 .content .main .categories {
 	display: flex;
@@ -30,34 +32,35 @@
 
 .content .main .category {
 	margin-left: 32px;
+	margin-bottom: 53px;
 }
 
 .content .main .category:nth-child(3n-2) {
 	margin-left: 0;
 }
 
+.content .main .category a {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #0066cc;
+	text-decoration-color: #0066cc;
+}
+
 .content .main .category img {
 	border: 5px solid #666666;
+	margin-bottom: 12px;
 }
 
 .content .main .category span {
 	display: block;
-	margin: 12px 0 53px 0;
+	height: 15px;
 
 	font-size: 15px;
-	color: #0066cc;
-	line-height: 1.933;
+	color: inherit;
 }
 
-.content .main .category img:hover  {
-	border-color: #00cc33;
-}
-
-.content .main .category a:hover {
-	color: #6699ff;
-}
-
-/* То, что ниже - было очень легко */
+/* Блок с текстом */
 
 .content .main article {
 	font-size: 12px;
@@ -69,13 +72,14 @@
 .content .main h2 {
 	font-size: 13px;
 	font-weight: bold;
+	margin-top: 20px;
 }
 
 .content .main p {	
 	margin-top: 12px;
 }
 
-/* Вот тут будет действительно сложновато */
+/* Сайдбар: неиллюстрированный каталог и блок новостей */
 
 .content .sidebar {
 	max-width: 175px;
@@ -87,23 +91,23 @@
 
 .content .sidebar .catalog h2, 
 .content .sidebar .news h2{
-  font-size: 17px;
-  color: #cc3300;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 27px;
+	font-size: 17px;
+	color: #cc3300;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 27px;
 }
 
 .content .sidebar .catalog a {
-  font-size: 13px;
-  line-height: 2.231;
-  color: #0066cc;
+	font-size: 13px;
+	line-height: 2.231;
+	color: #0066cc;
 }
 
 .content .sidebar .news a {
-  font-size: 13px;
-  color: #0066cc;
-  line-height: 1.2;
+	font-size: 13px;
+	color: #0066cc;
+	line-height: 1.2;
 }
 
 .content .sidebar .news h2 {
@@ -137,25 +141,14 @@
 	border: none;
 }
 
+/* Дополнительные элементы */
 
+.content .main .category a:hover,
+.content .sidebar a:hover {
+	color: #0099ff;
+	text-decoration-color: #0099ff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.content .main .category a:hover img {
+	border-color: #00cc33;
+}
