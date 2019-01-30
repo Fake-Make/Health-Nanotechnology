@@ -13,14 +13,13 @@
 
 /* Плохой способ сделать градиент на всю шапку: ухудшается работа с инструментом разработчика в браузере, появляется необходимость вводить индесацию элементов (z-index), т.к. почему-то градиент влияет на все дочерние элементы, а не только на фон родительского */
 
-/*
 .page-header::before {
 	position: absolute;
 	content: "";
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0) 80%);
-} */
+}
 
 /* Верхняя часть хэдера 
  z-index'ы нужны для корректной работы закомментированного градиента */
@@ -30,6 +29,8 @@
 	justify-content: space-around;
 	padding: 15px 0 11px 0;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 
 	color: #e7eeef;
 }
@@ -40,7 +41,6 @@
 	justify-content: space-around;
 	align-items: center;
 	margin: 0 12px 0 auto;
-	z-index: 1;
 
 	height: 200px;
 	width: 200px;
@@ -75,8 +75,7 @@
 	border-image-slice: 1;
 
 	/*very bad idea*/
-	width: 100%;
-	max-width: 724px;
+	width: 724px;
 	background: rgb(8, 8, 8) url(../img/contacts-bg.jpg) no-repeat;
 
 	box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.4);
@@ -142,6 +141,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10px;
+	position: relative;
 	z-index: 1;
 
 	font-family: "Tahoma", sans-serif;
@@ -176,16 +176,23 @@
 	background-image: -moz-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
 	background-image: -webkit-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
 	background-image: -ms-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	outline: none;
 }
 
-.page-header .user-info input[type="text"]::placeholder {
-	color: #000000;
+.page-header .user-info input[type="text"]:placeholder-shown,
+.page-header .user-info input[type="password"]:placeholder-shown {
+	background-image: -moz-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+	outline: none;
 }
 
-.page-header .user-info input[type="password"] {
-  background-image: -moz-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(83,83,83) 0%, rgb(134,134,134) 100%);
+.page-header .user-info input[type="text"]:focus,
+.page-header .user-info input[type="password"]:focus {
+	background-image: -moz-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(206,206,206) 0%, rgb(255,255,255) 100%);
+	outline: none;
 }
 
 .page-header .user-info input[type="submit"],
@@ -234,6 +241,7 @@
 	flex-direction: column;
 	align-items: center;
 	background: url(../img/header-nav-bg.jpg) repeat-x;
+	position: relative;
 	z-index: 1;
 	
 	box-shadow: 0px 7px 13px -5px rgba(0, 0, 0, 0.7);

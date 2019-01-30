@@ -17,7 +17,7 @@
 }
 
 .content .main {
-	max-width: 724px;
+	width: 724px;
 	order: 3;
 }
 
@@ -82,7 +82,7 @@
 /* Сайдбар: неиллюстрированный каталог и блок новостей */
 
 .content .sidebar {
-	max-width: 175px;
+	width: 175px;
 }
 
 .content .sidebar .catalog  {
