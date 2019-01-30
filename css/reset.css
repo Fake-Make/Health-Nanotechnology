@@ -20,3 +20,9 @@ ul, li {
 	padding: 0;
 	width: 944px;
 }
+
+/* Явный костыль против белой полосы справа */
+
+p, h2 {
+	word-wrap: break-word;
+}
