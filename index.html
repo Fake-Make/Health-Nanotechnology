@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<!-- Костыль для отображение на мобильных устройствах, не проходит валидацию -->
-	<meta charset="utf-8" content="width=1000" name="viewport" id="viewport">
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/content.css">
@@ -23,10 +22,10 @@
 			</div>
 			<div class="company-info">
 				<b>Нанотехнологии здоровья</b>
-				<p class="contacts">
+				<div class="contacts">
 					<a href="#">info@company.ru</a>
 					<a href="#">+7 (383) 349-18-49</a>
-				</p>
+				</div>
 			</div>
 		</section>
 
@@ -39,8 +38,8 @@
 				<label for="user-password">Пароль: </label>
 				<input type="password" name="user-password" id="user-password" placeholder=" ">
 				<input type="submit" name="submit" value="Войти">
-				<a href="#">Регистрация</a>
 			</form>
+			<a href="#">Регистрация</a>
 
 			<b class="cart-label">В <a href="#">корзине</a> товаров – <span>12</span></b>
 		</div>
@@ -211,12 +210,12 @@
 
 <footer class="page-footer">
 	<div class="wrapper">
-		<p class="copyright">
+		<div class="copyright">
 			<span>Copyright C2007-2010</span>
 			<span><b>&copy; "Company"</b>, 2010</span>
 			<img src="img/logo.png" alt="Company-logo">
 			<span>Company</span>
-		</p>
+		</div>
 		<nav class="footer-nav">
 			<ul>
 				<li><a href="#">Главная</a></li>
