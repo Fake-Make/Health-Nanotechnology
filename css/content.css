@@ -45,8 +45,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	color: #0066cc;
-	text-decoration-color: #0066cc;
+	color: #06c;
+	text-decoration-color: #06c;
 }
 
 .content .main .category img {
@@ -118,7 +118,7 @@
 .content .sidebar .catalog a {
 	font-size: 13px;
 	line-height: 2.231;
-	color: #0066cc;
+	color: #06c;
 	text-decoration: none;
 	border-bottom: 1px solid #06c;
 }
@@ -135,8 +135,14 @@
 
 .content .sidebar .news a {
 	font-size: 13px;
-	color: #0066cc;
+	color: #06c;
 	line-height: 1.2;
+}
+
+.content .sidebar .news .archive {
+	display: block;
+	margin-left: 1px;
+	margin-top: -5px;
 }
 
 .content .sidebar .news-list-item {
@@ -147,7 +153,7 @@
 }
 
 .content .sidebar .news-list-item a {
-	color: #0066cc;
+	color: #06c;
 	font-size: 11px;
 }
 

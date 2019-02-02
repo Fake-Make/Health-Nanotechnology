@@ -16,7 +16,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding-top: 21px;
+	padding-top: 19px;
 }
 
 /* Блок копирайта */
@@ -29,12 +29,16 @@
 .page-footer .copyright span {
 	display: block;
 	font-size: 11px;
-	color: #999999;
-	margin-bottom: 5px;
+	color: #999;
+	margin-bottom: 6px;
+}
+
+.page-footer .copyright span:nth-of-type(2) {
+	font-size: 13px;
 }
 
 .page-footer .copyright img {
-	margin: 15px 0 9px 0;
+	margin: 13px 0 3px 9px;
 	width: 36px;
 	height: 28px;
 }
@@ -46,32 +50,32 @@
 
 /* Нижняя навигация по сайту */
 .page-footer .footer-nav {
-	margin-left: 108px;
+	margin-left: 98px;
 	z-index: 1;
 }
 
 .page-footer .footer-nav ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-top: -4px;
-	width: 435px;
 }
 
 .page-footer .footer-nav li a {
 	position: relative;
+	margin-right: 21px;
 	font-size: 11px;
-	color: #ffffff;
+	color: #fff;
 }
 
 .page-footer .footer-nav li a::after {
 	position: absolute;
-	bottom: 1px;
-	right: -11px;
+	bottom: 0;
+	right: -10px;
 	content: "";
 	width: 0;
-	height: 8px;
-	border-right: 1px solid #ffffff;
+	height: 10px;
+	border-right: 1px solid #fff;
 }
 
 .page-footer .footer-nav li:last-child a::after {
@@ -100,7 +104,7 @@
 }
 
 .page-footer .developer img {
-	margin: 50px 0 60px 0;
+	margin: 52px 1px 60px 0;
 }
 
 /* Дополнительные элеменеты */
