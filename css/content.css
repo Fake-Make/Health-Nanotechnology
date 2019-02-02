@@ -6,7 +6,7 @@
 	align-items: center;
 	background: #f6f6f6;
 
-	padding: 50px 0 95px 0;
+	padding: 50px 0 78px 0;
 }
 
 .content .wrapper {
@@ -28,11 +28,13 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+
+	margin-top: 4px;
 }
 
 .content .main .category {
 	margin-left: 32px;
-	margin-bottom: 53px;
+	margin-bottom: 55px;
 }
 
 .content .main .category:nth-child(3n-2) {
@@ -48,8 +50,11 @@
 }
 
 .content .main .category img {
-	border: 5px solid #666666;
-	margin-bottom: 12px;
+	border: 5px solid #777;
+	margin-bottom: 9px;
+
+	width: 210px;
+	height: 145px;
 }
 
 .content .main .category span {
@@ -62,31 +67,33 @@
 
 /* Блок с текстом */
 
-.content .main article {
+.content .main .company-discription-article {
 	font-size: 12px;
 	line-height: 1.231;
 	color: #666666;
 	text-align: justify;
+	margin: 15px 0 0 -2px;
 }
 
 .content .main h2 {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 .content .main p {	
-	margin-top: 12px;
+	margin-bottom: 17px;
+	line-height: 1.4;
 }
 
 /* Сайдбар: неиллюстрированный каталог и блок новостей */
 
 .content .sidebar {
-	width: 175px;
+	width: 176px;
 }
 
-.content .sidebar .catalog  {
-	margin-bottom: 74px;
+.content .sidebar .catalog {
+	margin-bottom: 81px;
 }
 
 .content .sidebar .catalog h2, 
@@ -95,13 +102,35 @@
 	color: #cc3300;
 	font-weight: bold;
 	line-height: 1.2;
-	margin-bottom: 27px;
+	margin-bottom: 12px;
+}
+
+.content .sidebar .catalog ul {
+	margin-left: 2px;
+}
+
+/* !!! Если в li больше двух строк, то всё плохо */
+.content .sidebar .catalog li {
+	height: 13px;
+	margin-bottom: 16px;
 }
 
 .content .sidebar .catalog a {
 	font-size: 13px;
 	line-height: 2.231;
 	color: #0066cc;
+	text-decoration: none;
+	border-bottom: 1px solid #06c;
+}
+
+.content .sidebar .news {
+	width: 165px;
+}
+
+.content .sidebar .news h2 {
+	color: #009966;
+	margin-left: 1px;
+	margin-bottom: 18px;
 }
 
 .content .sidebar .news a {
@@ -110,8 +139,11 @@
 	line-height: 1.2;
 }
 
-.content .sidebar .news h2 {
-	color: #009966;
+.content .sidebar .news-list-item {
+	margin-left: 2px;
+	margin-bottom: 27px;
+
+	line-height: 0.98;
 }
 
 .content .sidebar .news-list-item a {
@@ -122,17 +154,17 @@
 .content .sidebar .news-list-item span {
 	position: relative;
 	display: block;
-	color: #666666;
+	color: #666;
 	font-size: 10px;
-	margin: 8px 0 30px 0;
+	margin-top: 10px;
 }
 
 .content .sidebar .news-list-item span::after {
 	position: absolute;
 	content: "";
-	bottom: -16px;
+	bottom: -19px;
 	left: 0;
-	width: 140px;
+	width: 136px;
 	height: 0px;
 	border: 1px solid #dadada;
 }

@@ -45,7 +45,7 @@
 	height: 199px;
 	width: 207px;
 
-	border: 1px solid #525252;
+	border: 1px solid #777;
 	border-radius: 17px;
 	background-color: rgb(8, 8, 8);
 	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.7);
@@ -68,7 +68,7 @@
 
 .page-header .header-top .company-info {
 	position: relative;
-	border: 1px solid #525252;
+	border: 1px solid #777;
 	border-radius: 17px;
 	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
 	
@@ -150,7 +150,7 @@
 	color: #ffffff;
 
 	/* Реализация фона с помощью повторяющихся элементов */
-	background: linear-gradient(-45deg, #243436 20%, #000000 20%, #000000 30%, #243436 30%, #243436 70%, #000000 70%, #000000 80%, #243436 80%);
+	background: linear-gradient(-45deg, #00242a 20%, #000000 20%, #000000 30%, #00242a 30%, #00242a 70%, #000000 70%, #000000 80%, #00242a 80%);
 	background-size: 0.4em 0.4em;
 
 	height: 34px;
@@ -289,6 +289,9 @@
 	font-size: 16px;
 	color: #ffffff;
 	line-height: 48px;
+	text-decoration: none;
+
+	border-bottom: 1px solid #fff;
 }
 
 /* Дополнительные элементы */
