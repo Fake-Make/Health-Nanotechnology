@@ -325,38 +325,38 @@ ul, li {
 }
 
 .content .wrapper {
+	position: relative;
+
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.content .main {
-	width: 724px;
-	order: 3;
-}
-
 /* Блок иллюстрированных категорий */
 
-.content .main .categories {
+.content .wrapper .categories {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 
-	margin-top: 4px;
+	width: 724px;
+
+	align-self: flex-end;
+	margin: 4px 0 0 0;
 }
 
-.content .main .category {
+.content .wrapper .category {
 	margin-left: 32px;
 	margin-bottom: 55px;
 }
 
-.content .main .category:nth-child(3n-2) {
+.content .wrapper .category:nth-child(3n-2) {
 	margin-left: 0;
 }
 
-.content .main .category a {
+.content .wrapper .category a {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -364,7 +364,7 @@ ul, li {
 	text-decoration-color: #005bc1;
 }
 
-.content .main .category img {
+.content .wrapper .category img {
 	border: 5px solid #797979;
 	margin-bottom: 9px;
 
@@ -372,7 +372,7 @@ ul, li {
 	height: 145px;
 }
 
-.content .main .category span {
+.content .wrapper .category span {
 	display: block;
 	height: 15px;
 
@@ -382,21 +382,24 @@ ul, li {
 
 /* Блок с текстом */
 
-.content .main .company-discription-article {
+.content .wrapper .company-discription-article {
+	align-self: flex-end;
 	font-size: 12px;
 	line-height: 1.231;
+
+	width: 724px;
 	color: #666;
 	text-align: justify;
-	margin: 15px 0 0 -2px;
+	margin: 15px 2px 0 0;
 }
 
-.content .main h2 {
+.content .wrapper h2 {
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 15px;
 }
 
-.content .main p {	
+.content .wrapper p {	
 	margin-bottom: 17px;
 	line-height: 1.4;
 }
@@ -405,6 +408,9 @@ ul, li {
 
 .content .sidebar {
 	width: 176px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .content .sidebar .catalog {
@@ -560,7 +566,7 @@ ul, li {
 
 /* Нижняя навигация по сайту */
 .page-footer .footer-nav {
-	margin-left: 98px;
+	margin-left: 99px;
 	z-index: 1;
 }
 
@@ -639,7 +645,7 @@ ul, li {
 	cursor: pointer;
 }
 
-.content .main .category a:hover,
+.content .wrapper .category a:hover,
 .content .sidebar a:hover {
 	color: #549ef1;
 	text-decoration-color: #549ef1;
@@ -647,6 +653,6 @@ ul, li {
 	cursor: pointer;
 }
 
-.content .main .category a:hover img {
+.content .wrapper .category a:hover img {
 	border-color: #00b31d;
 }
