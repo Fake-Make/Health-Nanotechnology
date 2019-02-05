@@ -1,637 +1,558 @@
 /* Общие настройки для всего документа */
-html, body, h1, h2, h3, p {
-	margin: 0;
-	padding: 0;
-	font-family: "Arial", "Tahoma", "Geneva", sans-serif;
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  font-family: "Arial", "Tahoma", "Geneva", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-ul, li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .invisible {
-	display: none
+  display: none;
 }
 
 .wrapper {
-	margin: 0;
-	padding: 0;
-	margin-left: 17px;
-	width: 944px;
+  margin-left: 18px;
+  width: 944px;
 }
 
 /* Хэдер страницы */
 .page-header {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-
-	/* Реализация фона с помощью повторяющихся градиентов */
-	background: linear-gradient(-45deg, #444 35%, #000 35%, #000 65%, #444 65%);
-	background-size: 0.5em 0.5em;
-	background-position: -3px -6px;
+  align-items: center;
+  /* Реализация фона с помощью повторяющихся градиентов */
+  background: linear-gradient(-45deg, #444 35%, #000 35%, #000 65%, #444 65%) -3px -6px;
+  background-size: .5em .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-/* Плохой способ сделать градиент на всю шапку: ухудшается работа с инструментом разработчика в браузере, появляется необходимость вводить индесацию элементов (z-index), т.к. почему-то градиент влияет на все дочерние элементы, а не только на фон родительского */
-
+/* Градиент на всю шапку: необходимо вводить индесацию элементов (z-index) и их позиционирование (position) */
 .page-header::before {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.05) 100%);
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .05) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
-/* Верхняя часть хэдера 
- z-index'ы нужны для корректной работы закомментированного градиента */
+/* Верхняя часть хэдера */
 .page-header .header-top {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 15px 0 9px 0;
-	width: 100%;
-	position: relative;
-	z-index: 1;
-
-	color: #e7eeef;
+  color: #e7eeef;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0 9px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 .page-header .header-top .header-logo {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	margin: 0 10px 0 auto;
-
-	height: 199px;
-	width: 207px;
-
-	border: 1px solid #7f7f7f;
-	border-radius: 17px;
-	background-color: rgb(8, 8, 8);
-	box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 1);
-
-	font-size: 24px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	line-height: 0.75;
-	font-weight: 100;
+  align-items: center;
+  background-color: #000;
+  border: 1px solid #7f7f7f;
+  border-radius: 17px;
+  box-shadow: 5px 5px 25px 0 #000;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  height: 199px;
+  justify-content: space-around;
+  letter-spacing: 2px;
+  line-height: .75;
+  margin: 0 10px 0 auto;
+  text-transform: uppercase;
+  width: 207px;
 }
 
 .page-header .header-top .header-logo img {
-	margin: 42px 50px 24px 63px;
+  margin: 42px 50px 24px 63px;
 }
 
 .page-header .header-top .header-logo span {
-	margin-bottom: auto;
-	padding: 0 1px 0 1px;
+  margin-bottom: auto;
+  padding: 0 1px;
 }
 
 .page-header .header-top .company-info {
-	position: relative;
-	border: 1px solid #7f7f7f;
-	border-radius: 17px;
-	/*border-image: linear-gradient(to bottom, #888888 0%, #969696 61%, #525252 69%, #575757 100%);*/
-	
-	margin-right: auto;
-	border-image-slice: 1;
-
-	/*very bad idea*/
-	width: 724px;
-	background: rgb(8, 8, 8) url(../img/contacts-bg.jpg) no-repeat;
-
-	box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 1);
+  background: #000 url(../img/contacts-bg.jpg) no-repeat;
+  border: 1px solid #7f7f7f;
+  border-image-slice: 1;
+  border-radius: 17px;
+  box-shadow: 5px 5px 25px 0 #000;
+  margin-right: auto;
+  position: relative;
+  width: 724px;
 }
 
 .page-header .header-top .company-info b {
-	line-height: 44px;
-	font-size: 23.6px;
-	font-style: italic;
-	letter-spacing: -1px;
-	display: flex;
-
-	/* bad idea */
-	width: 405px;
-
-	position: absolute;
-	right: 0;
-	top: 12px;
-
-	padding-left: 31px;
-	padding-bottom: 4px;
+  font-size: 23.6px;
+  font-style: italic;
+  letter-spacing: -1px;
+  position: absolute;
+  right: 106px;
+  top: 21px;
 }
 
 .page-header .header-top .company-info .contacts {
-	position: absolute;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	line-height: 43px;
-
-	/* bad idea */
-	width: 320px;
-
-	left: 3px;
-	padding: 0 36px 0 27px;
-
-	bottom: 7px;
+  align-items: center;
+  bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  left: 3px;
+  padding: 0 36px 0 27px;
+  position: absolute;
+  width: 320px;
 }
 
 .page-header .header-top .company-info .contacts a:nth-child(1) {
-	text-decoration: none;
-	color: inherit;
-	font-size: 14px;
+  color: inherit;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .page-header .header-top .company-info .contacts a:nth-child(2) {
-	text-decoration: none;
-	color: inherit;
-	font-family: "Arial Narrow", "Arial", sans-serif;
-	font-size: 18px;
+  color: inherit;
+  font-family: "Arial Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 /* Строка состояния пользователя */
-
 .page-header .user-info {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	margin-bottom: 9px;
-	position: relative;
-	z-index: 1;
-
-	font-size: 12px;
-	color: #f6f6f6;
-	width: 941px;
-
-	/* Реализация фона с помощью повторяющихся элементов */
-	background: linear-gradient(-45deg, #00282f 15%, #000 15%, #000 35%, #00282f 35%, #00282f 65%, #000 65%, #000 85%, #00282f 85%);
-	background-size: 0.4em 0.4em;
-
-	height: 34px;
-
-	border: 1px solid #525252;
-	border-radius: 17px;
-	box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 1), inset 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  /* Реализация фона с помощью повторяющихся элементов */
+  background: linear-gradient(-45deg, #00282f 15%, #000 15%, #000 35%, #00282f 35%, #00282f 65%, #000 65%, #000 85%, #00282f 85%);
+  background-size: .4em .4em;
+  border: 1px solid #525252;
+  border-radius: 17px;
+  box-shadow: 5px 5px 20px 0 #000, inset 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  color: #f6f6f6;
+  display: flex;
+  font-size: 12px;
+  height: 34px;
+  justify-content: flex-start;
+  margin-bottom: 9px;
+  position: relative;
+  width: 941px;
+  z-index: 1;
 }
 
 .page-header .user-info form {
-	display: flex;
-	flex-direction: row;
-
-	margin-left: 22px;
-
-	font-family: "Tahoma", sans-serif;
+  display: flex;
+  font-family: "Tahoma", sans-serif;
+  margin-left: 22px;
 }
 
 .page-header .user-info label {
-	font-weight: lighter;
-	margin: 0 7px 0 0px;
-
-	line-height: 34px;
+  font-weight: lighter;
+  line-height: 34px;
+  margin-right: 7px;
 }
 
 .page-header .user-info input[type="text"],
 .page-header .user-info input[type="password"] {
-	font-size: 12px;
-	border: none;
-	border-radius: 5px;
-	padding: 0 6px 2px 6px;
-	width: 104px;
-	height: 20px;
-	margin: 7px 21px 5px 0;
-	background-image: linear-gradient( 0deg, #fff 0%, #b0b7b8 100%);
-	outline: none;
+  background-image: linear-gradient(0deg, #fff 0%, #b0b7b8 100%);
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 20px;
+  margin: 7px 21px 5px 0;
+  padding: 0 6px 2px;
+  width: 104px;
 }
 
 .page-header .user-info input[type="text"]:placeholder-shown,
 .page-header .user-info input[type="password"]:placeholder-shown {
-	background-image: linear-gradient( 0deg, #4e5658 0%, #707779 100%);
-	outline: none;
+  background-image: linear-gradient(0deg, #4e5658 0%, #707779 100%);
 }
 
 .page-header .user-info input[type="text"]:focus,
 .page-header .user-info input[type="password"]:focus {
-	background-image: linear-gradient( 0deg, #fff 0%, #b0b7b8 100%);
-	outline: none;
+  background-image: linear-gradient(0deg, #fff 0%, #b0b7b8 100%);
+  outline: none;
 }
 
 .page-header .user-info input[type="submit"],
-.page-header .user-info form + a {
-	border: none;
-	background: none;
-	color: inherit;
-	border-bottom: 1px solid #f6f6f6;
-	font-weight: bold;
-	font-size: 12px;
-	height: 15px;
-
-	padding: 0;
-	margin: 10px 14px 0 -7px;
+.page-header .user-info form+a {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f6f6f6;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  height: 15px;
+  margin: 10px 14px 0 -7px;
+  padding: 0;
 }
 
-.page-header .user-info form + a {
-	padding: 0;
-	margin: 2px 252px 0 13px;
-	text-decoration: none;
-	height: 13px;
+.page-header .user-info form+a {
+  height: 13px;
+  margin: 2px 258px 0 14px;
+  text-decoration: none;
 }
 
 .page-header .user-info .cart-label {
-	font-family: "Arial", sans-serif;
-	font-weight: normal;
-	color: #fff;
-	position: relative;
-	margin: 12px 28px 8px 0;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin: 12px 0 8px;
+  position: relative;
 }
 
 .page-header .user-info .cart-label::before {
-	content: "";
-	position: absolute;
-	left: -28px;
-	top: -4px;
-
-	background: url(../img/cart-icon.png);
-	width: 20px;
-	height: 19px;
+  background: url(../img/cart-icon.png);
+  content: "";
+  height: 19px;
+  left: -28px;
+  position: absolute;
+  top: -4px;
+  width: 20px;
 }
 
 .page-header .user-info .cart-label a {
-	color: inherit;
-	text-decoration: none;
-	border-bottom: 1px solid #fff;
-}
-
-.page-header .user-info .cart-label span {
-	font-weight: bold;
+  border-bottom: 1px solid #fff;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Навигационная панель хэдера */
-
 .page-header .header-nav {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: url(../img/header-nav-bg.png) repeat-x;
-	background-size: 48px;
-	position: relative;
-	z-index: 1;
-	box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.7);
+  align-items: center;
+  background: url(../img/header-nav-bg.png) repeat-x;
+  background-size: 48px;
+  box-shadow: 0 7px 20px -5px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
-.page-header .header-nav ul{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-
-	list-style: none;
-	padding: 0 0 0 23px;
-}
-
-.page-header .header-nav li {
-	margin-right: 84px;
-}
-
-.page-header .header-nav li:last-child {
-	margin-right: 0;
+.page-header .header-nav ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 32px 0 23px;
 }
 
 .page-header .header-nav a {
-	font-size: 16px;
-	color: #fff;
-	line-height: 48px;
-	text-decoration: none;
-
-	border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  line-height: 48px;
+  text-decoration: none;
 }
 
 /* Основное содержание документа */
-
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #f6f6f6;
-
-	padding: 50px 0 78px 0;
+  align-items: center;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 78px;
 }
 
 .content .wrapper {
-	position: relative;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* Блок иллюстрированных категорий */
-
 .content .wrapper .categories {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-
-	width: 724px;
-
-	align-self: flex-end;
-	margin: 4px 0 0 0;
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 4px 0 0;
+  width: 724px;
 }
 
 .content .wrapper .category {
-	margin-left: 32px;
-	margin-bottom: 55px;
+  margin-bottom: 56px;
+  margin-left: 32px;
 }
 
 .content .wrapper .category:nth-child(3n-2) {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .content .wrapper .category a {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	color: #005bc1;
-	text-decoration-color: #005bc1;
+  color: #005bc1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration-color: #005bc1;
 }
 
 .content .wrapper .category img {
-	border: 5px solid #797979;
-	margin-bottom: 9px;
-
-	width: 210px;
-	height: 145px;
+  border: 5px solid #797979;
+  height: 145px;
+  margin-bottom: 9px;
+  width: 210px;
 }
 
 .content .wrapper .category span {
-	display: block;
-	height: 15px;
-
-	font-size: 15px;
-	color: inherit;
+  color: inherit;
+  display: block;
+  font-size: 15px;
+  height: 15px;
 }
 
 /* Блок с текстом */
-
 .content .wrapper .company-discription-article {
-	align-self: flex-end;
-	font-size: 12px;
-	line-height: 1.231;
-
-	width: 724px;
-	color: #666;
-	text-align: justify;
-	margin: 15px 2px 0 0;
+  align-self: flex-end;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.231;
+  margin: 12px 2px 0 0;
+  text-align: justify;
+  width: 724px;
 }
 
 .content .wrapper h2 {
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.content .wrapper p {	
-	margin-bottom: 17px;
-	line-height: 1.4;
+.content .wrapper p {
+  line-height: 1.4;
+  margin-bottom: 17px;
 }
 
 /* Сайдбар: неиллюстрированный каталог и блок новостей */
-
 .content .sidebar {
-	width: 176px;
-	position: absolute;
-	top: 0;
-	left: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 176px;
 }
 
 .content .sidebar .catalog {
-	margin-bottom: 81px;
+  margin-bottom: 81px;
 }
 
-.content .sidebar .catalog h2, 
-.content .sidebar .news h2{
-	font-size: 17px;
-	color: #c24000;
-	font-weight: bold;
-	line-height: 1.2;
-	margin-bottom: 12px;
+.content .sidebar .catalog h2,
+.content .sidebar .news h2 {
+  color: #c24000;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
 }
 
 .content .sidebar .catalog ul {
-	margin-left: 2px;
+  margin-left: 2px;
 }
 
 /* !!! Если в li больше двух строк, то всё плохо */
 .content .sidebar .catalog li {
-	height: 13px;
-	margin-bottom: 16px;
+  height: 13px;
+  margin-bottom: 16px;
 }
 
 .content .sidebar .catalog a {
-	font-size: 13px;
-	line-height: 2.231;
-	color: #005bc1;
-	text-decoration: none;
-	border-bottom: 1px solid #005bc1;
+  border-bottom: 1px solid #005bc1;
+  color: #005bc1;
+  font-size: 13px;
+  line-height: 2.231;
+  text-decoration: none;
 }
 
 .content .sidebar .news {
-	width: 165px;
+  width: 165px;
 }
 
 .content .sidebar .news h2 {
-	color: #058b7a;
-	margin-left: 1px;
-	margin-bottom: 18px;
+  color: #058b7a;
+  margin-bottom: 18px;
+  margin-left: 1px;
 }
 
 .content .sidebar .news a {
-	font-size: 13px;
-	line-height: 1.2;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .content .sidebar .news .archive {
-	display: block;
-	margin-left: 1px;
-	margin-top: -5px;
-	color: #005bc1;
-	text-decoration-color: #005bc1;
+  color: #005bc1;
+  display: block;
+  margin-left: 1px;
+  margin-top: -5px;
+  text-decoration-color: #005bc1;
 }
 
 .content .sidebar .news-list-item {
-	margin-left: 2px;
-	margin-bottom: 27px;
-
-	line-height: 0.98;
+  line-height: .98;
+  margin-bottom: 27px;
+  margin-left: 2px;
 }
 
 .content .sidebar .news-list-item a {
-	color: #005bc1;
-	font-size: 11px;
+  color: #005bc1;
+  font-size: 11px;
 }
 
 .content .sidebar .news-list-item span {
-	position: relative;
-	display: block;
-	color: #666;
-	font-size: 10px;
-	margin-top: 10px;
+  color: #666;
+  display: block;
+  font-size: 10px;
+  margin-top: 10px;
+  position: relative;
 }
 
 .content .sidebar .news-list-item span::after {
-	position: absolute;
-	content: "";
-	bottom: -19px;
-	left: 0;
-	width: 136px;
-	height: 0px;
-	border: 1px solid #dadada;
+  border: 1px solid #dadada;
+  bottom: -19px;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  width: 136px;
 }
 
 .content .sidebar .news-list-item:last-child span::after {
-	border: none;
+  border: none;
 }
 
-/* Футер страницы и дополнительная информация */
-
+/* Футер страницы */
 .page-footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-
-	background: linear-gradient(-45deg, #444 35%, #000 35%, #000 65%, #444 65%);
-	background-size: 0.5em 0.5em;
-	background-position: -3px 0px;
-
-	box-shadow: 0px -7px 20px -5px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  background: linear-gradient(-45deg, #444 35%, #000 35%, #000 65%, #444 65%) -3px 0;
+  background-size: .5em .5em;
+  box-shadow: 0 -7px 20px -5px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-/* Реализация градиента с помощью псевдоэлемента. Плохая идея, т.к. это ухудшает работу с инструментов разработчика в браузере и влияет на цвет текста дочерних элементов блока (непонятно, почему) */
-
+/* Реализация градиента */
 .page-footer::before {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.05) 100%);
-	z-index: 0;
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .05) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 
 .page-footer .wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding-top: 19px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 19px;
 }
 
 /* Блок копирайта */
-
 .page-footer .copyright {
-	margin-right: 0;
-	z-index: 1;
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .page-footer .copyright span {
-	display: block;
-	font-size: 11px;
-	color: #a4a4a4;
-	margin-bottom: 6px;
+  color: #a4a4a4;
+  display: block;
+  font-size: 11px;
+  margin-bottom: 6px;
 }
 
 .page-footer .copyright span:nth-of-type(2) {
-	font-size: 13px;
+  font-size: 13px;
 }
 
 .page-footer .copyright img {
-	margin: 13px 0 3px 9px;
-	width: 36px;
-	height: 28px;
+  height: 28px;
+  margin: 13px 0 3px 9px;
+  width: 36px;
 }
 
 .page-footer .copyright span:last-child {
-	text-transform: uppercase;
-	font-size: 9px;
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 /* Нижняя навигация по сайту */
 .page-footer .footer-nav {
-	margin-left: 99px;
-	z-index: 1;
+  margin-left: 98px;
+  position: relative;
+  z-index: 1;
 }
 
 .page-footer .footer-nav ul {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin-top: -4px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -4px;
 }
 
 .page-footer .footer-nav li a {
-	position: relative;
-	margin-right: 21px;
-	font-size: 11px;
-	color: #fff;
-	text-decoration: none;
-	border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 11px;
+  margin-right: 21px;
+  position: relative;
+  text-decoration: none;
 }
 
 .page-footer .footer-nav li a::after {
-	position: absolute;
-	bottom: 0;
-	right: -10px;
-	content: "";
-	width: 0;
-	height: 10px;
-	border-right: 1px solid #fff;
+  border-right: 1px solid #fff;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: -10px;
+  width: 0;
 }
 
 .page-footer .footer-nav li:last-child a::after {
-	border: none;
+  border: none;
 }
 
 /* Блок информации о разработчике */
-
 .page-footer .developer {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	margin-left: auto;
-
-	z-index: 1;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .page-footer .developer span,
 .page-footer .developer a {
-	font-size: 11px;
-	color: #fff;
+  color: #fff;
+  font-size: 11px;
 }
 
 .page-footer .developer a {
-	text-decoration: none;
-	border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
 }
 
 .page-footer .developer span {
-	display: block;
+  display: block;
 }
 
 .page-footer .developer img {
-	margin: 52px 1px 60px 0;
+  margin: 52px 1px 60px 0;
 }
 
 /* Дополнительные элеменеты */
-
 .page-header .wrapper .header-top .company-info .contacts a:hover,
 .page-header a:hover,
 .page-header .user-info a:hover,
@@ -639,20 +560,20 @@ ul, li {
 .page-footer .copyright a:hover,
 .page-footer .footer-nav a:hover,
 .page-footer .developer a:hover {
-	color: #ffde00;
-	text-decoration-color: #ffde00;
-	border-bottom-color: #ffde00;
-	cursor: pointer;
+  border-bottom-color: #ffde00;
+  color: #ffde00;
+  cursor: pointer;
+  text-decoration-color: #ffde00;
 }
 
 .content .wrapper .category a:hover,
 .content .sidebar a:hover {
-	color: #549ef1;
-	text-decoration-color: #549ef1;
-	border-bottom-color: #549ef1;
-	cursor: pointer;
+  border-bottom-color: #549ef1;
+  color: #549ef1;
+  cursor: pointer;
+  text-decoration-color: #549ef1;
 }
 
 .content .wrapper .category a:hover img {
-	border-color: #00b31d;
+  border-color: #00b31d;
 }
