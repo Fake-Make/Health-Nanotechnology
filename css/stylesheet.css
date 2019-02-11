@@ -21,12 +21,20 @@ li {
   display: none;
 }
 
+body {
+  min-width: 1000px;
+}
+
 .wrapper {
   margin-left: 18px;
   width: 944px;
 }
 
 @media (max-width: 480px) {
+  body {
+    min-width: 480px;
+  }
+
   .wrapper {
     margin-left: 0;
     width: 425px;
