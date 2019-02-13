@@ -171,9 +171,10 @@ body {
   }
 
   .page-header .header-top .company-info b {
-    right: 29px;
+    right: 22px;
     top: 107px;
     line-height: 28px;
+    width: 200px;
   }
 
   .page-header .header-top .company-info .contacts {
@@ -475,7 +476,7 @@ body {
   }
 
   .page-header .menu-toggler {
-    display: inline-block;
+    display: block;
   }
 
   .page-header .header-nav .menu-togglable {
