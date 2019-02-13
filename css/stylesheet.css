@@ -36,7 +36,7 @@ body {
   }
 
   .wrapper {
-    margin-left: 0;
+    margin-left: -2px;
     width: 425px;
   }
 }
@@ -156,11 +156,11 @@ body {
   }
 
   .page-header .header-top .header-logo img {
-    margin: 42px auto 24px 50px;
+    margin: 40px auto 25px 50px;
   }
 
   .page-header .header-top .header-logo span {
-    margin: 0 auto auto 25px;
+    margin: 0 auto auto 23px;
   }
 
   .page-header .header-top .company-info {
@@ -171,20 +171,24 @@ body {
   }
 
   .page-header .header-top .company-info b {
-    right: 27px;
-    top: 110px;
+    right: 29px;
+    top: 107px;
+    line-height: 28px;
   }
 
   .page-header .header-top .company-info .contacts {
     padding: 0;
-    left: -217px;
-    bottom: 122px;
+    left: -219px;
+    bottom: 127px;
     width: 128px;
     height: 40px;
+    line-height: 25px;
   }
 
   .page-header .header-top .company-info .contacts a:nth-child(1) {
     order: 2;
+    border-bottom: 1px solid #e7eeef;
+    height: 20px;
   }
 
   .page-header .header-top .company-info .contacts a:nth-child(2) {
@@ -296,6 +300,7 @@ body {
 @media screen and (max-width: 480px) {
   .page-header .user-info {
     width: 423px;
+    margin: 9px 0 20px;
   }
 
   .page-header .user-info label,
@@ -306,10 +311,12 @@ body {
 
   .page-header .user-info input[type="submit"] {
     margin: 0;
+    margin-left: 3px;
   }
 
   .page-header .user-info form + a {
     margin-right: auto;
+    margin-left: 22px;
   }
 
   .page-header .user-info .cart-label {
@@ -334,6 +341,25 @@ body {
   z-index: 1;
 }
 
+.page-header .menu-toggle {
+  color: #fff;
+  display: none;
+  font-size: 15px;
+  line-height: 25px;
+
+  margin: 18px 0 15px;
+  position: relative;
+}
+
+.page-header .menu-toggle::before {
+  content: "";
+  background: url(../img/menu-icon.png) no-repeat;
+  position: absolute;
+  width: 27px;
+  height: 25px;
+  left: -45px;
+}
+
 .page-header .header-nav ul {
   align-items: center;
   display: flex;
@@ -342,7 +368,7 @@ body {
   padding: 0 32px 0 23px;
 }
 
-.page-header .header-nav a {
+.page-header .header-nav a{
   border-bottom: 1px solid #fff;
   color: #fff;
   font-size: 16px;
@@ -350,9 +376,107 @@ body {
   text-decoration: none;
 }
 
+.page-header .header-nav .active {
+  background: #fff;
+  border-radius: 10px;
+  width: 70px;
+  margin-top: 9px;
+  margin-left: -19px;
+  margin-bottom: 7px;
+  padding-left: 19px;
+  padding-top: 1px;
+  vertical-align: bottom;
+}
+
+.page-header .header-nav .active a {
+  color: #005bc1;
+  border-bottom: 1px solid #005bc1;
+}
+
+.page-header .header-nav .sub-menu {
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 359px;
+  margin-top: -7px;
+  padding: 16px 21px 12px 0;
+}
+
+.page-header .header-nav .sub-menu a {
+  color: #005bc1;
+  line-height: 32px;
+}
+
+.page-header .header-nav .sub-menu li {
+  height: 32px;
+}
+
 @media screen and (max-width: 480px) {
   .page-header .header-nav {
+    align-items: flex-start;
     background: #7c8384;
+    padding-bottom: 25px;
+    box-shadow: none;
+  }
+
+  .page-header .header-nav .header-nav-item {
+    line-height: 32px;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(1) {
+    order: 1;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(2) {
+    order: 3;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(3) {
+    order: 2;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(4) {
+    order: 5;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(5) {
+    order: 4;
+  }
+
+  .page-header .header-nav .header-nav-item:nth-of-type(6) {
+    order: 6;
+  }
+
+  .page-header .header-nav .wrapper {
+    padding-left: 74px;
+    width: 406px;
+  }
+
+  .page-header .header-nav ul {
+    padding: 0;
+  }
+
+  .page-header .header-nav a {
+    font-size: 15px;
+    line-height: 32px;
+  }
+
+  .page-header .header-nav .sub-menu {
+    display: flex;
+  }
+
+  .page-header .header-nav .sub-menu a {
+
+    border-bottom: 1px solid #005bc1;
+
+    font-style: italic;
+  }
+
+  .page-header .menu-toggle {
+    display: inline-block;
   }
 
   .page-header .header-nav ul {
