@@ -341,7 +341,7 @@ body {
   z-index: 1;
 }
 
-.page-header .menu-toggle {
+.page-header .menu-toggler {
   color: #fff;
   display: none;
   font-size: 15px;
@@ -351,7 +351,7 @@ body {
   position: relative;
 }
 
-.page-header .menu-toggle::before {
+.page-header .menu-toggler::before {
   content: "";
   background: url(../img/menu-icon.png) no-repeat;
   position: absolute;
@@ -380,12 +380,8 @@ body {
   background: #fff;
   border-radius: 10px;
   width: 70px;
-  margin-top: 9px;
-  margin-left: -19px;
-  margin-bottom: 7px;
-  padding-left: 19px;
-  padding-top: 1px;
-  vertical-align: bottom;
+  margin: 9px 0 7px -19px;
+  padding: 1px 0 0 19px;
 }
 
 .page-header .header-nav .active a {
@@ -418,7 +414,6 @@ body {
   .page-header .header-nav {
     align-items: flex-start;
     background: #7c8384;
-    padding-bottom: 25px;
     box-shadow: none;
   }
 
@@ -451,12 +446,16 @@ body {
   }
 
   .page-header .header-nav .wrapper {
-    padding-left: 74px;
+    margin-left: 74px;
     width: 406px;
   }
 
-  .page-header .header-nav ul {
+  .page-header .header-nav .menu-togglable {
+
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0;
+    margin-bottom: 25px;
   }
 
   .page-header .header-nav a {
@@ -465,7 +464,7 @@ body {
   }
 
   .page-header .header-nav .sub-menu {
-    display: flex;
+    display: none;
   }
 
   .page-header .header-nav .sub-menu a {
@@ -475,13 +474,12 @@ body {
     font-style: italic;
   }
 
-  .page-header .menu-toggle {
+  .page-header .menu-toggler {
     display: inline-block;
   }
 
-  .page-header .header-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .page-header .header-nav .menu-togglable {
+    display: none;
   }
 }
 
