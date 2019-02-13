@@ -26,7 +26,11 @@ $(function() {
 				$('.active').find('.sub-menu').slideToggle(200);
 				$('.active').removeClass('active');
 				// Активация задействованного элемента
-				$(this).find('.sub-menu').slideToggle(200);
+				$(this).find('.sub-menu').slideToggle(200, function() {
+					if($(this).css('display') === 'block') {
+						$(this).css('display', 'flex');
+					}
+				});
 				$(this).addClass('active');
 			}
 		}
