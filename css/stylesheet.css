@@ -383,11 +383,13 @@ body {
 }
 
 .page-header .header-nav .active {
+  margin: 10px 0 7px -19px;
+}
+
+.page-header .header-nav .active span {
   background: #fff;
-  border-radius: 10px;
-  width: 70px;
-  margin: 9px 0 7px -19px;
-  padding: 1px 0 0 19px;
+  border-radius: 10px 10px 0 0;
+  padding: 8px 15px 4px 19px;
 }
 
 .page-header .header-nav .active a {
@@ -397,14 +399,14 @@ body {
 
 .page-header .header-nav .sub-menu {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 10px;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 359px;
   margin-top: -7px;
-  padding: 16px 21px 12px 0;
+  padding: 16px 19px 12px 21px;
 }
 
 .page-header .header-nav .sub-menu a {
