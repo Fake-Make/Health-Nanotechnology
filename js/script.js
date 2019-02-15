@@ -1,12 +1,12 @@
 // Деактивация активных элементов при наличии таковых
-var hideAllActive = function() {
+function hideAllActive() {
 	var temp = $('.active');
 	temp.removeClass('active');
 	temp.find('.sub-menu').slideToggle(0);
 }
 
 // Переключение меню
-var menuToggle = function(item) {
+function menuToggle(item) {
 	hideAllActive();
 	$(item).slideToggle(0, function() {
 		if($(this).css('display') === 'block') {
@@ -39,12 +39,14 @@ $(function() {
 				hideAllActive();
 				// Активация задействованного элемента
 				//menuToggle('.sub-menu');
-				$(this).find('.sub-menu').slideToggle(0, function() {
-					if($(this).css('display') === 'block') {
-						$(this).css('display', 'flex');
-					}
-				});
-				$(this).addClass('active');
+				if($(this).find('.sub-menu').is('ul')) {
+					$(this).find('.sub-menu').slideToggle(0, function() {
+						if($(this).css('display') === 'block') {
+							$(this).css('display', 'flex');
+						}
+					});
+					$(this).addClass('active');
+				}
 			}
 		}
 	});
@@ -52,7 +54,6 @@ $(function() {
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
 		if($(document).width() > 480 && $('.menu-togglable').css('display') === 'flex') {
-			//!!! При изменении размера окна ему иногда передаётся ширина в 481px, даже если по факту она  350px
 			menuToggle('.menu-togglable');
 		}
 	});

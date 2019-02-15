@@ -429,30 +429,6 @@ body {
     line-height: 32px;
   }
 
-  .page-header .header-nav .header-nav-item:nth-of-type(1) {
-    order: 1;
-  }
-
-  .page-header .header-nav .header-nav-item:nth-of-type(2) {
-    order: 3;
-  }
-
-  .page-header .header-nav .header-nav-item:nth-of-type(3) {
-    order: 2;
-  }
-
-  .page-header .header-nav .header-nav-item:nth-of-type(4) {
-    order: 5;
-  }
-
-  .page-header .header-nav .header-nav-item:nth-of-type(5) {
-    order: 4;
-  }
-
-  .page-header .header-nav .header-nav-item:nth-of-type(6) {
-    order: 6;
-  }
-
   .page-header .header-nav .wrapper {
     margin-left: 72px;
     width: 408px;
