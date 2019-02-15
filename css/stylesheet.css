@@ -171,7 +171,7 @@ body {
   }
 
   .page-header .header-top .company-info b {
-    right: 22px;
+    right: 20px;
     top: 107px;
     line-height: 28px;
     width: 200px;
@@ -447,8 +447,8 @@ body {
   }
 
   .page-header .header-nav .wrapper {
-    margin-left: 74px;
-    width: 406px;
+    margin-left: 72px;
+    width: 408px;
   }
 
   .page-header .header-nav .menu-togglable {
@@ -562,6 +562,7 @@ body {
   .content .wrapper .categories {
     justify-content: space-between;
     width: 440px;
+    margin-top: 4px;
     margin-left: 2px;
     margin-bottom: 0;
   }
