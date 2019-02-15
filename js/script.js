@@ -1,32 +1,45 @@
+// Деактивация активных элементов при наличии таковых
+var hideAllActive = function() {
+	var temp = $('.active');
+	temp.removeClass('active');
+	temp.find('.sub-menu').slideToggle(0);
+}
+
+// Переключение меню
+var menuToggle = function(item) {
+	hideAllActive();
+	$(item).slideToggle(0, function() {
+		if($(this).css('display') === 'block') {
+			$(this).css('display', 'flex');
+		}
+		if($(this).css('display') === 'none') {
+			$(this).removeAttr('style');
+		}
+	});
+}
+
+// Когда документ загрузился, добавим функции элементам
 $(function() {
+	// Переключатель основного меню
 	$('.menu-toggler').on('click', function() {
 		if ($(document).width() <= 480) {
-			// Деактивация активных элементов при наличии таковых
-			$('.active').find('.sub-menu').slideToggle(0);
-			$('.active').removeClass('active');
-
-			// Переключение меню
-			$('.menu-togglable').slideToggle(200, function() {
-				if($(this).css('display') === 'none') {
-					$(this).removeAttr('style');
-				}
-			});
+			menuToggle('.menu-togglable');
 		}
 	});
 
+	// Переключатель под-меню
 	$('.header-nav-item').on('click', function() {
 		if ($(document).width() <= 480) {
 			if($(this).hasClass('active')) {
 				// Деактивация задействованного элемента
-				$(this).find('.sub-menu').slideToggle(200);
-				$(this).removeClass('active');
+				hideAllActive();
 			}
 			else {
 				// Деактивация других активных элементов при наличии таковых
-				$('.active').find('.sub-menu').slideToggle(200);
-				$('.active').removeClass('active');
+				hideAllActive();
 				// Активация задействованного элемента
-				$(this).find('.sub-menu').slideToggle(200, function() {
+				//menuToggle('.sub-menu');
+				$(this).find('.sub-menu').slideToggle(0, function() {
 					if($(this).css('display') === 'block') {
 						$(this).css('display', 'flex');
 					}
@@ -36,19 +49,11 @@ $(function() {
 		}
 	});
 
+	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
-		// Если окно увеличилось, а меню оставалось открытым - уберём его
-		if($(document).width() > 480 && $('.menu-togglable').css('display') === 'block') {
-			// Деактивация активных элементов при наличии таковых
-			$('.active').find('.sub-menu').slideToggle(0);
-			$('.active').removeClass('active');
-
-			// Переключение меню
-			$('.menu-togglable').slideToggle(200, function() {
-				if($(this).css('display') === 'none') {
-					$(this).removeAttr('style');
-				}
-			});
+		if($(document).width() > 480 && $('.menu-togglable').css('display') === 'flex') {
+			//!!! При изменении размера окна ему иногда передаётся ширина в 481px, даже если по факту она  350px
+			menuToggle('.menu-togglable');
 		}
 	});
 });

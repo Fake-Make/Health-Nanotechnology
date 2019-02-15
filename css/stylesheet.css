@@ -352,6 +352,11 @@ body {
   position: relative;
 }
 
+.page-header .menu-toggler:hover {
+  color: #ffde00;
+  cursor: pointer;
+}
+
 .page-header .menu-toggler::before {
   content: "";
   background: url(../img/menu-icon.png) no-repeat;
