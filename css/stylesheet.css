@@ -271,7 +271,7 @@ body {
 
 .page-header .user-info form + a {
   height: 13px;
-  margin: 2px 258px 0 14px;
+  margin: 2px 260px 0 14px;
   text-decoration: none;
 }
 
@@ -512,7 +512,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   width: 724px;
 }
 
