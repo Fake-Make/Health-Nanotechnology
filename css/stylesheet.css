@@ -494,18 +494,13 @@ body {
   align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 2px 0 0;
   width: 724px;
 }
 
 .content .wrapper .category {
   margin-bottom: 56px;
-  margin-left: 32px;
-}
-
-.content .wrapper .category:nth-child(3n-2) {
-  margin-left: 0;
 }
 
 .content .wrapper .category a {
@@ -553,10 +548,6 @@ body {
   .content .wrapper .category {
     margin: 0 auto 53px;
     width: 205px;
-  }
-
-  .content .wrapper .category:nth-child(3n-2)  {
-    margin-left: auto;
   }
 
   .content .wrapper .category img {
