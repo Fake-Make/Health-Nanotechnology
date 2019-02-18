@@ -136,13 +136,13 @@ body {
   flex-wrap: wrap;
 }
 
-.page-header .header-top .company-info .contacts a:nth-child(1) {
+.page-header .header-top .company-info .contacts .link-mail {
   color: inherit;
   font-size: 14px;
   text-decoration: none;
 }
 
-.page-header .header-top .company-info .contacts a:nth-child(2) {
+.page-header .header-top .company-info .contacts .link-phone {
   color: inherit;
   font-family: "Arial Narrow", "Arial", sans-serif;
   font-size: 18px;
@@ -186,13 +186,13 @@ body {
     line-height: 25px;
   }
 
-  .page-header .header-top .company-info .contacts a:nth-child(1) {
+  .page-header .header-top .company-info .contacts .link-mail {
     order: 2;
     border-bottom: 1px solid #e7eeef;
     height: 20px;
   }
 
-  .page-header .header-top .company-info .contacts a:nth-child(2) {
+  .page-header .header-top .company-info .contacts .link-phone {
     order: 1;
   }
 }
@@ -803,14 +803,14 @@ body {
   z-index: 1;
 }
 
-.page-footer .copyright span {
+.page-footer .copyright .copyright-lifetime {
   color: #a4a4a4;
   display: block;
   font-size: 11px;
   margin-bottom: 6px;
 }
 
-.page-footer .copyright span:nth-of-type(2) {
+.page-footer .copyright .company-name {
   font-size: 13px;
 }
 
