@@ -1,21 +1,32 @@
 // Деактивация активных элементов при наличии таковых
 function hideAllActive() {
-	var temp = $('.active');
-	temp.removeClass('active');
-	temp.find('.sub-menu').slideToggle(0);
+	$('.active').removeClass('active').find('.sub-menu').css('display', 'none');
 }
 
 // Переключение меню
 function menuToggle(item) {
 	hideAllActive();
-	$(item).slideToggle(0, function() {
-		if($(this).css('display') === 'block') {
-			$(this).css('display', 'flex');
-		}
-		if($(this).css('display') === 'none') {
-			$(this).removeAttr('style');
-		}
-	});
+	if($(item).css('display') === 'flex') {
+		$(item).removeAttr('style');
+	}
+	else {
+		$(item).css('display', 'flex');
+	}
+}
+
+// Функция для исправления отображения флекс-бокса
+function flexFix() {
+	if($(document).width() > 480)
+		var n = 3;
+	else var n = 2;
+
+	// Если количество элементов не кратно n, то дополняется до кратности n
+	if($('ul.categories').children().length % n) {
+		// Перед запуском удаляются лишние фикс-элементы
+		$('.category.hidden').remove();
+		while($('ul.categories').children().length % n)
+			$('ul.categories').append('<li class="category hidden"><a><img><span></span></a></li>');
+	}
 }
 
 // Когда документ загрузился, добавим функции элементам
@@ -40,39 +51,25 @@ $(function() {
 				// Активация задействованного элемента
 				//menuToggle('.sub-menu');
 				if($(this).find('.sub-menu').is('ul')) {
-					$(this).find('.sub-menu').slideToggle(0, function() {
-						if($(this).css('display') === 'block') {
-							$(this).css('display', 'flex');
-						}
-					});
+					menuToggle('.sub-menu');
 					$(this).addClass('active');
 				}
 			}
+			return false;
 		}
 	});
 
+	// Починка флекс-отображения категорий при загрузке страницы
+	flexFix();
+
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
-		// Функция для исправления отображения флекс-бокса
-		function flexFix(n) {
-		// Если количество элементов не кратно n, то дополняется до кратности n
-			if($('ul.categories').children().length % n) {
-				// Перед запуском удаляются лишние фикс-элементы
-				$('.category.hidden').remove();
-				while($('ul.categories').children().length % n)
-					$('ul.categories').append('<li class="category hidden"><a><img><span></span></a></li>');
-			}
-		}
-
 		if($(document).width() > 480) {
 			if($('.menu-togglable').css('display') === 'flex') {
 				menuToggle('.menu-togglable');
 			}
+		}
 
-			flexFix(3);
-		}
-		if($(document).width() < 481) {
-			flexFix(2);
-		}
+		flexFix();
 	});
 });
