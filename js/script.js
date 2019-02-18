@@ -53,8 +53,26 @@ $(function() {
 
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
-		if($(document).width() > 480 && $('.menu-togglable').css('display') === 'flex') {
-			menuToggle('.menu-togglable');
+		// Функция для исправления отображения флекс-бокса
+		function flexFix(n) {
+		// Если количество элементов не кратно n, то дополняется до кратности n
+			if($('ul.categories').children().length % n) {
+				// Перед запуском удаляются лишние фикс-элементы
+				$('.category.hidden').remove();
+				while($('ul.categories').children().length % n)
+					$('ul.categories').append('<li class="category hidden"><a><img><span></span></a></li>');
+			}
+		}
+
+		if($(document).width() > 480) {
+			if($('.menu-togglable').css('display') === 'flex') {
+				menuToggle('.menu-togglable');
+			}
+
+			flexFix(3);
+		}
+		if($(document).width() < 481) {
+			flexFix(2);
 		}
 	});
 });

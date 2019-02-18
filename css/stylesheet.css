@@ -21,6 +21,10 @@ li {
   display: none;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 body {
   min-width: 1000px;
 }
