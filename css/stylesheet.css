@@ -798,14 +798,14 @@ body {
   z-index: 1;
 }
 
-.page-footer .copyright .copyright-lifetime {
+.page-footer .copyright span {
   color: #a4a4a4;
   display: block;
   font-size: 11px;
   margin-bottom: 6px;
 }
 
-.page-footer .copyright .company-name {
+.page-footer .copyright .company-copyright {
   font-size: 13px;
 }
 
@@ -815,7 +815,7 @@ body {
   width: 36px;
 }
 
-.page-footer .copyright span:last-child {
+.page-footer .copyright .company-name {
   font-size: 9px;
   text-transform: uppercase;
 }
@@ -898,7 +898,7 @@ body {
     margin-left: 7px;
   }
 
-  .page-footer .copyright span:last-child {
+  .page-footer .copyright .company-name {
     margin-left: -2px;
     letter-spacing: 0.7px;
   }
