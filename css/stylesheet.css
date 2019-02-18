@@ -637,7 +637,7 @@ body {
 
 /* !!! Если в li больше двух строк, то всё плохо */
 .content .sidebar .catalog li {
-  height: 13px;
+  line-height: 13px;
   margin-bottom: 16px;
 }
 
@@ -645,7 +645,6 @@ body {
   border-bottom: 1px solid #005bc1;
   color: #005bc1;
   font-size: 13px;
-  line-height: 2.231;
   text-decoration: none;
 }
 
