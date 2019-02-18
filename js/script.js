@@ -1,21 +1,17 @@
 // Деактивация активных элементов при наличии таковых
 function hideAllActive() {
-	var temp = $('.active');
-	temp.removeClass('active');
-	temp.find('.sub-menu').slideToggle(0);
+	$('.active').removeClass('active').find('.sub-menu').css('display', 'none');
 }
 
 // Переключение меню
 function menuToggle(item) {
 	hideAllActive();
-	$(item).slideToggle(0, function() {
-		if($(this).css('display') === 'block') {
-			$(this).css('display', 'flex');
-		}
-		if($(this).css('display') === 'none') {
-			$(this).removeAttr('style');
-		}
-	});
+	if($(item).css('display') === 'flex') {
+		$(item).removeAttr('style');
+	}
+	else {
+		$(item).css('display', 'flex');
+	}
 }
 
 // Функция для исправления отображения флекс-бокса
@@ -55,11 +51,7 @@ $(function() {
 				// Активация задействованного элемента
 				//menuToggle('.sub-menu');
 				if($(this).find('.sub-menu').is('ul')) {
-					$(this).find('.sub-menu').slideToggle(0, function() {
-						if($(this).css('display') === 'block') {
-							$(this).css('display', 'flex');
-						}
-					});
+					menuToggle('.sub-menu');
 					$(this).addClass('active');
 				}
 			}
