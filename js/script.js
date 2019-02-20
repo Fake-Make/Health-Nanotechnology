@@ -25,7 +25,7 @@ function flexFix() {
 		// Перед запуском удаляются лишние фикс-элементы
 		$('.category.hidden').remove();
 		while($('ul.categories').children().length % n)
-			$('ul.categories').append('<li class="category hidden"><a><img><span></span></a></li>');
+			$('ul.categories').append('<li class="category hidden"><a class="category__link"><img class="category__image"></a></li>');
 	}
 }
 
@@ -63,11 +63,11 @@ $(function() {
 	flexFix();
 
 	// Заливка непустых полей ввода
-	$('input[type="text"]').on('change', function() {
+	$('.user-info__input').on('change', function() {
 		if($(this).val() === "")
-			$(this).removeClass('input-fill')
+			$(this).removeClass('user-info__input_filled-white')
 		else
-			$(this).addClass('input-fill')
+			$(this).addClass('user-info__input_filled-white')
 	})
 
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop
