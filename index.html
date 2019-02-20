@@ -26,18 +26,19 @@
             </div>
           </div>
         </aside>
-
         <div class="user-info">
           <form method="POST" action="send">
-            <label for="user-name">Логин: </label>
-            <input type="text" name="user-name" id="user-name" placeholder=" ">
-
-            <label for="user-password">Пароль: </label>
-            <input type="password" name="user-password" id="user-password" placeholder=" ">
+            <span>
+              <label for="user-name">Логин: </label>
+              <input type="text" name="user-name" id="user-name">
+            </span>
+            <span>
+              <label for="user-password">Пароль: </label>
+              <input type="password" name="user-password" id="user-password">
+            </span>
             <input type="submit" name="submit" value="Войти">
           </form>
           <a href="#">Регистрация</a>
-
           <span class="cart-label">В <a href="#">корзине</a> товаров - <b>12</b></span>
         </div>
       </div>
@@ -46,7 +47,8 @@
           <span class="menu-toggler">Меню</span>
           <ul class="menu-togglable">
             <li class="header-nav-item"><span><a href="#">Главная</a></span></li>
-            <li class="header-nav-item"><span><a href="#">Каталог</a></span>
+            <li class="header-nav-item">
+              <span><a href="#">Каталог</a></span>
               <ul class="sub-menu">
                 <li><a href="#">Электронные сигареты</a></li>
                 <li><a href="#">Трубки</a></li>
@@ -121,38 +123,20 @@
             </li>
           </ul>
         </main>
-
         <div class="sidebar">
           <section class="catalog">
             <h2>Каталог</h2>
             <ul class="catalog-list">
-              <li class="catalog-list-item">
-                <a href="#">Электронные сигареты</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Трубки</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Жидкости для заправки</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Аккумуляторы и атомайзеры</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Картриджи</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Зарядные устройства</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Аксессуары</a>
-              </li>
-              <li class="catalog-list-item">
-                <a href="#">Подарочные наборы</a>
-              </li>
+              <li class="catalog-list-item"><a href="#">Электронные сигареты</a></li>
+              <li class="catalog-list-item"><a href="#">Трубки</a></li>
+              <li class="catalog-list-item"><a href="#">Жидкости для заправки</a></li>
+              <li class="catalog-list-item"><a href="#">Аккумуляторы и атомайзеры</a></li>
+              <li class="catalog-list-item"><a href="#">Картриджи</a></li>
+              <li class="catalog-list-item"><a href="#">Зарядные устройства</a></li>
+              <li class="catalog-list-item"><a href="#">Аксессуары</a></li>
+              <li class="catalog-list-item"><a href="#">Подарочные наборы</a></li>
             </ul>
           </section>
-
           <section class="news">
             <h2>Новости</h2>
             <ul class="news-list">

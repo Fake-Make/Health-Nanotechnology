@@ -62,6 +62,14 @@ $(function() {
 	// Починка флекс-отображения категорий при загрузке страницы
 	flexFix();
 
+	// Заливка непустых полей ввода
+	$('input[type="text"]').on('change', function() {
+		if($(this).val() === "")
+			$(this).removeClass('input-fill')
+		else
+			$(this).addClass('input-fill')
+	})
+
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
 		if($(document).width() > 480) {
