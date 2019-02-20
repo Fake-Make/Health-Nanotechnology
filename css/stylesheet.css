@@ -474,7 +474,7 @@ body {
   padding: 50px 0 78px;
 }
 
-.content .wrapper {
+.content__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -484,7 +484,7 @@ body {
 }
 
 /* Блок иллюстрированных категорий */
-.content .wrapper .categories {
+.categories {
   align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
@@ -493,11 +493,11 @@ body {
   width: 724px;
 }
 
-.content .wrapper .category {
+.category {
   margin-bottom: 56px;
 }
 
-.content .wrapper .category a {
+.category__link {
   color: #005bc1;
   display: flex;
   flex-direction: column;
@@ -505,14 +505,14 @@ body {
   text-decoration-color: #005bc1;
 }
 
-.content .wrapper .category img {
+.category__image {
   border: 5px solid #797979;
   height: 145px;
   margin-bottom: 9px;
   width: 210px;
 }
 
-.content .wrapper .category span {
+.category__name {
   color: inherit;
   display: block;
   font-size: 15px;
@@ -525,13 +525,13 @@ body {
     padding-bottom: 33px;
   }
 
-  .content .wrapper {
+  .content__wrapper {
     padding: 0;
     width: 440px;
     justify-content: flex-start;
   }
 
-  .content .wrapper .categories {
+  .categories {
     justify-content: space-between;
     width: 440px;
     margin-top: 4px;
@@ -539,17 +539,17 @@ body {
     margin-bottom: 0;
   }
 
-  .content .wrapper .category {
+  .category {
     margin: 0 auto 53px;
     width: 205px;
   }
 
-  .content .wrapper .category img {
+  .category__image {
     width: 195px;
     height: 135px;
   }
 
-  .content .wrapper .category span {
+  .category__name {
     margin-left: -1px;
   }
 }
@@ -560,7 +560,7 @@ body {
 
 
 /* Блок с текстом */
-.content .wrapper .company-discription-article {
+.seo-article {
   align-self: flex-end;
   color: #666;
   font-size: 12px;
@@ -570,36 +570,35 @@ body {
   width: 724px;
 }
 
-.content .wrapper h2 {
+.seo-article__headline {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.content .wrapper p {
+.seo-article__paragraph {
   line-height: 1.4;
   margin-bottom: 17px;
 }
 
 @media screen and (max-width: 480px) {
-  .content .wrapper .company-discription-article {
+  .seo-article {
     width: 425px;
     margin-right: 8px;
   }
 
-  .content .wrapper h2 {
+  .seo-article__headline {
     font-size: 21px;
     margin-top: 35px;
     margin-bottom: 9px;
   }
 
-  .content .wrapper p {
+  .seo-article__paragraph {
     font-size: 15px;
     margin-bottom: 8px;
     line-height: 21px;
     text-align: left;
   }
-
 }
 
 /**********************************************************************************************************************/
