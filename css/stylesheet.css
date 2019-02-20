@@ -773,7 +773,7 @@ body {
   z-index: 0;
 }
 
-.page-footer .wrapper {
+.page-footer__wrapper {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
@@ -781,48 +781,48 @@ body {
 }
 
 /* Блок копирайта */
-.page-footer .copyright {
+.copyright {
   margin-right: 0;
   position: relative;
   z-index: 1;
 }
 
-.page-footer .copyright span {
+.copyright__part {
   color: #a4a4a4;
   display: block;
   font-size: 11px;
   margin-bottom: 6px;
 }
 
-.page-footer .copyright .company-copyright {
+.company-copyright {
   font-size: 13px;
 }
 
-.page-footer .copyright img {
+.copyright__image {
   height: 28px;
   margin: 13px 0 3px 9px;
   width: 36px;
 }
 
-.page-footer .copyright .company-name {
+.copyright__company-name {
   font-size: 9px;
   text-transform: uppercase;
 }
 
 /* Нижняя навигация по сайту */
-.page-footer .footer-nav {
+.footer-nav {
   margin-left: 98px;
   position: relative;
   z-index: 1;
 }
 
-.page-footer .footer-nav ul {
+.footer-nav__list {
   display: flex;
   justify-content: flex-start;
   margin-top: -4px;
 }
 
-.page-footer .footer-nav li a {
+.footer-nav__link {
   border-bottom: 1px solid #fff;
   color: #fff;
   font-size: 11px;
@@ -831,7 +831,7 @@ body {
   text-decoration: none;
 }
 
-.page-footer .footer-nav li a::after {
+.footer-nav__link::after {
   border-right: 1px solid #fff;
   bottom: 0;
   content: "";
@@ -841,12 +841,12 @@ body {
   width: 0;
 }
 
-.page-footer .footer-nav li:last-child a::after {
+.footer-nav__list-item:last-child .footer-nav__link::after {
   border: none;
 }
 
 /* Блок информации о разработчике */
-.page-footer .developer {
+.developer {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
@@ -855,48 +855,48 @@ body {
   z-index: 1;
 }
 
-.page-footer .developer span,
-.page-footer .developer a {
+.developer__ref,
+.developer__link {
   color: #fff;
   font-size: 11px;
 }
 
-.page-footer .developer a {
+.developer__link {
   border-bottom: 1px solid #fff;
   text-decoration: none;
 }
 
-.page-footer .developer span {
+.developer__ref {
   display: block;
 }
 
-.page-footer .developer img {
+.counter {
   margin: 52px 1px 60px 0;
 }
 
 @media screen and (max-width: 480px) {
-  .page-footer .wrapper {
+  .page-footer__wrapper {
     padding-top: 40px;
   }
 
-  .page-footer .copyright {
+  .copyright {
     margin-left: 3px;
   }
 
-  .page-footer .copyright img {
+  .copyright__image {
     margin-left: 7px;
   }
 
-  .page-footer .copyright .company-name {
+  .copyright__company-name {
     margin-left: -2px;
     letter-spacing: 0.7px;
   }
 
-  .page-footer .footer-nav {
+  .footer-nav {
     display: none;
   }
 
-  .page-footer .developer img {
+  .counter {
     margin: 46px 0 60px;
   }
 }
