@@ -912,14 +912,18 @@ body {
   text-decoration-color: #ffde00;
 }
 
-.content .wrapper .category a:hover,
-.content .sidebar a:hover {
+.content a:hover {
   border-bottom-color: #549ef1;
   color: #549ef1;
   cursor: pointer;
   text-decoration-color: #549ef1;
 }
 
-.content .wrapper .category a:hover img {
+.category__link:hover .category__image {
   border-color: #00b31d;
+}
+
+.active .header-nav-item__link:hover {
+  color: #005bc1;
+  border-bottom: 1px solid #005bc1;
 }
