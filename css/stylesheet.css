@@ -905,15 +905,9 @@ body {
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
 
-
 /* Дополнительные элеменеты */
-.page-header .wrapper .header-top .company-info .contacts a:hover,
 .page-header a:hover,
-.page-header .user-info a:hover,
-.page-header .user-info input[type="submit"]:hover,
-.page-footer .copyright a:hover,
-.page-footer .footer-nav a:hover,
-.page-footer .developer a:hover {
+.page-footer a:hover {
   border-bottom-color: #ffde00;
   color: #ffde00;
   cursor: pointer;
