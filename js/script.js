@@ -63,11 +63,11 @@ $(function() {
 	flexFix();
 
 	// Заливка непустых полей ввода
-	$('input[type="text"]').on('change', function() {
+	$('.user-info__input').on('change', function() {
 		if($(this).val() === "")
-			$(this).removeClass('input-fill')
+			$(this).removeClass('user-info__input_filled-white')
 		else
-			$(this).addClass('input-fill')
+			$(this).addClass('user-info__input_filled-white')
 	})
 
 	// Закрывашка меню при смене области просмотра Mobile -> Desktop

@@ -27,19 +27,19 @@
           </div>
         </aside>
         <div class="user-info">
-          <form method="POST" action="send">
+          <form class="user-info__form" method="POST" action="send">
             <span>
-              <label for="user-name">Логин: </label>
-              <input type="text" name="user-name" id="user-name">
+              <label class="user-info__label" for="user-name">Логин: </label>
+              <input class="user-info__input" type="text" name="user-name" id="user-name">
             </span>
             <span>
-              <label for="user-password">Пароль: </label>
-              <input type="password" name="user-password" id="user-password">
+              <label class="user-info__label" for="user-password">Пароль: </label>
+              <input class="user-info__input" type="password" name="user-password" id="user-password">
             </span>
-            <input type="submit" name="submit" value="Войти">
+            <input class="user-info__link" type="submit" name="submit" value="Войти">
           </form>
-          <a href="#">Регистрация</a>
-          <span class="cart-label">В <a href="#">корзине</a> товаров - <b>12</b></span>
+          <a class="user-info__link user-info__link_reposition" href="#">Регистрация</a>
+          <span class="cart-label">В <a class="cart-label__link" href="#">корзине</a> товаров - <b>12</b></span>
         </div>
       </div>
       <nav class="header-nav">
