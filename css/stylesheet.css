@@ -71,7 +71,7 @@ body {
 }
 
 /* Верхняя часть хэдера */
-.page-header .header-top {
+.header-top {
   color: #e7eeef;
   display: flex;
   justify-content: space-around;
@@ -81,7 +81,7 @@ body {
   z-index: 1;
 }
 
-.page-header .header-top .header-logo {
+.header-logo {
   align-items: center;
   background-color: #000;
   border: 1px solid #7f7f7f;
@@ -99,16 +99,16 @@ body {
   width: 207px;
 }
 
-.page-header .header-top .header-logo img {
+.header-logo__image {
   margin: 42px 50px 24px 63px;
 }
 
-.page-header .header-top .header-logo span {
+.header-logo__caption {
   margin-bottom: auto;
   padding: 0 1px;
 }
 
-.page-header .header-top .company-info {
+.company-info {
   background: #000 url(../img/contacts-bg.jpg) no-repeat;
   border: 1px solid #7f7f7f;
   border-image-slice: 1;
@@ -119,7 +119,7 @@ body {
   width: 724px;
 }
 
-.page-header .header-top .company-info b {
+.company-info__tagline {
   font-size: 23.6px;
   font-style: italic;
   letter-spacing: -1px;
@@ -128,7 +128,7 @@ body {
   top: 21px;
 }
 
-.page-header .header-top .company-info .contacts {
+.contacts {
   align-items: center;
   bottom: 19px;
   display: flex;
@@ -140,13 +140,13 @@ body {
   flex-wrap: wrap;
 }
 
-.page-header .header-top .company-info .contacts .link-mail {
+.contacts__link-mail {
   color: inherit;
   font-size: 14px;
   text-decoration: none;
 }
 
-.page-header .header-top .company-info .contacts .link-phone {
+.contacts__link-phone {
   color: inherit;
   font-family: "Arial Narrow", "Arial", sans-serif;
   font-size: 18px;
@@ -154,34 +154,34 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .page-header .header-top .header-logo {
+  .header-logo {
     width: 423px;
     margin-right: 0;
   }
 
-  .page-header .header-top .header-logo img {
+  .header-logo__image {
     margin: 40px auto 25px 50px;
   }
 
-  .page-header .header-top .header-logo span {
+  .header-logo__caption {
     margin: 0 auto auto 23px;
   }
 
-  .page-header .header-top .company-info {
+  .company-info {
     background: none;
     border: none;
     box-shadow: none;
     width: 0;
   }
 
-  .page-header .header-top .company-info b {
+  .company-info__tagline {
     right: 20px;
     top: 107px;
     line-height: 28px;
     width: 200px;
   }
 
-  .page-header .header-top .company-info .contacts {
+  .contacts {
     padding: 0;
     left: -219px;
     bottom: 127px;
@@ -190,13 +190,13 @@ body {
     line-height: 25px;
   }
 
-  .page-header .header-top .company-info .contacts .link-mail {
+  .contacts__link-mail {
     order: 2;
     border-bottom: 1px solid #e7eeef;
     height: 20px;
   }
 
-  .page-header .header-top .company-info .contacts .link-phone {
+  .contacts__link-phone {
     order: 1;
   }
 }
