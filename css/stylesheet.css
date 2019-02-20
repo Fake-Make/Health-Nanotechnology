@@ -606,19 +606,18 @@ body {
 /**********************************************************************************************************************/
 
 /* Сайдбар: неиллюстрированный каталог и блок новостей */
-.content .sidebar {
+.sidebar {
   left: 0;
   position: absolute;
   top: 0;
   width: 176px;
 }
 
-.content .sidebar .catalog {
+.catalog {
   margin-bottom: 81px;
 }
 
-.content .sidebar .catalog h2,
-.content .sidebar .news h2 {
+.sidebar__headline {
   color: #c24000;
   font-size: 17px;
   font-weight: 700;
@@ -626,39 +625,38 @@ body {
   margin-bottom: 12px;
 }
 
-.content .sidebar .catalog ul {
+.catalog-list {
   margin-left: 2px;
 }
 
-/* !!! Если в li больше двух строк, то всё плохо */
-.content .sidebar .catalog li {
+.catalog-list__item {
   line-height: 13px;
   margin-bottom: 16px;
 }
 
-.content .sidebar .catalog a {
+.catalog-list__link {
   border-bottom: 1px solid #005bc1;
   color: #005bc1;
   font-size: 13px;
   text-decoration: none;
 }
 
-.content .sidebar .news {
+.news {
   width: 165px;
 }
 
-.content .sidebar .news h2 {
+.news__headline {
   color: #058b7a;
   margin-bottom: 18px;
   margin-left: 1px;
 }
 
-.content .sidebar .news a {
+.news-item__link {
   font-size: 13px;
   line-height: 1.2;
 }
 
-.content .sidebar .news .archive {
+.archive {
   color: #005bc1;
   display: block;
   margin-left: 1px;
@@ -666,18 +664,18 @@ body {
   text-decoration-color: #005bc1;
 }
 
-.content .sidebar .news-list-item {
+.news-item {
   line-height: .98;
   margin-bottom: 27px;
   margin-left: 2px;
 }
 
-.content .sidebar .news-list-item a {
+.news-item__link {
   color: #005bc1;
   font-size: 11px;
 }
 
-.content .sidebar .news-list-item span {
+.news-item__date {
   color: #666;
   display: block;
   font-size: 10px;
@@ -685,7 +683,7 @@ body {
   position: relative;
 }
 
-.content .sidebar .news-list-item span::after {
+.news-item__date::after {
   border: 1px solid #dadada;
   bottom: -19px;
   content: "";
@@ -695,53 +693,54 @@ body {
   width: 136px;
 }
 
-.content .sidebar .news-list-item:last-child span::after {
+.news-item:last-child .news-item__date::after {
   border: none;
 }
 
 
 @media screen and (max-width: 480px) {
-  .content .sidebar,
-  .content .sidebar .news {
+  /*здесь было .sidebar, .news*/
+  .sidebar,
+  .news {
     position: relative;
     width: 425px;
   }
 
-  .content .sidebar .news {
+  .news {
     margin-left: -1px;
   }
 
-  .content .sidebar .news h2 {
+  .news__headline {
     font-size: 21px;
     margin-top: -4px;
     margin-bottom: 17px;
   }
 
-  .content .sidebar .news a {
+  .news-item__link {
     font-size: 15px;
   }
 
-  .content .sidebar .news-list-item {
+  .news-item {
     margin-bottom: 34px;
   }
 
-  .content .sidebar .news-list-item span {
+  .news-item__date {
     font-size: 13px;
     margin-top: 11px;
   }
 
-  .content .sidebar .news-list-item span::after {
+  .news-item__date::after {
     width: 422px;
     bottom: -21px;
     left: -1px;
   }
 
-  .content .sidebar .news .archive {
+  .archive {
     margin-top: -14px;
     margin-left: 0;
   }
 
-  .content .sidebar .catalog {
+  .catalog {
     display: none;
   }
 }
