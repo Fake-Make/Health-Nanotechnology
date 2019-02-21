@@ -965,23 +965,35 @@ body {
   margin-left: -3px;
 }
 
-.shipment-paragraph {
+.shipment-text {
   font-size: 13px;
   line-height: 18px;
-  margin: 18px 0;
 }
 
-.shipment-paragraph_bold {
+.shipment-text__block {
+  margin: 18px 0;
+  padding: 0;
+}
+
+.shipment-text_bold {
   font-weight: bold;
   margin-bottom: -1px;
 }
 
-.shipment__payments {
-  line-height: 18px;
-  margin: inherit;
-  padding: 0;
-}
+@media screen and (max-width: 480px) {
+  .inside-content {
+    width: 425px;
+    min-height: auto;
+    margin-bottom: 25px;
+    align-self: center;
+  }
 
-.shipment__payment {
-  font-size: 13px;
+  .shipment-headline {
+    font-size: 22px;
+  }
+
+  .shipment-text {
+    font-size: 15px;
+    text-align: justify;
+  }
 }

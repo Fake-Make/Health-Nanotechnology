@@ -53,9 +53,9 @@ $(function() {
 				if($(this).find('.sub-menu').is('ul')) {
 					menuToggle('.sub-menu');
 					$(this).addClass('active');
+					return false;
 				}
 			}
-			return false;
 		}
 	});
 
