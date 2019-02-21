@@ -387,6 +387,13 @@ body {
   text-decoration: none;
 }
 
+.header-nav-item__link_current {
+  border-bottom-color: #ffde00;
+  color: #ffde00;
+  cursor: default;
+  text-decoration-color: #ffde00;
+}
+
 .active {
   margin: 10px 0 7px -19px;
 }
