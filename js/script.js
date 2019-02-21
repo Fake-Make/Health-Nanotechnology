@@ -16,7 +16,7 @@ function menuToggle(item) {
 
 // Функция для исправления отображения флекс-бокса
 function flexFix() {
-	if($(document).width() > 480)
+	if($(window).width() > 480)
 		var n = 3;
 	else var n = 2;
 
@@ -33,14 +33,14 @@ function flexFix() {
 $(function() {
 	// Переключатель основного меню
 	$('.menu-toggler').on('click', function() {
-		if ($(document).width() <= 480) {
+		if ($(window).width() <= 480) {
 			menuToggle('.menu-togglable');
 		}
 	});
 
 	// Переключатель под-меню
 	$('.header-nav-item').on('click', function() {
-		if ($(document).width() <= 480) {
+		if ($(window).width() <= 480) {
 			if($(this).hasClass('active')) {
 				// Деактивация задействованного элемента
 				hideAllActive();
@@ -70,12 +70,25 @@ $(function() {
 			$(this).addClass('user-info__input_filled-white')
 	})
 
-	// Закрывашка меню при смене области просмотра Mobile -> Desktop
 	$(window).resize(function() {
-		if($(document).width() > 480) {
+		if($(window).width() > 480) {
+			// Закрывашка меню при смене области просмотра Mobile -> Desktop
 			if($('.menu-togglable').css('display') === 'flex') {
 				menuToggle('.menu-togglable');
 			}
+
+			// Возобновление отображения сайдбара при переходе Mobile -> Desktop
+			if($('.sidebar').css('display') === 'none') {
+				$('.sidebar').removeAttr('style');
+			}
+		}
+		if($(window).width() < 481) {
+			// Сокрытие сайдбара при переходе Desktop -> Mobile на внутренних страницах
+			if($(document).find('.header-nav-item__link_current').is('.header-nav-item__link_current')) {
+				if ($('.header-nav-item__link_current')[0].text != "Главная") {
+					$('.sidebar').css('display', 'none');
+				}
+			}				
 		}
 
 		flexFix();
