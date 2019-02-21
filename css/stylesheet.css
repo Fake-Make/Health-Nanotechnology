@@ -238,7 +238,11 @@ body {
 .user-info__label {
   font-weight: lighter;
   line-height: 34px;
-  margin-right: 7px;
+  margin-right: 3px;
+}
+
+.user-info__label_margin-right_bigger {
+  margin-right: 4px;
 }
 
 .user-info__input {
@@ -614,7 +618,7 @@ body {
 }
 
 .catalog {
-  margin-bottom: 81px;
+  margin-bottom: 72px;
 }
 
 .sidebar__headline {
@@ -622,7 +626,7 @@ body {
   font-size: 17px;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 21px;
 }
 
 .catalog-list {
@@ -630,7 +634,7 @@ body {
 }
 
 .catalog-list__item {
-  line-height: 13px;
+  line-height: 12px;
   margin-bottom: 16px;
 }
 
@@ -654,14 +658,19 @@ body {
 .news-item__link {
   font-size: 13px;
   line-height: 1.2;
+  border-bottom: 1px solid #005bc1;
 }
 
 .archive {
-  color: #005bc1;
   display: block;
   margin-left: 1px;
-  margin-top: -5px;
-  text-decoration-color: #005bc1;
+  margin-top: -7px;
+}
+
+.archive__link {
+  font-size: 13px;
+  color: #005bc1;
+  border-bottom: 1px solid #005bc1;
 }
 
 .news-item {
@@ -792,8 +801,13 @@ body {
   margin-bottom: 6px;
 }
 
-.company-copyright {
-  font-size: 13px;
+.copyright__lifetime {
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+
+.copyright__company-lifetime {
+  font-size: 12px;
 }
 
 .copyright__image {
@@ -802,14 +816,14 @@ body {
   width: 36px;
 }
 
-.copyright__company-name {
+.copyrhigt__company-name {
   font-size: 9px;
   text-transform: uppercase;
 }
 
 /* Нижняя навигация по сайту */
 .footer-nav {
-  margin-left: 98px;
+  margin-left: 107px;
   position: relative;
   z-index: 1;
 }
