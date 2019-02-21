@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link href="https://allfont.ru/allfont.css?fonts=arial-narrow">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
     <title>Company - Интернет-магазин электронных сигарет</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
       <div class="wrapper">
         <aside class="header-top">
           <div class="header-logo">
-            <img class="header-logo__image" src="img/logo.png" alt="Логотип" width="95" height="75">
+            <img class="header-logo__image" src="../img/logo.png" alt="Логотип" width="95" height="75">
             <span class="header-logo__caption">Company</span>
           </div>
           <div class="company-info">
@@ -46,7 +46,7 @@
         <div class="wrapper">
           <span class="menu-toggler">Меню</span>
           <ul class="menu-togglable">
-            <li class="header-nav-item"><span><a class="header-nav-item__link" href="#">Главная</a></span></li>
+            <li class="header-nav-item"><span><a class="header-nav-item__link" href="../index.html">Главная</a></span></li>
             <li class="header-nav-item">
               <span class="header-nav-item__container-for-link"><a class="header-nav-item__link" href="#">Каталог</a></span>
               <ul class="sub-menu">
@@ -62,66 +62,37 @@
             </li>
             <li class="header-nav-item"><span><a class="header-nav-item__link" href="#">О компании</a></span></li>
             <li class="header-nav-item"><span><a class="header-nav-item__link" href="#">Новости</a></span></li>
-            <li class="header-nav-item"><span><a class="header-nav-item__link" href="html/shipment.html">Доставка и оплата</a></span></li>
+            <li class="header-nav-item"><span><a class="header-nav-item__link" href="#">Доставка и оплата</a></span></li>
             <li class="header-nav-item"><span><a class="header-nav-item__link" href="#">Контакты</a></span></li>
           </ul>
         </div>
       </nav>
     </header>
+
+
+
     <div class="content">
       <div class="wrapper content__wrapper">
-        <main class="categories">
-          <h1 class="invisible">Company - Электронные сигареты</h1>
-          <ul class="categories">
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-1.jpg" alt="category-image-1">
-                <span class="category__name">Электронные сигареты</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-2.jpg" alt="category-image-2">
-                <span class="category__name">Трубки</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-3.jpg" alt="category-image-3">
-                <span class="category__name">Жидкости для заправки</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-4.jpg" alt="category-image-4">
-                <span class="category__name">Аккумуляторы и атомайзеры</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-5.jpg" alt="category-image-5">
-                <span class="category__name">Картриджи</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-6.jpg" alt="category-image-6">
-                <span class="category__name">Зарядные устройства</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-7.jpg" alt="category-image-7">
-                <span class="category__name">Аксессуары</span>
-              </a>
-            </li>
-            <li class="category">
-              <a class="category__link" href="#">
-                <img class="category__image" src="img/category-8.jpg" alt="category-image-1">
-                <span class="category__name">Подарочные наборы</span>
-              </a>
-            </li>
-          </ul>
+        <main class="inside-content">
+          <div>
+            <h1 class="shipment-headline">Доставка</h1>
+            <p class="shipment-paragraph shipment-paragraph_bold">Уважаемые покупатели!</p>
+            <p class="shipment-paragraph">
+              Оплатить свой заказ Вы можете любым из следующих способов:
+              <ol class="shipment__payments">
+                <li class="shipment__payment">1. Оплата наличными курьеру (в Москве в пределах МКАД)</li>
+                <li class="shipment__payment">2. Оплата с помощью Яндекс.Деньги</li>
+                <li class="shipment__payment">3. Оплата по безналичному расчету</li>
+                <li class="shipment__payment">4. Оплата по квитанции Сбербанка РФ или другого коммерческого банка.</li>
+              </ol>
+            </p>
+            <p class="shipment-paragraph">В двух последних случаях мы выписываем Вам счет, который Вы получаете по электронной почте после подтверждения Вашего заказа. После получения денег, мы в течение 2-3 рабочих дней доставляем Вам товар с помощью транспортных компаний "СПСР" и "Грузовозофф" (по РФ), а так же по желанию "Почтой РФ". Стоимость доставки по РФ согласовывается с Вами и включается в стоимость счета.</p>
+            <p class="shipment-paragraph">Доставка по Москве осуществляется на следующий день после согласования заказа.</p>
+            <p class="shipment-paragraph">Стоимость курьерской доставки по Москве составляет <b>250 р.</b></p>
+            <p class="shipment-paragraph">Доставка по Москве крупногабаритных товаров (от 5 кг) - <b>300 р.</b></p>
+            <p class="shipment-paragraph">Доставка за пределы МКАД - по договоренности</p>
+            <p class="shipment-paragraph"><i>Также, Вы имеете возможность приобрести товары в нашем шоу-руме на м.Сходненская</i></p>
+          </div>
         </main>
         <div class="sidebar">
           <section class="catalog">
@@ -180,62 +151,32 @@
             <span class="archive"><a class="archive__link" href="#">Архив новостей</a></span>
           </section>
         </div>
-        <article class="seo-article">
-          <h2 class="seo-article__headline">Высокое качество японских ножей</h2>
-          <p class="seo-article__paragraph">
-            Кухонные японские ножи (ножи masahiro, касуми, хаттори) известных торговых марок уже завоевали популярность
-            благодаря своей прочности и уникальным качествам - остроте и долговечности заточки. Японские ножи (ножи
-            касуми, масахиро, хаттори, кухонные ножи из дамасской стали) - это профессиональные поварские инструменты,
-            секреты производства которых передаются и шлифуются мастерами из поколения в поколение. Эти японские ножи
-            обладают особым значением - они своего рода статус шеф-повара, в Японии обладание таким ножом считалось
-            показателем высокого мастерства в поварском деле.
-          </p>
-          <p class="seo-article__paragraph">
-            Сегодня японские ножи соединили в себе древнейшие традиции изготовления самурайских мечей и инновационные
-            технологии и, именно поэтому японские ножи обладают уникальными свойствами. Сделаны японские ножи только из
-            высококачественных материалов. Клинок японского ножа делают из высокоуглеродистой стали, что обеспечивает его
-            высокую прочность и надежность. Следует отметить, что японские ножи эргономичны по своему дизайну, что
-            обеспечивает удобство и комфорт в работе. Японские ножи суперострые и после заточки очень долго не тупятся,
-            благодаря этому уникальному качеству они получили широкую известность. Японские ножи - это прекрасный выбор,
-            который говорит о требовательности покупателя к высокому качеству ножа и о его превосходном вкусе. Кстати,
-            нужно отметить, что японские ножи предназначены не только для японской, но и для европейской, а также любой
-            другой кухни. В известных ресторанах крупнейших городов во всем мире используют именно японские ножи.
-            Японские ножи -это профессиональные инструменты для японской кухни (купить японские ножи Вы можете у нас).
-          </p>
-          <p class="seo-article__paragraph">
-            Интернет магазин "Chef" предлагает купить японские ножи (ножи касуми, масахиро), нож для суши. У нас есть
-            японские ножи из дамасской стали (ножи masahiro, касуми). Дамасская сталь - это не просто причудливый узор на
-            лезвии ножа, это технология, сочетающая твердую сталь сердцевины клинка для сохранения остроты ножа и
-            множество слоев мягкой стали, которая и создает рисунок при заточке, для придания гибкости и прочности
-            острой, но хрупкой сердцевине. По этой технологии делались древние острейшие самурайские мечи катаны. Ножи из
-            дамасской стали прочны, надежны и долговечны, что подтверждено многолетним опытом. Не зря ножи из дамасской
-            стали бестселлерами продаж. Есть также товары, которые являются результатом современных научных технологий:
-            титановые, керамические ножи из Японии.
-          </p>
-        </article>
       </div>
     </div>
+
+
+
     <footer class="page-footer">
       <div class="wrapper page-footer__wrapper">
         <div class="copyright">
           <span class="copyright__part copyright__lifetime">Copyright ©2007-2010</span>
           <span class="copyright__part copyright__company-lifetime"><b>© "Company"</b>, 2010</span>
-          <img class="copyright__image" src="img/logo.png" alt="Company-logo">
+          <img class="copyright__image" src="../img/logo.png" alt="Company-logo">
           <span class="copyright__part copyrhigt__company-name">Company</span>
         </div>
         <nav class="footer-nav">
           <ul class="footer-nav__list">
-            <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Главная</a></li>
+            <li class="footer-nav__list-item"><a class="footer-nav__link" href="../index.html">Главная</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Каталог</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">О компании</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Новости</a></li>
-            <li class="footer-nav__list-item"><a class="footer-nav__link" href="">Доставка и оплата</a></li>
+            <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Доставка и оплата</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="developer">
           <span class="developer__ref">Разработка сайта - <a class="developer__link" href="#">ITConstruct</a></span>
-          <img class="counter" src="img/counter.png" alt="Page-counter">
+          <img class="counter" src="../img/counter.png" alt="Page-counter">
         </div>
       </div>
     </footer>

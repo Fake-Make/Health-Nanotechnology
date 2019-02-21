@@ -947,3 +947,41 @@ body {
   color: #005bc1;
   border-bottom: 1px solid #005bc1;
 }
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+.inside-content {
+  padding: 2px 0 0 0;
+  min-height: 1030px;
+  align-self: flex-end;
+  width: 724px;
+}
+
+.shipment-headline {
+  font-size: 17px;
+  margin-bottom: 25px;
+  margin-left: -3px;
+}
+
+.shipment-paragraph {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 18px 0;
+}
+
+.shipment-paragraph_bold {
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+
+.shipment__payments {
+  line-height: 18px;
+  margin: inherit;
+  padding: 0;
+}
+
+.shipment__payment {
+  font-size: 13px;
+}
