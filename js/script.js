@@ -29,6 +29,17 @@ function flexFix() {
 	}
 }
 
+// Скрытие сайдбара при просмотре Mobile на внутренних страницах
+function sidebarHide() {
+	if($(window).width() < 481) {
+		if($(document).find('.header-nav-item__link_current').is('.header-nav-item__link_current')) {
+			if ($('.header-nav-item__link_current')[0].text != "Главная") {
+				$('.sidebar').css('display', 'none');
+			}
+		}	
+	}
+}
+
 // Когда документ загрузился, добавим функции элементам
 $(function() {
 	// Переключатель основного меню
@@ -61,6 +72,8 @@ $(function() {
 
 	// Починка флекс-отображения категорий при загрузке страницы
 	flexFix();
+	// Скрытие сайдбара при просмотре Mobile на внутренних страницах
+	sidebarHide();
 
 	// Заливка непустых полей ввода
 	$('.user-info__input').on('change', function() {
@@ -82,15 +95,9 @@ $(function() {
 				$('.sidebar').removeAttr('style');
 			}
 		}
-		if($(window).width() < 481) {
-			// Сокрытие сайдбара при переходе Desktop -> Mobile на внутренних страницах
-			if($(document).find('.header-nav-item__link_current').is('.header-nav-item__link_current')) {
-				if ($('.header-nav-item__link_current')[0].text != "Главная") {
-					$('.sidebar').css('display', 'none');
-				}
-			}				
-		}
+		
 
 		flexFix();
+		sidebarHide();
 	});
 });
