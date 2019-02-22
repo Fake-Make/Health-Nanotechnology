@@ -77,79 +77,95 @@
         <main class="inside-content">
           <h1 class="invisible">Каталог товаров</h1>
             <ul class="bread-crumbs">
-              <li class="bread-crumb bread-crumb_current">Главная</li>
+              <li class="bread-crumb bread-crumb_current"><a class="bread-crumb__link" href="../index.html">Главная</a></li>
               <li class="bread-crumb">Каталог</li>
             </ul>
             <form class="search-filter" method="POST">
               <span>
-                <label for="cost-from">Цена</label>
-                <input type="number" name="cost-from" id="cost-from" placeholder="от">
+                <label class="search-filter__label" for="cost-from">Цена</label>
+                <input class="search-filter__input" type="number" name="cost-from" id="cost-from" placeholder="от">
               </span>
               <span>
-                <label for="cost-to">—</label>
-                <input type="number" name="cost-to" id="cost-to" placeholder="до">
+                <label class="search-filter__label" for="cost-to">—</label>
+                <input class="search-filter__input" type="number" name="cost-to" id="cost-to" placeholder="до">
               </span>
-              <input type="submit" value="Применить">
+              <input class="search-filter__apply" type="submit" value="Применить">
             </form>
             <ul class="categories">
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-1.jpg" alt="category-image-1">
-                    <span class="category__name">Электронные сигареты</span>
+                    <img class="category__image" src="../img/category-1.jpg" alt="category-image-1">
+                    <span class="category__name">Электронная сигарета FD12</span>
                   </a>
+                  <span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-2.jpg" alt="category-image-2">
-                    <span class="category__name">Трубки</span>
+                    <img class="category__image" src="../img/category-2.jpg" alt="category-image-1">
+                    <span class="category__name">Трубка из дерева</span>
                   </a>
+                  <span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-3.jpg" alt="category-image-3">
-                    <span class="category__name">Жидкости для заправки</span>
+                    <img class="category__image" src="../img/category-3.jpg" alt="category-image-1">
+                    <span class="category__name">Жидкость для заправки</span>
                   </a>
+                  <span class="good-price good_price">59 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-4.jpg" alt="category-image-4">
-                    <span class="category__name">Аккумуляторы и атомайзеры</span>
+                    <img class="category__image" src="../img/category-4.jpg" alt="category-image-1">
+                    <span class="category__name">Аккумулятор TY132</span>
                   </a>
+                  <span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-5.jpg" alt="category-image-5">
-                    <span class="category__name">Картриджи</span>
+                    <img class="category__image" src="../img/category-r.jpg" alt="category-image-1">
+                    <span class="category__name">Картридж FG876</span>
                   </a>
+                  <span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-6.jpg" alt="category-image-6">
-                    <span class="category__name">Зарядные устройства</span>
+                    <img class="category__image" src="../img/category-6.jpg" alt="category-image-1">
+                    <span class="category__name">Зарядное устройство</span>
                   </a>
+                  <span class="good-price good_price">59 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-7.jpg" alt="category-image-7">
-                    <span class="category__name">Аксессуары</span>
+                    <img class="category__image" src="../img/category-7.jpg" alt="category-image-1">
+                    <span class="category__name">Аксессуар</span>
                   </a>
+                  <span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
                 <li class="category">
                   <a class="category__link" href="#">
-                    <img class="category__image" src="img/category-8.jpg" alt="category-image-1">
-                    <span class="category__name">Подарочные наборы</span>
+                    <img class="category__image" src="../img/category-8.jpg" alt="category-image-1">
+                    <span class="category__name">Подарочный набор</span>
                   </a>
+                  <span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
+                  <button class="good-to-cart good_to-cart">в корзину</button>
                 </li>
             </ul>
             <ul class="paginator">
-              <li class="paginator-elem"><a href="#" class="paginator-link">1</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">2</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">3</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">4</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">5</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">6</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">7</a></li>
-              <li class="paginator-elem"><a href="#" class="paginator-link">Следующая страница</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">1</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">2</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">3</a></li>
+              <li class="paginator__elem paginator__elem_current"><a href="#" class="paginator__link">4</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">5</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">6</a></li>
+              <li class="paginator__elem"><a href="#" class="paginator__link">7</a></li>
+              <li class="paginator__elem paginator__elem_next"><a href="#" class="paginator__link">Следующая страница</a></li>
             </ul>
 
         </main>
