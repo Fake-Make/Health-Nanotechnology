@@ -48,7 +48,7 @@
           <ul class="menu-togglable">
             <li class="header-nav-item"><span><a class="header-nav-item__link" href="../index.html">Главная</a></span></li>
             <li class="header-nav-item">
-              <span class="header-nav-item__container-for-link"><a class="header-nav-item__link" href="catalog.html">Каталог</a></span>
+              <span class="header-nav-item__container-for-link"><a class="header-nav-item__link" href="#">Каталог</a></span>
               <ul class="sub-menu">
                 <li class="sub-menu__list-item"><a class="sub-menu__link" href="#">Электронные сигареты</a></li>
                 <li class="sub-menu__list-item"><a class="sub-menu__link" href="#">Трубки</a></li>
@@ -68,28 +68,90 @@
         </div>
       </nav>
     </header>
+
+
+
+
     <div class="content">
       <div class="wrapper content__wrapper">
         <main class="inside-content">
-          <article>
-            <h1 class="shipment-headline">Доставка</h1>
-            <p class="shipment-text shipment-text__block shipment-text_bold">Уважаемые покупатели!</p>
-            <p class="shipment-text shipment-text__block">
-              Оплатить свой заказ Вы можете любым из следующих способов:
-              <ol class="shipment-text__block">
-                <li class="shipment-text">1. Оплата наличными курьеру (в Москве в пределах МКАД)</li>
-                <li class="shipment-text">2. Оплата с помощью Яндекс.Деньги</li>
-                <li class="shipment-text">3. Оплата по безналичному расчету</li>
-                <li class="shipment-text">4. Оплата по квитанции Сбербанка РФ или другого коммерческого банка.</li>
-              </ol>
-            </p>
-            <p class="shipment-text shipment-text__block">В двух последних случаях мы выписываем Вам счет, который Вы получаете по электронной почте после подтверждения Вашего заказа. После получения денег, мы в течение 2-3 рабочих дней доставляем Вам товар с помощью транспортных компаний "СПСР" и "Грузовозофф" (по РФ), а так же по желанию "Почтой РФ". Стоимость доставки по РФ согласовывается с Вами и включается в стоимость счета.</p>
-            <p class="shipment-text shipment-text__block">Доставка по Москве осуществляется на следующий день после согласования заказа.</p>
-            <p class="shipment-text shipment-text__block">Стоимость курьерской доставки по Москве составляет <b>250 р.</b></p>
-            <p class="shipment-text shipment-text__block">Доставка по Москве крупногабаритных товаров (от 5 кг) - <b>300 р.</b></p>
-            <p class="shipment-text shipment-text__block">Доставка за пределы МКАД - по договоренности</p>
-            <p class="shipment-text shipment-text__block"><i>Также, Вы имеете возможность приобрести товары в нашем шоу-руме на м.Сходненская</i></p>
-          </article>
+          <h1 class="invisible">Каталог товаров</h1>
+            <ul class="bread-crumbs">
+              <li class="bread-crumb bread-crumb_current">Главная</li>
+              <li class="bread-crumb">Каталог</li>
+            </ul>
+            <form class="search-filter" method="POST">
+              <span>
+                <label for="cost-from">Цена</label>
+                <input type="number" name="cost-from" id="cost-from" placeholder="от">
+              </span>
+              <span>
+                <label for="cost-to">—</label>
+                <input type="number" name="cost-to" id="cost-to" placeholder="до">
+              </span>
+              <input type="submit" value="Применить">
+            </form>
+            <ul class="categories">
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-1.jpg" alt="category-image-1">
+                    <span class="category__name">Электронные сигареты</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-2.jpg" alt="category-image-2">
+                    <span class="category__name">Трубки</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-3.jpg" alt="category-image-3">
+                    <span class="category__name">Жидкости для заправки</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-4.jpg" alt="category-image-4">
+                    <span class="category__name">Аккумуляторы и атомайзеры</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-5.jpg" alt="category-image-5">
+                    <span class="category__name">Картриджи</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-6.jpg" alt="category-image-6">
+                    <span class="category__name">Зарядные устройства</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-7.jpg" alt="category-image-7">
+                    <span class="category__name">Аксессуары</span>
+                  </a>
+                </li>
+                <li class="category">
+                  <a class="category__link" href="#">
+                    <img class="category__image" src="img/category-8.jpg" alt="category-image-1">
+                    <span class="category__name">Подарочные наборы</span>
+                  </a>
+                </li>
+            </ul>
+            <ul class="paginator">
+              <li class="paginator-elem"><a href="#" class="paginator-link">1</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">2</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">3</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">4</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">5</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">6</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">7</a></li>
+              <li class="paginator-elem"><a href="#" class="paginator-link">Следующая страница</a></li>
+            </ul>
+
         </main>
         <div class="sidebar">
           <section class="catalog">
@@ -150,6 +212,9 @@
         </div>
       </div>
     </div>
+
+
+
     <footer class="page-footer">
       <div class="wrapper page-footer__wrapper">
         <div class="copyright">
@@ -161,7 +226,7 @@
         <nav class="footer-nav">
           <ul class="footer-nav__list">
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="../index.html">Главная</a></li>
-            <li class="footer-nav__list-item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
+            <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Каталог</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">О компании</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Новости</a></li>
             <li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Доставка и оплата</a></li>
