@@ -1043,8 +1043,7 @@ body {
   display: flex;
   color: #9d9d9d;
   font-size: 11px;
-  text-decoration: underline;
-  margin-bottom: 13px;
+  margin: 0 0 11px -2px;
 }
 
 .bread-crumb {
@@ -1065,6 +1064,7 @@ body {
 
 .bread-crumb__link {
   color: inherit;
+  border-bottom: 1px solid #9d9d9d;
 }
 
 /**********************************************************************************************************************/
@@ -1072,24 +1072,37 @@ body {
 /**********************************************************************************************************************/
 
 .search-filter {
-  margin-bottom: 30px;
+  display: flex;
+  margin: 0 0 30px -1px;
+}
+
+.search-filter__item {
+  display: flex;
+  align-items: center;
+  margin: 0 -2px 0 0;
 }
 
 .search-filter__label {
   font-size: 13px;
   color: #4c4c4c;
+  margin-right: 1px;
 }
 
 .search-filter__input {
-  border-radius: 7px;
+  border-radius: 9px;
   border: 1px solid #c6bfac;
   box-shadow: none;
   color: #4c4c4c;
-  height: 29px;
-  margin: 0 9px;
-  padding: 0 10px;
-  width: 68px; 
+  height: 25px;
+  margin: 0 10px 0 9px;
+  padding: 0 9px 2px 9px;
+  width: 70px; 
   font-size: 13px;
+  line-height: 13px;
+}
+
+.search-filter__input::placeholder {
+  color: #9d9d9d;
 }
 
 .search-filter__input::-webkit-outer-spin-button,
@@ -1108,6 +1121,9 @@ body {
   color: #00b31d;
   font-size: 13px;
   padding: 0;
+  margin: auto 0 auto 9px;
+  height: 17px;
+  font-weight: bold;
 }
 
 .search-filter__apply:focus {
