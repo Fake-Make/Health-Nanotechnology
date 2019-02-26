@@ -668,6 +668,7 @@ body {
   .seo-article {
     width: 425px;
     margin-right: 8px;
+    margin-bottom: 0;
   }
 
   .seo-article__headline {
