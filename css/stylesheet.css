@@ -80,6 +80,7 @@ body {
   align-self: flex-end;
   width: 724px;
   margin-right: 2px;
+  margin-bottom: 505px;
 }
 
 @media (max-width: 480px) {
