@@ -560,19 +560,18 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 /* Блок иллюстрированных категорий */
 .categories {
-  align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 2px 0 0;
   width: 724px;
+  order: 2;
 }
 
 .category {
@@ -642,7 +641,7 @@ body {
 
 /* Блок с текстом */
 .seo-article {
-  align-self: flex-end;
+  order: 3;
   color: #666;
   font-size: 12px;
   line-height: 1.231;
@@ -691,10 +690,13 @@ body {
 
 /* Сайдбар: неиллюстрированный каталог и блок новостей */
 .sidebar {
-  left: 0;
-  position: absolute;
-  top: 0;
+  order: 1;
+  align-self: flex-start;
   width: 176px;
+}
+
+.page-wrap {
+  height: 100%;
 }
 
 .catalog {
