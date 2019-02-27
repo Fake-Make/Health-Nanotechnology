@@ -595,7 +595,7 @@ body {
 @media screen and (max-width: 480px) {
 	.content {
 		padding-top: 32px;
-		padding-bottom: 74px;
+		padding-bottom: 42px;
 	}
 
 	.content__wrapper {
@@ -1245,6 +1245,22 @@ body {
 @media screen and (max-width: 480px) {
   .categories__reposition {
     margin-right: 0;
+    float: left;
+    margin-left: -14px;
+    width: 438px;
+  }
+
+  .good-piece {
+    margin-bottom: 45px;
+  }
+
+  .good__image {
+    margin-bottom: 6px;
+  }
+
+  .good_price {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -1296,6 +1312,11 @@ body {
 
 @media screen and (max-width: 480px) {
 	.catalog-page__paginator {
-		margin: 0 auto;
-	}
+    margin: -12px auto 0 40px;
+    width: 328px;
+  }
+  
+  .paginator__elem_next {
+    margin-left: 0px;
+  }
 }
