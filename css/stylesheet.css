@@ -1101,7 +1101,7 @@ body {
 	box-shadow: none;
 	color: #4c4c4c;
 	height: 25px;
-	margin: 0 9px 0 9px;
+	margin: 0 10px 0 9px;
 	padding: 0 9px 2px 9px;
 	width: 70px;
 	font-size: 13px;
@@ -1152,6 +1152,7 @@ body {
 
   .search-filter__input {
     width: 60px;
+    margin-right: 9px;
   }
 
   .search-filter__apply {
