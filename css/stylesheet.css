@@ -1063,6 +1063,17 @@ body {
 	border-bottom: 1px solid #9d9d9d;
 }
 
+@media screen and (max-width: 480px) {
+  .bread-crumbs {
+    margin-top: -9px;
+    margin-left: -8px;
+  }
+
+  .bread-crumb {
+    font-size: 11px;
+  }
+}
+
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
@@ -1090,7 +1101,7 @@ body {
 	box-shadow: none;
 	color: #4c4c4c;
 	height: 25px;
-	margin: 0 10px 0 9px;
+	margin: 0 9px 0 9px;
 	padding: 0 9px 2px 9px;
 	width: 70px;
 	font-size: 13px;
@@ -1111,24 +1122,55 @@ body {
 }
 
 .search-filter__apply {
-	background: none;
+  background: none;
 	border: none;
 	border-bottom: 1px solid #00b31d;
 	color: #00b31d;
 	font-size: 13px;
-	padding: 0;
+  padding: 0;
+  position: relative;
 	margin: auto 0 auto 9px;
 	height: 17px;
 	font-weight: bold;
+}
+
+.search-filter__apply:hover {
+	color: #00f028;
+	border-color: #00f028;
 }
 
 .search-filter__apply:focus {
 	outline: none;
 }
 
-.search-filter__apply:hover {
-	color: #00f028;
-	border-color: #00f028;
+
+@media screen and (max-width: 480px) {
+  .search-filter {
+    margin-left: -8px;
+    margin-bottom: 35px;
+  }
+
+  .search-filter__input {
+    width: 60px;
+  }
+
+  .search-filter__apply {
+    background: #fff url(../img/search__apply-icon.png) no-repeat 50% 50%;
+    border: 1px solid #00b31d;
+    border-radius: 9px;
+    height: 29px;
+    width: 30px;
+    color: transparent;
+    margin-left: 2px;
+  }
+
+  .search-filter__apply:hover {
+    color: transparent;
+  }
+
+  .search-filter__apply:focus {
+    color: transparent;
+  }
 }
 
 /**********************************************************************************************************************/
@@ -1197,6 +1239,12 @@ body {
 
 .good_to-cart {
 	margin: 0 0 0 26px;
+}
+
+@media screen and (max-width: 480px) {
+  .categories__reposition {
+    margin-right: 0;
+  }
 }
 
 /**********************************************************************************************************************/
