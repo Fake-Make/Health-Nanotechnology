@@ -595,7 +595,7 @@ body {
 @media screen and (max-width: 480px) {
 	.content {
 		padding-top: 32px;
-		padding-bottom: 42px;
+		padding-bottom: 45px;
 	}
 
 	.content__wrapper {
@@ -1246,7 +1246,8 @@ body {
   .categories__reposition {
     margin-right: 0;
     float: left;
-    margin-left: -14px;
+		margin-left: -14px;
+		margin-bottom: -3px;
     width: 438px;
   }
 
@@ -1256,7 +1257,11 @@ body {
 
   .good__image {
     margin-bottom: 6px;
-  }
+	}
+	
+	.good_name {
+		margin-left: 0px;
+	}
 
   .good_price {
     margin-left: 0;
