@@ -82,13 +82,13 @@
 					<img class="product__image" src="img/product-image-1.jpg" alt="Упс! Здесь было фото сигареты, но теперь его нет :(">
 					<span class="good-price good_price product__info-block-part product__info-price">820 <small class="good-price__currency">руб.</small></span>
 
-					<form class="product__info-block-part" method="POST">
-						<span class="amount-tubmler">
-							<button class="amount-tumbler__button amount-tumbler__button_left">-</button>
+					<form class="product__info-block-part product__form" method="POST">
+						<span class="amount-tubmler product__amount-tumbler">
+							<button class="amount-tumbler__button amount-tumbler__button_left"></button>
 							<input type="number" class="search-filter__input products-amount__input" value="1">
-							<button class="amount-tumbler__button amount-tumbler__button_right">+</button>
+							<button class="amount-tumbler__button amount-tumbler__button_right"></button>
 						</span>
-						<input class="good-to-cart good_to-cart" type="submint" value="Добавить в корзину">
+						<button class="good-to-cart good_to-cart product__good_to-cart" value="Электронная сигарета «Такая-то»">Добавить в корзину</button>
 					</form>
 					
 					
@@ -111,7 +111,7 @@
 				<section class="catalog">
 					<h2 class="sidebar__headline">Каталог</h2>
 					<ul class="catalog-list">
-						<li class="catalog-list__item"><a class="catalog-list__link" href="#">Электронные сигареты</a></li>
+						<li class="catalog-list__item catalog-list__item_active"><a class="catalog-list__link" href="#">Электронные сигареты</a></li>
 						<li class="catalog-list__item"><a class="catalog-list__link" href="#">Трубки</a></li>
 						<li class="catalog-list__item"><a class="catalog-list__link" href="#">Жидкости для заправки</a></li>
 						<li class="catalog-list__item"><a class="catalog-list__link" href="#">Аккумуляторы и атомайзеры</a></li>

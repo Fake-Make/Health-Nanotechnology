@@ -711,6 +711,20 @@ body {
 	margin-bottom: 17px;
 }
 
+.catalog-list__item_active {
+	margin-left: -15px;
+	margin-bottom: 16px;
+	padding-top: 1px;
+}
+
+.catalog-list__item_active .catalog-list__link {
+	border: none;
+	background: #e3e3e3;
+  border-radius: 10px;
+	padding: 7px 14px 8px 15px;
+	color: #000;
+}
+
 .catalog-list__link {
 	border-bottom: 1px solid #005bc1;
 	color: #005bc1;
@@ -1361,6 +1375,16 @@ body {
 	margin-bottom: 14px;
 }
 
+.product__form {
+	display: flex;
+	align-items: center;
+}
+
+.product__amount-tumbler {
+	margin-left: 1px;
+	margin-right: 21px;
+}
+
 .amount-tubmler {
 	display: flex;
 	font-size: 13px;
@@ -1368,9 +1392,16 @@ body {
 }
 
 .amount-tumbler__button {
+	background: #fff;
 	border: 1px solid #dadada;
 	box-shadow: none;
 	color: #4c4c4c;
+	padding: 0 9px;
+}
+
+.product__good_to-cart {
+	align-self: flex-start;
+	margin-top: 5px;
 }
 
 .amount-tumbler__button_left {
@@ -1381,6 +1412,7 @@ body {
 .amount-tumbler__button_right {
 	border-left: none;
 	border-radius: 0 5px 5px 0;
+	padding-right: 10px;
 }
 
 .products-amount__input {
