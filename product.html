@@ -48,7 +48,7 @@
 				<ul class="menu-togglable">
 					<li class="header-nav-item"><span><a class="header-nav-item__link" href="index.html">Главная</a></span></li>
 					<li class="header-nav-item">
-						<span class="header-nav-item__container-for-link"><a class="header-nav-item__link header-nav-item__link_current" href="#">Каталог</a></span>
+						<span class="header-nav-item__container-for-link"><a class="header-nav-item__link header-nav-item__link_current" href="catalog.html">Каталог</a></span>
 						<ul class="sub-menu">
 							<li class="sub-menu__list-item"><a class="sub-menu__link" href="#">Электронные сигареты</a></li>
 							<li class="sub-menu__list-item"><a class="sub-menu__link" href="#">Трубки</a></li>
@@ -71,98 +71,41 @@
 	<div class="content">
 		<div class="wrapper content__wrapper">
 			<main class="inside-content">
-				<h1 class="invisible">Каталог товаров</h1>
-				<ul class="bread-crumbs">
+				<ul class="bread-crumbs product__bread-crumbs">
 					<li class="bread-crumb"><a class="bread-crumb__link" href="index.html">Главная</a></li>
-					<li class="bread-crumb bread-crumb_current">Каталог</li>
+					<li class="bread-crumb"><a class="bread-crumb__link" href="catalog.html">Каталог</a></li>
+					<li class="bread-crumb"><a class="bread-crumb__link" href="#">Электронные сигареты</a></li>
+					<li class="bread-crumb bread-crumb_current">Электронная сигарета «Такая-то»</li>
 				</ul>
-				<form class="search-filter" method="POST">
-					<span class="search-filter__item">
-						<label class="search-filter__label" for="cost-from">Цена</label>
-						<input class="search-filter__input" type="number" name="cost-from" id="cost-from" placeholder="от">
-					</span>
-					<span class="search-filter__item">
-						<label class="search-filter__label" for="cost-to">—</label>
-						<input class="search-filter__input" type="number" name="cost-to" id="cost-to" placeholder="до">
-					</span>
-					<input class="search-filter__apply" type="submit" value="Применить">
-				</form>
-				<ul class="categories categories__reposition">
-					<li class="category good-piece">
-						<a class="category__link" href="product.html">
-							<img class="category__image good__image" src="img/category-1.jpg" alt="category-image-1">
-							<span class="category__name good_name">Электронная сигарета FD12</span>
-						</a>
-						<span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-2.jpg" alt="category-image-2">
-							<span class="category__name good_name">Трубка из дерева</span>
-						</a>
-						<span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-3.jpg" alt="category-image-3">
-							<span class="category__name good_name">Жидкость для заправки</span>
-						</a>
-						<span class="good-price good_price">59 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-4.jpg" alt="category-image-4">
-							<span class="category__name good_name">Аккумулятор TY132</span>
-						</a>
-						<span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-none.jpg" alt="category-image-none">
-							<span class="category__name good_name">Картридж FG876</span>
-						</a>
-						<span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-6.jpg" alt="category-image-6">
-							<span class="category__name good_name">Зарядное устройство</span>
-						</a>
-						<span class="good-price good_price">59 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-7.jpg" alt="category-image-7">
-							<span class="category__name good_name">Аксессуар</span>
-						</a>
-						<span class="good-price good_price">820 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-					<li class="category  good-piece">
-						<a class="category__link" href="#">
-							<img class="category__image good__image" src="img/category-8.jpg" alt="category-image-8">
-							<span class="category__name good_name">Подарочный набор</span>
-						</a>
-						<span class="good-price good_price">760 <small class="good-price__currency">руб.</small></span>
-						<button class="good-to-cart good_to-cart">в корзину</button>
-					</li>
-				</ul>
-				<ul class="paginator catalog-page__paginator">
-					<li class="paginator__elem"><a href="#" class="paginator__link">1</a></li>
-					<li class="paginator__elem"><a href="#" class="paginator__link">2</a></li>
-					<li class="paginator__elem"><a href="#" class="paginator__link">3</a></li>
-					<li class="paginator__elem paginator__elem_current"><a href="#" class="paginator__link">4</a></li>
-					<li class="paginator__elem"><a href="#" class="paginator__link">5</a></li>
-					<li class="paginator__elem"><a href="#" class="paginator__link">6</a></li>
-					<li class="paginator__elem"><a href="#" class="paginator__link">7</a></li>
-					<li class="paginator__elem paginator__elem_next"><a href="#" class="paginator__link">Следующая страница</a></li>
-				</ul>
+				<section class="product">
+					<h1 class="product__info-block-part product__headline">Электронная сигарета «Такая-то»</h1>
+					<img class="product__image" src="img/product-image-1.jpg" alt="Упс! Здесь было фото сигареты, но теперь его нет :(">
+					<span class="good-price good_price product__info-block-part product__info-price">820 <small class="good-price__currency">руб.</small></span>
+
+					<form class="product__info-block-part" method="POST">
+						<span class="amount-tubmler">
+							<button class="amount-tumbler__button amount-tumbler__button_left">-</button>
+							<input type="number" class="search-filter__input products-amount__input" value="1">
+							<button class="amount-tumbler__button amount-tumbler__button_right">+</button>
+						</span>
+						<input class="good-to-cart good_to-cart" type="submint" value="Добавить в корзину">
+					</form>
+					
+					
+
+					<article class="seo-article product__description">
+						<p class="seo-article__paragraph">
+							Сегодня японские ножи соединили в себе древнейшие традиции изготовления самурайских мечей и инновационные технологии и, именно поэтому японские ножи обладают уникальными свойствами. Сделаны японские ножи только из высококачественных материалов. Клинок японского ножа делают из высокоуглеродистой стали, что обеспечивает его высокую прочность и надежность. Следует отметить, что японские ножи эргономичны по своему дизайну, что обеспечивает удобство и комфорт в работе. Японские ножи суперострые и после заточки очень долго не тупятся, благодаря этому уникальному качеству они получили широкую известность. Японские ножи - это прекрасный выбор, который говорит о требовательности покупателя к высокому качеству ножа и о его превосходном вкусе. Кстати, нужно отметить, что японские ножи предназначены не только для японской, но и для европейской, а также любой другой кухни. В известных ресторанах крупнейших городов во всем мире используют именно японские ножи. Японские ножи -это профессиональные инструменты для японской кухни (купить японские ножи Вы можете у нас).
+						</p>
+						<p class="seo-article__paragraph">
+							Интернет магазин "Chef" предлагает купить японские ножи (ножи касуми, масахиро), нож для суши. У нас есть японские ножи из дамасской стали (ножи masahiro, касуми). Дамасская сталь - это не просто причудливый узор на лезвии ножа, это технология, сочетающая твердую сталь сердцевины клинка для сохранения остроты ножа и	множество слоев мягкой стали, которая и создает рисунок при заточке, для придания гибкости и прочности острой, но хрупкой сердцевине. По этой технологии делались древние острейшие самурайские мечи катаны. Ножи из дамасской стали прочны, надежны и долговечны, что подтверждено многолетним опытом. Не зря ножи из дамасской стали бестселлерами продаж. Есть также товары, которые являются результатом современных научных технологий: титановые, керамические ножи из Японии.
+						</p>
+						<p class="seo-article__paragraph">
+								Кухонные японские ножи (ножи masahiro, касуми, хаттори) известных торговых марок уже завоевали популярность благодаря своей прочности и уникальным качествам - остроте и долговечности заточки. Японские ножи (ножи касуми, масахиро, хаттори, кухонные ножи из дамасской стали) - это профессиональные поварские инструменты, секреты производства которых передаются и шлифуются мастерами из поколения в поколение. Эти японские ножи обладают особым значением - они своего рода статус шеф-повара, в Японии обладание таким ножом считалось показателем высокого мастерства в поварском деле.
+							</p>
+					</article>
+				</section>
+
 			</main>
 			<div class="sidebar">
 				<section class="catalog">
@@ -234,7 +177,7 @@
 			<nav class="footer-nav">
 				<ul class="footer-nav__list">
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="index.html">Главная</a></li>
-					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Каталог</a></li>
+					<li class="footer-nav__list-item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">О компании</a></li>
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Новости</a></li>
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="shipment.html">Доставка и оплата</a></li>

@@ -1037,6 +1037,7 @@ body {
 
 .bread-crumbs {
 	display: flex;
+	flex-wrap: wrap;
 	color: #9d9d9d;
 	font-size: 11px;
 	margin: 0 0 11px -2px;
@@ -1044,7 +1045,7 @@ body {
 
 .bread-crumb {
 	position: relative;
-	margin-right: 18px;
+	margin-right: 17px;
 }
 
 .bread-crumb::after {
@@ -1324,4 +1325,107 @@ body {
   .paginator__elem_next {
     margin-left: 0px;
   }
+}
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+.product {
+	margin: 25px 0 0 -2px;
+}
+
+.product__headline {
+	margin-top: 6px;
+	font-size: 18px;
+	line-height: 21.5px;
+	margin-bottom: 16px;
+}
+
+.product__image {
+	float: left;
+	outline: 5px solid #797979;
+	outline-offset: -5px;
+	width: 451px;
+	height: 318px;	
+	margin-bottom: 16px;
+}
+
+.product__info-block-part {
+	float: right;
+	width: 250px;
+	margin-right: 2px;
+}
+
+.product__info-price {
+	margin-bottom: 14px;
+}
+
+.amount-tubmler {
+	display: flex;
+	font-size: 13px;
+	color: #000;
+}
+
+.amount-tumbler__button {
+	border: 1px solid #dadada;
+	box-shadow: none;
+	color: #4c4c4c;
+}
+
+.amount-tumbler__button_left {
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.amount-tumbler__button_right {
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+}
+
+.products-amount__input {
+	border-color: #dadada;
+	border-radius: 0;
+	height: 22px;
+	position: relative;
+	text-align: center;
+	width: 33px;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.product__description {
+	margin-bottom: 201px;
+}
+
+@media screen and (max-width: 480px) {
+	.product__bread-crumbs {
+		margin-top: -19px;
+	}
+
+	.product {
+		margin-top: -16px;
+		margin-left: -6px;
+	}
+
+	.product__info-block-part {
+		float: left;
+		width: 425px;
+	}
+
+	.product__headline {
+		margin-bottom: 9px;
+	}
+
+	.product__image {
+		margin-left: -2px;
+		margin-bottom: 12px;
+		width: 426px;
+		height: 300px;
+	}
+
+	.product__description {
+		margin-bottom: 0;
+	}
 }
