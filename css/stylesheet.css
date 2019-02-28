@@ -1432,6 +1432,10 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+	.content__product {
+		padding-bottom: 34px;
+	}
+
 	.product__bread-crumbs {
 		margin-top: -19px;
 	}
@@ -1455,6 +1459,43 @@ body {
 		margin-bottom: 12px;
 		width: 426px;
 		height: 300px;
+	}
+
+	.product__info-price {
+		margin-left: -2px;
+	}
+
+	.product__form {
+		margin-left: -3px;
+		margin-bottom: 26px;
+	}
+
+	.product__amount-tumbler {
+		margin-right: 33px;
+	}
+
+	.amount-tumbler__button {
+		padding: 16px 16.25px;
+	}
+
+	.amount-tumbler__button_left {
+		border-radius: 9px 0 0 9px;
+	}
+	
+	.amount-tumbler__button_right {
+		border-radius: 0 9px 9px 0;
+	}
+
+	.products-amount__input {
+		width: 58px;
+		height: 38px;
+		font-size: 24px;
+	}
+
+	.product__good_to-cart {
+		margin-top: 12px;
+		font-size: 15px;
+		line-height: 15px;
 	}
 
 	.product__description {
