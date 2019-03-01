@@ -1524,3 +1524,43 @@ body {
 		margin-bottom: 0;
 	}
 }
+
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+/**********************************************************************************************************************/
+
+.contacts-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 1px;
+}
+
+.contacts-section__requisites {
+	width: 292px;
+}
+
+.contacts-section__headline {
+	margin-top: -2px;
+	margin-bottom: 26px;
+}
+
+.contacts-section__requisites{
+	margin-top: 30px;
+}
+
+.contacts-section__partners-headline {
+	margin-top: 36px;
+}
+
+.contacts-section__partner-headline {
+	font-size: 13px;
+	margin-bottom: -15px;
+}
+
+@media screen and (max-width: 480px) {
+	.contacts-section__requisites {
+		width: 425px;
+	}
+
+}
