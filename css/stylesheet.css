@@ -1405,11 +1405,21 @@ body {
 }
 
 .amount-tumbler__button_left {
+	background:
+		linear-gradient(90deg, #fff 0%, #fff 27%, transparent 27%, transparent 76%, #fff 76%, #fff 100%),
+		linear-gradient(transparent 0%, transparent 47.5%, #000 47.5%, #000 52.5%, transparent 52.5%, transparent 100%),
+		linear-gradient(#fff, #fff);
 	border-right: none;
 	border-radius: 5px 0 0 5px;
 }
 
 .amount-tumbler__button_right {
+	background:
+		linear-gradient(90deg, #fff 0%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 100%),
+		linear-gradient(transparent 0%, transparent 46.5%, #000 46.5%, #000 52.5%, transparent 52.5%, transparent 100%),
+		linear-gradient(#fff 0%, #fff 29%, transparent 29%, transparent 71%, #fff 71%, #fff 100%),
+		linear-gradient(90deg, transparent 0%, transparent 46.5%, #000 46.5%, #000 53%, transparent 53%, transparent 100%), 
+		linear-gradient(#fff, #fff);
 	border-left: none;
 	border-radius: 0 5px 5px 0;
 	padding-right: 10px;
@@ -1462,7 +1472,7 @@ body {
 	}
 
 	.product__info-price {
-		margin-left: -2px;
+		margin-left: -3px;
 	}
 
 	.product__form {
