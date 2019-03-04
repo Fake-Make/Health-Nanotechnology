@@ -214,12 +214,14 @@ body {
 }
 
 .contacts__link-mail {
+	border: none;
 	color: inherit;
 	font-size: 14px;
 	text-decoration: none;
 }
 
 .contacts__link-phone {
+	border: none;
 	color: inherit;
 	font-family: "Arial Narrow", "Arial", sans-serif;
 	font-size: 18px;
