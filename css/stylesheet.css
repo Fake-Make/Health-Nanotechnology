@@ -576,7 +576,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	text-decoration-color: #005bc1;
+	border: none;
 }
 
 .category__image {
@@ -586,12 +586,16 @@ body {
 	width: 210px;
 }
 
-.category__name {
+.category__name-container {
 	color: inherit;
 	display: block;
 	font-size: 15px;
 	height: 15px;
-	text-decoration: underline;
+}
+
+.category__name-inner {
+	display: inline;
+	border-bottom: 1px solid #005bc1;
 }
 
 @media screen and (max-width: 480px) {
@@ -622,7 +626,7 @@ body {
 		height: 135px;
 	}
 
-	.category__name {
+	.category__name-container {
 		margin-left: -1px;
 	}
 }
@@ -1025,7 +1029,8 @@ body {
 	text-decoration-color: #ffde00;
 }
 
-.content a:hover {
+.content a:hover,
+.content a:hover .category__name-inner {
 	border-bottom-color: #549ef1;
 	color: #549ef1;
 	cursor: pointer;
