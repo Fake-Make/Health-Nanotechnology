@@ -119,52 +119,56 @@
 					</section>
 				</section>
 				<section class="feedback-form">
-						<h1>Форма обратной связи</h1>
-						<p>
-							* — обязательные для заполнения поля
+					<h1>Форма обратной связи</h1>
+					<p class="feedback-form__hint">
+						<span class="feedback-form__required-star">*</span> — обязательные для заполнения поля
+					</p>
+					<aside class="error-box error-text">
+						<p class="error-message">
+							Поле «Имя» должно быть заполнено
 						</p>
-						<aside>
-							<p class="feedback-form__error-text">
-								Поле «Имя» должно быть заполнено
-							</p>
-							<p class="feedback-form__error-text">
-								Пользователь с такой электронной почтой уже зарегестрирован
-							</p>
-							<p class="feedback-form__error-text">
-								Поле «Подтверждение пароля» должно быть заполнено
-							</p>
-							<p class="feedback-form__error-text">
-								Поле «Пароль» должно быть заполнено
-							</p>
-						</aside>
-						<span>
-							<label for="">
-								Имя *
+						<p class="error-message">
+							Пользователь с такой электронной почтой уже зарегестрирован
+						</p>
+						<p class="error-message">
+							Поле «Подтверждение пароля» должно быть заполнено
+						</p>
+						<p class="error-message">
+							Поле «Пароль» должно быть заполнено
+						</p>
+					</aside>
+					<form>
+						<div class="feedback-form__row">
+							<label class="inner-label" for="feedback-author">
+								Имя <span class="feedback-form__required-star">*</span>
 							</label>
-							<input type="text">
-						</span>
-						<span>
-							<label for="">
-								Электронная почта *
+							<input class="inner-input-box" type="text" name="feedback-author" id="feedback-author">
+							<span class="error-text feedback-form__error-hint">Поле «Имя» должно быть заполнено</span>
+						</div>
+						<div class="feedback-form__row">
+							<label class="inner-label" for="email">
+								Электронная почта <span class="feedback-form__required-star">*</span>
 							</label>
-							<input type="email">
-						</span>
-						<span>
-							<label for="">
+							<input class="inner-input-box" type="email" name="email" id="email">
+							<span class="error-text feedback-form__error-hint">Поле «Электронная почта» должно быть заполнено</span>
+						</div>
+						<div class="feedback-form__row">
+							<label class="inner-label" for="phone">
 								Телефон
 							</label>
-							<input type="tel">
-						</span>
-						<span>
-							<label for="">
-								Пожалуйста, укажите, какого рода информация вас интересует *
+							<input class="inner-input-box" type="tel" name="phone" id="phone">
+						</div>
+						<div class="feedback-form__row feedback-form__row_left-shift">
+							<label class="inner-label feedback-text-area__label" for="feedback-text">
+								Пожалуйста укажите какого рода информация вас интересует <span class="feedback-form__required-star">*</span>
 							</label>
-							<input type="textarea">
-						</span>
-						<span>
-							<input type="submit">
-							<input type="submit">
-						</span>
+							<input class="inner-input-box feedback-text-area__input" type="textarea" name="feedback-text" id="feedback-text">
+							<div>
+									<input class="form-submit" type="submit" value="Отправить">
+									<input class="form-submit clear-inputs " type="submit" value="Очистить поля">
+							</div>
+						</div>
+					</form>
 				</section>
 			</main>
 			<div class="sidebar">
