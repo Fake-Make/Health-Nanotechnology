@@ -569,6 +569,7 @@ body {
 
 .category {
 	margin-bottom: 56px;
+	width: 210px;
 }
 
 .category__link {
@@ -1327,11 +1328,12 @@ body {
 
 .paginator__elem_current {
 	background: #797979;
-  border-radius: 2px;
+	border-radius: 2px;
 }
 
 .paginator__elem_current .paginator__link {
 	text-decoration: none;
+	border: none;
 	color: #fff;
 }
 
