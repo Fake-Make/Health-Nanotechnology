@@ -1634,7 +1634,7 @@ body {
 
 .feedback-form__error-hint {
 	display: block;
-	margin: 3px 0 0px 131px;
+	margin: 4px 0 -1px 131px;
 }
 
 .feedback-text-area__label {
@@ -1648,8 +1648,9 @@ body {
 
 .feedback-text-area__input {
 	margin-bottom: 10px;
-	width: 418px;
+	width: 419px;
 	height: 137px;
+	margin-left: -1px;
 }
 
 .feedback-form__row_left-shift {
