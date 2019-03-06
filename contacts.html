@@ -121,7 +121,7 @@
 				<section class="feedback-form">
 					<h1>Форма обратной связи</h1>
 					<p class="feedback-form__hint">
-						<span class="feedback-form__required-star">*</span> — обязательные для заполнения поля
+						<span class="required-star">*</span> — обязательные для заполнения поля
 					</p>
 					<aside class="error-box error-text">
 						<p class="error-message">
@@ -140,29 +140,29 @@
 					<form>
 						<div class="feedback-form__row">
 							<label class="inner-label" for="feedback-author">
-								Имя <span class="feedback-form__required-star">*</span>
+								Имя <span class="required-star">*</span>
 							</label>
-							<input class="inner-input-box" type="text" name="feedback-author" id="feedback-author">
+							<input class="inner-input-box incorrect-input-style" type="text" name="feedback-author" id="feedback-author">
 							<span class="error-text feedback-form__error-hint">Поле «Имя» должно быть заполнено</span>
 						</div>
 						<div class="feedback-form__row">
 							<label class="inner-label" for="email">
-								Электронная почта <span class="feedback-form__required-star">*</span>
+								Электронная почта <span class="required-star">*</span>
 							</label>
-							<input class="inner-input-box" type="email" name="email" id="email">
+							<input class="inner-input-box incorrect-input-style" type="email" name="email" id="email">
 							<span class="error-text feedback-form__error-hint">Поле «Электронная почта» должно быть заполнено</span>
 						</div>
 						<div class="feedback-form__row">
-							<label class="inner-label" for="phone">
+							<label class="inner-label optional" for="phone">
 								Телефон
 							</label>
 							<input class="inner-input-box" type="tel" name="phone" id="phone">
 						</div>
 						<div class="feedback-form__row feedback-form__row_left-shift">
 							<label class="inner-label feedback-text-area__label" for="feedback-text">
-								Пожалуйста укажите какого рода информация вас интересует <span class="feedback-form__required-star">*</span>
+								Пожалуйста укажите какого рода информация вас интересует <span class="required-star">*</span>
 							</label>
-							<input class="inner-input-box feedback-text-area__input" type="textarea" name="feedback-text" id="feedback-text">
+							<textarea class="inner-input-box feedback-text-area__input" type="textarea" name="feedback-text" id="feedback-text"></textarea>
 							<div>
 									<input class="form-submit" type="submit" value="Отправить">
 									<input class="form-submit clear-inputs " type="submit" value="Очистить поля">
