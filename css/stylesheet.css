@@ -1605,18 +1605,18 @@ body {
 
 .inner-label {
 	display: inline-block;
-	width: 121px;
+	width: 130px;
 	height: 25px;
 	font-size: 12.5px;
 	color: #424242;
 	text-align: right;
 	margin-right: 5px;
-	margin-left: -6px;
+	margin-left: -15px;
 	vertical-align: 1px;
 }
 
 .optional {
-	margin-left: -15px;
+	margin-left: -24px;
 	margin-right: 14px;
 }
 
