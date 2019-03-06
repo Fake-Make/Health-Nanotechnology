@@ -1688,10 +1688,15 @@ body {
 		margin-top: 30px;
 	}
 
+	.feedback-form__hint {
+		font-size: 13px;
+	}
+
 	.error-box {
 		border: none;
 		margin-left: -7px;
 		margin-bottom: 27px;
+		margin-right: 10px;
 	}
 
 	.inner-label {
@@ -1732,6 +1737,34 @@ body {
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
+
+.inside-content__registration {
+	margin-bottom: 36px;
+}
+
+.feedback-form__registration {
+	margin-top: -3px;
+}
+
+.registration-headline {
+	color: #424242;
+	font-size: 21px;
+	margin-bottom: 27px;
+	margin-left: -2px;
+}
+
+.feedback-form__registration-password {
+	padding-top: 3px;
+}
+
+.feedback-form__registration-password-confirm {
+	padding-top: 1px;
+	margin-bottom: 14px;
+}
+
+.form-submit__registration {
+	margin-left: -2px;
+}
 
 .invisible {
 	display: none;

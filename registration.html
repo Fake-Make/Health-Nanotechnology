@@ -8,6 +8,7 @@
 	<link rel="alternate" href="https://allfont.ru/allfont.css?fonts=arial-narrow">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script  src="js/script.js"></script>
+	<script  src="js/contacts__formCheck.js"></script>	
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
 					</span>
 					<input class="user-info__link" type="submit" name="submit" value="Войти">
 				</form>
-				<a class="user-info__link user-info__link_reposition" href="registration.html">Регистрация</a>
+				<a class="user-info__link user-info__link_reposition" href="#">Регистрация</a>
 				<span class="cart-label">В <a class="cart-label__link" href="#">корзине</a> товаров - <b>12</b></span>
 			</div>
 		</div>
@@ -62,34 +63,73 @@
 					</li>
 					<li class="header-nav-item"><span><a class="header-nav-item__link" href="#">О компании</a></span></li>
 					<li class="header-nav-item"><span><a class="header-nav-item__link" href="#">Новости</a></span></li>
-					<li class="header-nav-item"><span><a class="header-nav-item__link header-nav-item__link_current" href="#">Доставка и оплата</a></span></li>
-					<li class="header-nav-item"><span><a class="header-nav-item__link" href="contacts.html">Контакты</a></span></li>
+					<li class="header-nav-item"><span><a class="header-nav-item__link" href="shipment.html">Доставка и оплата</a></span></li>
+					<li class="header-nav-item"><span><a class="header-nav-item__link header-nav-item__link_current" href="#">Контакты</a></span></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 	<div class="content">
 		<div class="wrapper content__wrapper">
-			<main class="inside-content">
-				<article class="shipment-article">
-					<h1>Доставка</h1>
-					<p><b>Уважаемые покупатели!</b></p>
-					<p>
-						Оплатить свой заказ Вы можете любым из следующих способов:
+			<main class="inside-content inside-content__registration">
+				<section class="feedback-form feedback-form__registration">
+					<h1 class="registration-headline">Регистрация</h1>
+					<p class="feedback-form__hint">
+						<span class="required-star">*</span> — обязательные для заполнения поля
 					</p>
-					<ol>
-						<li>1. Оплата наличными курьеру (в Москве в пределах МКАД)</li>
-						<li>2. Оплата с помощью Яндекс.Деньги</li>
-						<li>3. Оплата по безналичному расчету</li>
-						<li>4. Оплата по квитанции Сбербанка РФ или другого коммерческого банка.</li>
-					</ol>
-					<p>В двух последних случаях мы выписываем Вам счет, который Вы получаете по электронной почте после подтверждения Вашего заказа. После получения денег, мы в течение 2-3 рабочих дней доставляем Вам товар с помощью транспортных компаний "СПСР" и "Грузовозофф" (по РФ), а так же по желанию "Почтой РФ". Стоимость доставки по РФ согласовывается с Вами и включается в стоимость счета.</p>
-					<p>Доставка по Москве осуществляется на следующий день после согласования заказа.</p>
-					<p>Стоимость курьерской доставки по Москве составляет <b>250 р.</b></p>
-					<p>Доставка по Москве крупногабаритных товаров (от 5 кг) - <b>300 р.</b></p>
-					<p>Доставка за пределы МКАД - по договоренности</p>
-					<p><i>Также, Вы имеете возможность приобрести товары в нашем шоу-руме на м.Сходненская</i></p>
-				</article>
+					<aside class="error-box error-text">
+						<p class="error-message">
+							Поле «Имя» должно быть заполнено
+						</p>
+						<p class="error-message">
+							Пользователь с такой электронной почтой уже зарегестрирован
+						</p>
+						<p class="error-message">
+							Поле «Подтверждение пароля» должно быть заполнено
+						</p>
+						<p class="error-message">
+							Поле «Пароль» должно быть заполнено
+						</p>
+					</aside>
+					<form>
+						<div class="feedback-form__row">
+							<label class="inner-label" for="feedback-author">
+								Имя <span class="required-star">*</span>
+							</label>
+							<input class="inner-input-box" type="text" name="feedback-author" id="feedback-author">
+							<span class="error-text feedback-form__error-hint error_emptyness invisible">Поле «Имя» должно быть заполнено</span>
+						</div>
+						<div class="feedback-form__row">
+							<label class="inner-label" for="email">
+								Электронная почта <span class="required-star">*</span>
+							</label>
+							<input class="inner-input-box" type="email" name="email" id="email">
+							<span class="error-text feedback-form__error-hint error_emptyness invisible">Поле «Электронная почта» должно быть заполнено</span>
+							<span class="error-text feedback-form__error-hint error_correctness	invisible">Неверный адрес электронной почты</span>
+						</div>
+						<div class="feedback-form__row">
+							<label class="inner-label optional" for="phone">
+								Телефон
+							</label>
+							<input class="inner-input-box" type="tel" name="phone" id="phone">
+						</div>
+						<div class="feedback-form__row feedback-form__registration-password">
+							<label class="inner-label" for="registration-password">
+								Пароль <span class="required-star">*</span>
+							</label>
+							<input class="inner-input-box" type="password" name="registration-password" id="registration-password">
+							<span class="error-text feedback-form__error-hint error_emptyness invisible">Поле «Пароль» должно быть заполнено</span>
+						</div>
+						<div class="feedback-form__row feedback-form__registration-password-confirm">
+							<label class="inner-label" for="registration-password-confirm">
+								Подтверждение пароля <span class="required-star">*</span>
+							</label>
+							<input class="inner-input-box" type="password" name="registration-password-confirm" id="registration-password-confirm">
+							<span class="error-text feedback-form__error-hint error_emptyness invisible">Поле «Подтверждение пароля» должно быть заполнено</span>
+						</div>
+						<input class="form-submit data-send form-submit__registration" type="submit" value="Зарегистрироваться">
+					</form>
+				</section>
 			</main>
 			<div class="sidebar">
 				<section class="catalog">
@@ -164,8 +204,8 @@
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="catalog.html">Каталог</a></li>
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">О компании</a></li>
 					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Новости</a></li>
-					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Доставка и оплата</a></li>
-					<li class="footer-nav__list-item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
+					<li class="footer-nav__list-item"><a class="footer-nav__link" href="shipment.html">Доставка и оплата</a></li>
+					<li class="footer-nav__list-item"><a class="footer-nav__link" href="#">Контакты</a></li>
 				</ul>
 			</nav>
 			<div class="developer">
