@@ -1655,6 +1655,7 @@ body {
 	height: 128px;
 	margin-left: -1px;
 	vertical-align: top;
+	resize: none;
 }
 
 .feedback-form__row_left-shift {
