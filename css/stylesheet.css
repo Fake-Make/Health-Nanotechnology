@@ -1767,6 +1767,14 @@ body {
 	margin-left: -2px;
 }
 
+.registration-headline_authorisation {
+	margin-bottom: 21px;
+}
+
+.form-submit__authorisation {
+	margin: 11px 0px 68px -1px;
+}
+
 .invisible {
 	display: none;
 }
