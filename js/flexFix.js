@@ -10,7 +10,7 @@ function flexFix() {
 		// Перед запуском удаляются лишние фикс-элементы
 		$('.category.hidden').remove();
 		while ($('ul.categories').children().length % n)
-			$('ul.categories').append('<li class="category hidden"><a class="category__link"><img class="category__image"></a></li>');
+			$('ul.categories').append('<li class="category hidden"></li>');
 	}
 }
 
