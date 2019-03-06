@@ -85,10 +85,6 @@ body {
 	align-self: flex-end;
 	width: 724px;
 	float: right;
-	/*
-	!important!
-	*/
-	margin-right: 10px;
 }
 
 @media (max-width: 480px) {
@@ -1681,6 +1677,11 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+	.contacts-section,
+	.feedback-form {
+		margin-left: -7px;
+	}
+
 	.contacts-section__requisites {
 		width: 425px;
 		margin-top: 0px;
