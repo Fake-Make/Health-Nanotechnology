@@ -1695,6 +1695,7 @@ body {
 	}
 
 	.inner-label {
+		width: auto;
 		display: block;
 		margin: 0 0 -4px 6px;
 		text-align: left;
