@@ -10,6 +10,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/flexFix.js"></script>
+	<script src="js/catalog-validation.js"></script>
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 
@@ -84,11 +85,11 @@
 				<form class="search-filter" method="POST">
 					<span class="search-filter__item">
 						<label class="search-filter__label" for="cost-from">Цена</label>
-						<input class="search-filter__input" type="number" name="cost-from" id="cost-from" placeholder="от">
+						<input class="search-filter__input" step="0.01" type="number" min="0" name="cost-from" id="cost-from" placeholder="от">
 					</span>
 					<span class="search-filter__item">
 						<label class="search-filter__label" for="cost-to">—</label>
-						<input class="search-filter__input" type="number" name="cost-to" id="cost-to" placeholder="до">
+						<input class="search-filter__input" type="number" min="0" name="cost-to" id="cost-to" placeholder="до">
 					</span>
 					<input class="form-submit search-filter__apply" type="submit" value="Применить">
 				</form>
