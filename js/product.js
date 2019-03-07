@@ -16,4 +16,11 @@ $(function() {
 
 		a[0].value = +a[0].value + 1
 	});
+
+	$('.product__form').on('submit', function(e) {
+		e.preventDefault();
+		var amount = $(this).find('.products-amount__input')[0].value;
+		if (amount >= 1 && amount % 1 == 0)
+			this.submit();
+	})
 });
