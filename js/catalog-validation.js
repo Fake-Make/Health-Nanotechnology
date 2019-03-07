@@ -1,25 +1,4 @@
-$(function() {/*
-	// Действие кнопки уменьшения количества товара
-	// параллельно с валидацией
-	$('.amount-tumbler__button_left').on('click', function() {
-		var a = $(this).siblings('.products-amount__input')
-		if (!(a[0].value >= 1) || a[0].value % 1 != 0)
-			a[0].value = 1;
-
-		if (a[0].value > 1) 
-			a[0].value = +a[0].value - 1
-	});
-
-	// Действие кнопки увеличения количества товара
-	// параллельно с валидацией
-	$('.amount-tumbler__button_right').on('click', function() {
-		var a = $(this).siblings('.products-amount__input')
-		if (!(a[0].value >= 1) || a[0].value % 1 != 0)
-			a[0].value = 1;
-
-		a[0].value = +a[0].value + 1
-	}); */
-
+$(function() {
 	// Валидация при потере фокуса
 	$('.search-filter__input').focusout(function() {
 		var amount = $(this)[0].value;
