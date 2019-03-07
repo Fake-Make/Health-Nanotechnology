@@ -19,7 +19,7 @@ function menuToggle(item) {
 function sidebarHide() {
 	if ($(window).width() <= phoneSize) {
 		if ($(document).find('.header-nav-item__link_current').is('.header-nav-item__link_current')) {
-			if ($('.header-nav-item__link_current')[0].text != "Главная") {
+			if ($('.header-nav-item__link_current')[0].innerText != "Главная") {
 				$('.sidebar').css('display', 'none');
 			}
 		}

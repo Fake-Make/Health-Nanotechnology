@@ -141,7 +141,8 @@ h3 {
 
 h1 {
 	font-size: 17px;
-	margin: 0 0 24px -3px;
+	margin: 0 0 26px -3px;
+	font-weight: bold;
 }
 
 h2 {
@@ -150,6 +151,7 @@ h2 {
 	font-weight: bold;
 	line-height: 18px;
 	margin: 18px 0;
+	font-weight: bold;
 }
 
 p,
@@ -158,6 +160,14 @@ ol {
 	font-size: 13px;
 	line-height: 18px;
 	margin: 18px 0;
+}
+
+b {
+	font-weight: bold;
+}
+
+i {
+	font-style: italic;
 }
 
 ul,
@@ -173,8 +183,13 @@ a {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
 	outline: none;
+}
+
+button:hover {
+ cursor: pointer;
 }
 
 a:hover {
@@ -201,7 +216,7 @@ body {
 }
 
 .inside-content {
-	padding: 2px 0 0 0;
+	padding: 3px 0 0 0;
 	align-self: flex-end;
 	width: 724px;
 	float: right;
@@ -289,7 +304,6 @@ body {
 	font-size: 24px;
 	height: 199px;
 	justify-content: space-around;
-	letter-spacing: 2px;
 	line-height: 18px;
 	margin: 0 10px 0 auto;
 	text-transform: uppercase;
@@ -319,10 +333,9 @@ body {
 .company-info__tagline {
 	font-size: 23.6px;
 	font-style: italic;
-	letter-spacing: -1px;
 	position: absolute;
-	right: 106px;
-	top: 21px;
+	right: 109px;
+	top: 23px;
 }
 
 .contacts {
@@ -738,12 +751,12 @@ body {
 	.categories {
 		justify-content: space-between;
 		width: 440px;
-		margin: 4px 0 0 2px;
+		margin: 4px 0 0 1px;
 	}
 
 	.category {
 		margin: 0 auto 53px;
-		width: 205px;
+		width: 206px;
 	}
 
 	.category__image {
@@ -789,6 +802,10 @@ body {
 	margin: 0 0 16px;
 }
 
+.product__description h2 {
+	display: none;
+}
+
 @media screen and (max-width: 480px) {
 
 	.seo-article,
@@ -802,10 +819,6 @@ body {
 	.product__description h2 {
 		font-size: 21px;
 		margin: -1px 0 13px 0;
-	}
-
-	.product__description h2 {
-		display: none;
 	}
 
 	.seo-article p,
@@ -825,7 +838,7 @@ body {
 .sidebar {
 	float: left;
 	width: 176px;
-	margin-bottom: 41px;
+	margin-bottom: 42px;
 }
 
 .page-wrap {
@@ -941,8 +954,6 @@ body {
 
 
 @media screen and (max-width: 480px) {
-
-	/*здесь было .sidebar, .news*/
 	.sidebar,
 	.news {
 		position: relative;
@@ -955,8 +966,8 @@ body {
 
 	.news__headline {
 		font-size: 21px;
-		margin-top: -4px;
-		margin-bottom: 16px;
+    margin-top: -1px;
+    margin-bottom: 21px;
 	}
 
 	.news-item__link {
@@ -969,7 +980,7 @@ body {
 
 	.news-item__date {
 		font-size: 13px;
-		margin-top: 11px;
+		margin-top: 15px;
 	}
 
 	.news-item__date::after {
@@ -979,7 +990,7 @@ body {
 	}
 
 	.archive {
-		margin-top: -10px;
+		margin-top: -9px;
 		margin-left: 0;
 	}
 
@@ -1027,9 +1038,10 @@ body {
 
 /* Блок копирайта */
 .copyright {
-	margin-right: 0;
+	margin-top: 1px;
 	position: relative;
 	z-index: 1;
+	margin-left: 1px;
 }
 
 .copyright__part {
@@ -1041,7 +1053,7 @@ body {
 
 .copyright__lifetime {
 	font-size: 11px;
-	margin-bottom: 7px;
+	margin-bottom: 9px;
 }
 
 .copyright__company-lifetime {
@@ -1050,7 +1062,7 @@ body {
 
 .copyright__image {
 	height: 28px;
-	margin: 13px 0 3px 9px;
+	margin: 13px 0 5px 7px;
 	width: 36px;
 }
 
@@ -1104,6 +1116,7 @@ body {
 	margin-left: auto;
 	position: relative;
 	z-index: 1;
+	margin-top: 1px;
 }
 
 .developer__ref,
@@ -1140,7 +1153,6 @@ body {
 
 	.copyright__company-name {
 		margin-left: -2px;
-		letter-spacing: 0.7px;
 	}
 
 	.footer-nav {
@@ -1515,7 +1527,7 @@ body {
 	margin-top: 6px;
 	font-size: 18px;
 	line-height: 21.5px;
-	margin-bottom: 16px;
+	margin-bottom: 18px;
 }
 
 .product__image {
@@ -1534,7 +1546,7 @@ body {
 }
 
 .product__info-price {
-	margin-bottom: 14px;
+	margin-bottom: 16px;
 }
 
 .product__form {
@@ -1627,18 +1639,19 @@ body {
 	}
 
 	.product__image {
-		margin-left: -2px;
+		margin-left: -3px;
 		margin-bottom: 12px;
 		width: 426px;
 		height: 300px;
 	}
 
 	.product__info-price {
-		margin-left: -3px;
+		margin-left: -4px;
+		margin-top: 11px;
 	}
 
 	.product__form {
-		margin-left: -3px;
+		margin-left: -4px;
 		margin-bottom: 26px;
 	}
 
@@ -1692,7 +1705,7 @@ body {
 
 .contacts-section h1 {
 	margin-top: -2px;
-	margin-bottom: 26px;
+	margin-bottom: -8px;
 }
 
 .contacts-section h2 {
@@ -1701,22 +1714,27 @@ body {
 
 .contacts-section h3 {
 	font-size: 13px;
+	margin-top: 20px;
 	margin-bottom: -15px;
 }
 
 .contacts-section__requisites {
-	margin-top: 30px;
+	margin-top: 11px;
 }
 
 
 .feedback-form {
 	display: flex;
 	flex-direction: column;
-	margin: 77px 0 47px 3px;
+	margin: 78px 0 47px 3px;
+}
+
+.feedback-form__headline {
+	margin-bottom: 24px;
 }
 
 .feedback-form__hint {
-	margin: -23px 0 15px -1px;
+	margin: -21px 0 15px -1px;
 }
 
 .required-star {
@@ -1776,7 +1794,7 @@ body {
 
 .feedback-form__error-hint {
 	display: block;
-	margin: 3px 0 -1px 131px;
+	margin: 3px 0 0 131px;
 }
 
 .feedback-text-area__label {
@@ -1785,7 +1803,7 @@ body {
 	color: #424242;
 	display: inline-block;
 	width: auto;
-	margin: 4px 0 -3px;
+	margin: 4px 0 -4px;
 }
 
 .feedback-text-area__input {
@@ -1913,6 +1931,16 @@ body {
 
 .form-submit__authorisation {
 	margin: 11px 0px 68px -1px;
+}
+
+.data-send:hover {
+	color: #00f028;
+	border-color: #00f028;
+}
+
+.clear-inputs:hover {
+	color: #ff7070;
+	border-color: #ff7070;
 }
 
 .invisible {
