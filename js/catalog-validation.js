@@ -7,13 +7,11 @@ $(function () {
 	});
 
 	// Валидация при отправке формы
-	$('.search-filter').on('submit', function (e) {
-		e.preventDefault();
+	$('.search-filter').on('submit', function () {
 		var min = $(this).find('.search-filter__input')[0].value;
 		var max = $(this).find('.search-filter__input')[1].value;
 		// Проверка на пустоту, неотрицательость и логичность
-		if (min != "" && max != "" && min >= 0 && max >= 0 && min <= max) {
-			this.submit();
-		}
+		if (min === "" || max === "" || min < 0 || max < 0 || min > max)
+			return false;
 	})
 });

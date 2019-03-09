@@ -56,8 +56,7 @@ $(function () {
 	});
 
 	// Валидация при отправке формы
-	$('.registration-form').on('submit', function (event) {
-		event.preventDefault();
+	$('.registration-form').on('submit', function () {
 		var flag = 0;
 		var name = $(this).find('input[name="feedback-author"]')[0].value;
 		var email = $(this).find('input[name="email"]')[0].value;
@@ -101,7 +100,7 @@ $(function () {
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if (REQUIRED_FIEDLS_NUMBER == flag)
-			this.submit();
+		if (REQUIRED_FIEDLS_NUMBER != flag)
+			return false;
 	})
 });

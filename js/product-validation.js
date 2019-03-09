@@ -28,10 +28,9 @@ $(function () {
 	});
 
 	// Валидация при отправке формы
-	$('.product__form').on('submit', function (e) {
-		e.preventDefault();
+	$('.product__form').on('submit', function () {
 		var amount = $(this).find('.products-amount__input')[0].value;
-		if (amount >= 1 && amount % 1 == 0)
-			this.submit();
+		if (amount < 1 || amount % 1 !== 0)
+			return false;
 	})
 });

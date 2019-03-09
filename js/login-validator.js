@@ -26,8 +26,7 @@ $(function () {
 	}
 
 	// Валидация при отправке формы
-	$('.login-form').on('submit', function (event) {
-		event.preventDefault();
+	$('.login-form').on('submit', function () {
 		var flag = 0;
 		var email = $(this).find('input[name="login-user-email"]')[0].value;
 		var password = $(this).find('input[name="login-password"]')[0].value;
@@ -53,7 +52,7 @@ $(function () {
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if (REQUIRED_FIEDLS_NUMBER == flag)
-			this.submit();
+		if (REQUIRED_FIEDLS_NUMBER != flag)
+			return false;
 	})
 });
