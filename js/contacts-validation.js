@@ -92,11 +92,11 @@ $(function() {
 
 		// Проверка поля текста сообщения на пустоту
 		if (message === "") {
-			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
+			// Если пусто, то делаем границы поля красными
 			flag--;
 			$(this).find('.feedback-text-area__input').addClass('incorrect-input-style');
 		} else {
-			// Иначе скрываем сообщение, возвращаем цвета границ
+			// Иначе возвращаем цвета границ
 			flag++;
 			$(this).find('.feedback-text-area__input').removeClass('incorrect-input-style');
 		}
