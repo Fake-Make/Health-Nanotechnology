@@ -65,7 +65,6 @@ $(function() {
 		var password = $(this).find('input[name="registration-password"]')[0].value;
 		var passwordConfirm = $(this).find('input[name="registration-password-confirm"]')[0].value;
 
-		console.log(name, email, password, passwordConfirm);
 		// Проверка поля автора отзыва на пустоту
 		if (name === "") {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными

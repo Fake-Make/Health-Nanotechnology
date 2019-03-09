@@ -8,7 +8,7 @@
 	<link rel="alternate" href="https://allfont.ru/allfont.css?fonts=arial-narrow">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script  src="js/script.js"></script>
-	<script  src="js/contacts__formCheck.js"></script>	
+	<script  src="js/login-validator.js"></script>	
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 <body>
@@ -73,22 +73,22 @@
 		<div class="wrapper content__wrapper">
 			<main class="inside-content inside-content__registration">
 				<section class="feedback-form feedback-form__registration">
-					<h1 class="registration-headline registration-headline_authorisation">Вход</h1>
-					<form>
+					<h1 class="registration-headline registration-headline_login">Вход</h1>
+					<form method="POST" class="login-form">
 						<div class="feedback-form__row">
-							<label class="inner-label" for="user-email">
+							<label class="inner-label" for="login-user-email">
 								Электронная почта
 							</label>
-							<input class="inner-input-box" type="text" name="user-email" id="user-email">
+							<input class="inner-input-box inner-input-box__login-email" type="email" name="login-user-email" id="login-user-email">
 						</div>
 						<div class="feedback-form__row feedback-form__registration-password">
-							<label class="inner-label" for="authorisation-password">
+							<label class="inner-label" for="login-password">
 								Пароль
 							</label>
-							<input class="inner-input-box" type="password" name="authorisation-password" id="authorisation-password">
+							<input class="inner-input-box inner-input-box__login-password" type="password" name="login-password" id="login-password">
 							<span class="error-text feedback-form__error-hint error_emptyness invisible">Поле «Пароль» должно быть заполнено</span>
 						</div>
-						<input class="form-submit data-send form-submit__registration form-submit__authorisation" type="submit" value="Войти">
+						<input class="form-submit data-send form-submit__registration form-submit__login" type="submit" value="Войти">
 					</form>
 				</section>
 			</main>
