@@ -1,10 +1,9 @@
-
 var REQUIRED_FIEDLS_NUMBER = 4;
 
-$(function() {
-	{	// Группа функций для валидации полей при потере фокуса
+$(function () {
+	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля имени при потере фокуса	
-		$('.registration-form input[name="registration-user-name"]').focusout(function() {
+		$('.registration-form input[name="registration-user-name"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.name-field-empty').removeClass('invisible');
@@ -17,7 +16,7 @@ $(function() {
 		});
 
 		// Валидация поля электронной почты при потере фокуса	
-		$('.registration-form input[name="registration-email"]').focusout(function() {
+		$('.registration-form input[name="registration-email"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.email-field-empty').removeClass('invisible');
@@ -30,7 +29,7 @@ $(function() {
 		});
 
 		// Валидация поля пароля при потере фокуса	
-		$('.registration-form input[name="registration-password"]').focusout(function() {
+		$('.registration-form input[name="registration-password"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.password-field-empty').removeClass('invisible');
@@ -43,7 +42,7 @@ $(function() {
 		});
 
 		// Валидация поля подтверждения пароля при потере фокуса	
-		$('.registration-form input[name="registration-password-confirm"]').focusout(function() {
+		$('.registration-form input[name="registration-password-confirm"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.password-confirm-field-empty').removeClass('invisible');
@@ -57,7 +56,7 @@ $(function() {
 	}
 
 	// Валидация при отправке формы
-	$('.registration-form').on('submit', function(event) {
+	$('.registration-form').on('submit', function (event) {
 		event.preventDefault();
 		var flag = 0;
 		var name = $(this).find('input[name="registration-user-name"]')[0].value;
@@ -114,7 +113,7 @@ $(function() {
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if(REQUIRED_FIEDLS_NUMBER == flag)
+		if (REQUIRED_FIEDLS_NUMBER == flag)
 			this.submit();
 	})
 });

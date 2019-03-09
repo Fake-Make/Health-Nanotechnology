@@ -1,10 +1,9 @@
-
 var REQUIRED_FIEDLS_NUMBER = 3;
 
-$(function() {
-	{	// Группа функций для валидации полей при потере фокуса
+$(function () {
+	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля имени при потере фокуса	
-		$('.registration-form input[name="feedback-author"]').focusout(function() {
+		$('.registration-form input[name="feedback-author"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.name-field-empty').removeClass('invisible');
@@ -17,7 +16,7 @@ $(function() {
 		});
 
 		// Валидация поля электронной почты при потере фокуса	
-		$('.registration-form input[name="email"]').focusout(function() {
+		$('.registration-form input[name="email"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.email-field-empty').removeClass('invisible');
@@ -30,7 +29,7 @@ $(function() {
 		});
 
 		// Валидация поля сообщения при потере фокуса	
-		$('.registration-form textarea[name="feedback-text"]').focusout(function() {
+		$('.registration-form textarea[name="feedback-text"]').focusout(function () {
 			if ($(this)[0].value === "") {
 				// Если пусто, то делаем границы поля красными
 				$('.registration-form .feedback-text-area__input').addClass('incorrect-input-style');
@@ -43,10 +42,10 @@ $(function() {
 
 	// Очистка полей при нажатии соответствующей кнопки
 	// Кнопка ничего не сделает без JavaScript
-	$('.clear-inputs').on('click', function() {
+	$('.clear-inputs').on('click', function () {
 		// Удаление значений всех полей, кроме кнопок и сабмитов
 		// И возвращение изначального цвета границ полей
-		$('.registration-form').find('input[type != "submit"][type != "button"], textarea[type="textarea"]').each(function(i, t) {
+		$('.registration-form').find('input[type != "submit"][type != "button"], textarea[type="textarea"]').each(function (i, t) {
 			t.value = "";
 			$(t).removeClass('incorrect-input-style');
 		});
@@ -57,7 +56,7 @@ $(function() {
 	});
 
 	// Валидация при отправке формы
-	$('.registration-form').on('submit', function(event) {
+	$('.registration-form').on('submit', function (event) {
 		event.preventDefault();
 		var flag = 0;
 		var name = $(this).find('input[name="feedback-author"]')[0].value;
@@ -102,7 +101,7 @@ $(function() {
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if(REQUIRED_FIEDLS_NUMBER == flag)
+		if (REQUIRED_FIEDLS_NUMBER == flag)
 			this.submit();
 	})
 });

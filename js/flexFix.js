@@ -2,7 +2,7 @@
 function flexFix() {
 	if ($(window).width() > phoneSize)
 		var n = 3;
-	else 
+	else
 		var n = 2;
 
 	// Если количество элементов не кратно n, то дополняется до кратности n
@@ -15,11 +15,11 @@ function flexFix() {
 }
 
 // Когда документ загрузился, добавим функции элементам
-$(function() {
+$(function () {
 	// Починка флекс-отображения категорий при загрузке страницы
 	flexFix();
 
-	$(window).resize(function() {
+	$(window).resize(function () {
 		flexFix();
 	});
 });

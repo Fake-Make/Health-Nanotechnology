@@ -189,7 +189,7 @@ button:focus {
 }
 
 button:hover {
- cursor: pointer;
+	cursor: pointer;
 }
 
 a:hover {
@@ -954,6 +954,7 @@ body {
 
 
 @media screen and (max-width: 480px) {
+
 	.sidebar,
 	.news {
 		position: relative;
@@ -966,8 +967,8 @@ body {
 
 	.news__headline {
 		font-size: 21px;
-    margin-top: -1px;
-    margin-bottom: 21px;
+		margin-top: -1px;
+		margin-bottom: 21px;
 	}
 
 	.news-item__link {

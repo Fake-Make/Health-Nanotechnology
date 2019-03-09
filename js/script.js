@@ -27,16 +27,16 @@ function sidebarHide() {
 }
 
 // Когда документ загрузился, добавим функции элементам
-$(function() {
+$(function () {
 	// Переключатель основного меню
-	$('.menu-toggler').on('click', function() {
+	$('.menu-toggler').on('click', function () {
 		if ($(window).width() <= phoneSize) {
 			menuToggle('.menu-togglable');
 		}
 	});
 
 	// Переключатель под-меню
-	$('.header-nav-item').on('click', function() {
+	$('.header-nav-item').on('click', function () {
 		if ($(window).width() <= phoneSize) {
 			if ($(this).hasClass('active')) {
 				// Деактивация задействованного элемента
@@ -59,14 +59,14 @@ $(function() {
 	sidebarHide();
 
 	// Заливка непустых полей ввода
-	$('.user-info__input').on('change', function() {
+	$('.user-info__input').on('change', function () {
 		if ($(this).val() === "")
 			$(this).removeClass('user-info__input_filled-white')
 		else
 			$(this).addClass('user-info__input_filled-white')
 	})
 
-	$(window).resize(function() {
+	$(window).resize(function () {
 		if ($(window).width() > phoneSize) {
 			// Закрывашка меню при смене области просмотра Mobile -> Desktop
 			if ($('.menu-togglable').css('display') === 'flex') {
