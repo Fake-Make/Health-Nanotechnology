@@ -177,6 +177,12 @@ li {
 	padding: 0;
 }
 
+ol li { 
+	list-style-position: inside;
+	list-style-image: none;
+	list-style-type: decimal;
+}
+
 a {
 	text-decoration: none;
 	border-bottom: 1px solid #fff;
