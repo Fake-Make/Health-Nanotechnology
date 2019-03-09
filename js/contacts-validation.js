@@ -65,7 +65,6 @@ $(function () {
 		// Проверка поля автора отзыва на пустоту
 		if (name === "") {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
-			flag--;
 			$('.name-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__name').addClass('incorrect-input-style');
 		} else {
@@ -78,7 +77,6 @@ $(function () {
 		// Проверка поля электронной почты на пустоту
 		if (email === "") {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
-			flag--;
 			$('.email-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__email').addClass('incorrect-input-style');
 		} else {
@@ -91,7 +89,6 @@ $(function () {
 		// Проверка поля текста сообщения на пустоту
 		if (message === "") {
 			// Если пусто, то делаем границы поля красными
-			flag--;
 			$(this).find('.feedback-text-area__input').addClass('incorrect-input-style');
 		} else {
 			// Иначе возвращаем цвета границ
