@@ -9,7 +9,6 @@
 	<link rel="alternate" href="https://allfont.ru/allfont.css?fonts=arial-narrow">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/script.js"></script>
-	<script src="js/contacts-validation.js"></script>
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 
@@ -140,20 +139,20 @@
 							Поле «Пароль» должно быть заполнено
 						</p>
 					</aside>
-					<form method="POST" class="registration-form">
+					<form method="POST" class="registration-form" name="contats-page__feedback-form">
 						<div class="feedback-form__row">
 							<label class="inner-label" for="feedback-author">
 								Имя <span class="required-star">*</span>
 							</label>
 							<input class="inner-input-box inner-input-box__name" type="text" name="feedback-author" id="feedback-author">
-							<span class="error-text feedback-form__error-hint name-field-empty invisible">Поле «Имя» должно быть заполнено</span>
+							<span class="error-text feedback-form__error-hint error-emptyness invisible">Поле «Имя» должно быть заполнено</span>
 						</div>
 						<div class="feedback-form__row">
 							<label class="inner-label" for="email">
 								Электронная почта <span class="required-star">*</span>
 							</label>
 							<input class="inner-input-box inner-input-box__email" type="email" name="email" id="email">
-							<span class="error-text feedback-form__error-hint email-field-empty invisible">Поле «Электронная почта» должно
+							<span class="error-text feedback-form__error-hint error-emptyness invisible">Поле «Электронная почта» должно
 								быть заполнено</span>
 						</div>
 						<div class="feedback-form__row">
