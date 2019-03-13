@@ -1700,14 +1700,12 @@ body {
 /**********************************************************************************************************************/
 
 .contacts-section {
-	display: grid;
-	grid-template-columns: auto 292px;
-	grid-template-rows: auto;
-	margin-top: 1px;
+	width: 100%;
+	margin-top: -36px;
 }
 
-.contacts-section section {
-	margin-top: 11px;
+.contacts-section__second-column {
+	width: 292px;
 }
 
 .contacts-section h1 {
@@ -1841,9 +1839,13 @@ body {
 	}
 
 	.contacts-section {
-		grid-template-columns: 425px;
 		width: 425px;
 		margin-top: 0px;
+	}
+
+	.contacts-section tr,
+	.contacts-section td {
+		display: block;
 	}
 
 	.feedback-form {
