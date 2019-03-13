@@ -2,7 +2,7 @@ $(function () {
 	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля электронной почты при потере фокуса	
 		$('.login-form input[name="login-user-email"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то делаем границы поля красными
 				$('.login-form .inner-input-box__login-email').addClass('incorrect-input-style');
 			} else {
@@ -13,7 +13,7 @@ $(function () {
 
 		// Валидация поля пароля при потере фокуса	
 		$('.login-form input[name="login-password"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, делаем границы поля красными
 				$('.login-form .inner-input-box__login-password').addClass('incorrect-input-style');
 			} else {
@@ -26,8 +26,8 @@ $(function () {
 	// Валидация при отправке формы
 	$('.login-form').on('submit', function () {
 		var flag = 0;
-		var email = $(this).find('input[name="login-user-email"]')[0].value;
-		var password = $(this).find('input[name="login-password"]')[0].value;
+		var email = $(this).find('input[name="login-user-email"]').val();
+		var password = $(this).find('input[name="login-password"]').val();
 
 		// Проверка поля электронной почты на пустоту
 		if (email === "") {

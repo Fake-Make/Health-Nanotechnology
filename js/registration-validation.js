@@ -2,7 +2,7 @@ $(function () {
 	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля имени при потере фокуса	
 		$('.registration-form input[name="registration-user-name"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.name-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__name').addClass('incorrect-input-style');
@@ -15,7 +15,7 @@ $(function () {
 
 		// Валидация поля электронной почты при потере фокуса	
 		$('.registration-form input[name="registration-email"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.email-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__registration-email').addClass('incorrect-input-style');
@@ -28,7 +28,7 @@ $(function () {
 
 		// Валидация поля пароля при потере фокуса	
 		$('.registration-form input[name="registration-password"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.password-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__password').addClass('incorrect-input-style');
@@ -41,7 +41,7 @@ $(function () {
 
 		// Валидация поля подтверждения пароля при потере фокуса	
 		$('.registration-form input[name="registration-password-confirm"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.password-confirm-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__password-confirm').addClass('incorrect-input-style');
@@ -56,10 +56,10 @@ $(function () {
 	// Валидация при отправке формы
 	$('.registration-form').on('submit', function () {
 		var flag = 0;
-		var name = $(this).find('input[name="registration-user-name"]')[0].value;
-		var email = $(this).find('input[name="registration-email"]')[0].value;
-		var password = $(this).find('input[name="registration-password"]')[0].value;
-		var passwordConfirm = $(this).find('input[name="registration-password-confirm"]')[0].value;
+		var name = $(this).find('input[name="registration-user-name"]').val();
+		var email = $(this).find('input[name="registration-email"]').val();
+		var password = $(this).find('input[name="registration-password"]').val();
+		var passwordConfirm = $(this).find('input[name="registration-password-confirm"]').val();
 
 		// Проверка поля автора отзыва на пустоту
 		if (name === "") {

@@ -2,7 +2,7 @@ $(function () {
 	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля имени при потере фокуса	
 		$('.registration-form input[name="feedback-author"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.name-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__name').addClass('incorrect-input-style');
@@ -15,7 +15,7 @@ $(function () {
 
 		// Валидация поля электронной почты при потере фокуса	
 		$('.registration-form input[name="email"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 				$('.email-field-empty').removeClass('invisible');
 				$('.registration-form .inner-input-box__email').addClass('incorrect-input-style');
@@ -28,7 +28,7 @@ $(function () {
 
 		// Валидация поля сообщения при потере фокуса	
 		$('.registration-form textarea[name="feedback-text"]').focusout(function () {
-			if ($(this)[0].value === "") {
+			if ($(this).val() === "") {
 				// Если пусто, то делаем границы поля красными
 				$('.registration-form .feedback-text-area__input').addClass('incorrect-input-style');
 			} else {
@@ -56,9 +56,9 @@ $(function () {
 	// Валидация при отправке формы
 	$('.registration-form').on('submit', function () {
 		var flag = 0;
-		var name = $(this).find('input[name="feedback-author"]')[0].value;
-		var email = $(this).find('input[name="email"]')[0].value;
-		var message = $(this).find('textarea[name="feedback-text"]')[0].value;
+		var name = $(this).find('input[name="feedback-author"]').val();
+		var email = $(this).find('input[name="email"]').val();
+		var message = $(this).find('textarea[name="feedback-text"]').val();
 
 		// Проверка поля автора отзыва на пустоту
 		if (name === "") {
