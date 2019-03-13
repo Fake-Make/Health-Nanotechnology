@@ -1,5 +1,3 @@
-var REQUIRED_FIEDLS_NUMBER = 4;
-
 $(function () {
 	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля имени при потере фокуса	
@@ -68,9 +66,9 @@ $(function () {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 			$('.name-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__name').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе скрываем сообщение, возвращаем цвета границ
-			flag++;
 			$('.name-field-empty').addClass('invisible');
 			$(this).find('.inner-input-box__name').removeClass('incorrect-input-style');
 		}
@@ -80,9 +78,9 @@ $(function () {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 			$('.email-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__registration-email').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе скрываем сообщение, возвращаем цвета границ
-			flag++;
 			$('.email-field-empty').addClass('invisible');
 			$(this).find('.inner-input-box__registration-email').removeClass('incorrect-input-style');
 		}
@@ -92,9 +90,9 @@ $(function () {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 			$('.password-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__password').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе скрываем сообщение, возвращаем цвета границ
-			flag++;
 			$('.password-field-empty').addClass('invisible');
 			$(this).find('.inner-input-box__password').removeClass('incorrect-input-style');
 		}
@@ -104,15 +102,15 @@ $(function () {
 			// Если пусто, то показываем сообщение об ошибке, делаем границы поля красными
 			$('.password-confirm-field-empty').removeClass('invisible');
 			$(this).find('.inner-input-box__password-confirm').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе скрываем сообщение, возвращаем цвета границ
-			flag++;
 			$('.password-confirm-field-empty').addClass('invisible');
 			$(this).find('.inner-input-box__password-confirm').removeClass('incorrect-input-style');
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if (REQUIRED_FIEDLS_NUMBER != flag)
+		if (flag)
 			return false;
 	})
 });

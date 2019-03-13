@@ -1,5 +1,3 @@
-var REQUIRED_FIEDLS_NUMBER = 2;
-
 $(function () {
 	{ // Группа функций для валидации полей при потере фокуса
 		// Валидация поля электронной почты при потере фокуса	
@@ -35,9 +33,9 @@ $(function () {
 		if (email === "") {
 			// Если пусто, то делаем границы поля красными
 			$(this).find('.inner-input-box__login-email').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе возвращаем цвета границ
-			flag++;
 			$(this).find('.inner-input-box__login-email').removeClass('incorrect-input-style');
 		}
 
@@ -45,14 +43,14 @@ $(function () {
 		if (password === "") {
 			// Если пусто, то делаем границы поля красными
 			$(this).find('.inner-input-box__login-password').addClass('incorrect-input-style');
+			flag++;
 		} else {
 			// Иначе возвращаем цвета границ
-			flag++;
 			$(this).find('.inner-input-box__login-password').removeClass('incorrect-input-style');
 		}
 
 		// Отправляем форму, только если все требуемые поля валидны
-		if (REQUIRED_FIEDLS_NUMBER != flag)
+		if (flag)
 			return false;
 	})
 });
