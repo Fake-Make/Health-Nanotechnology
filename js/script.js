@@ -126,7 +126,6 @@ $(function () {
 
 	{	// Группа специфических настроек
 		// Очистка полей при нажатии соответствующей кнопки
-		// Кнопка ничего не сделает без JavaScript
 		$('form[name="contats-page__feedback-form"] .clear-inputs').on('click', function () {
 			// Удаление значений всех полей, кроме кнопок и сабмитов
 			// И возвращение изначального цвета границ полей
@@ -137,6 +136,25 @@ $(function () {
 			// А так же скрытие всех сообщений об ошибках
 			// Мы же не хотим пугать пользователя ещё до ввода информации
 			$('.error-emptyness').addClass('invisible');
+		});
+
+		// Действие кнопки уменьшения количества товара параллельно с валидацией
+		$('.amount-tumbler__button_left').on('click', function () {
+			var a = $(this).siblings('.products-amount__input')
+			if (!(a.val() >= 1) || a.val() % 1 != 0)
+				a.val(1);
+
+			if (a.val() > 1)
+				a.val(+a.val() - 1);
+		});
+
+		// Действие кнопки увеличения количества товара параллельно с валидацией
+		$('.amount-tumbler__button_right').on('click', function () {
+			var a = $(this).siblings('.products-amount__input')
+			if (!(parseInt(a.val()) >= 1) || a.val() % 1 != 0)
+				a.val(1);
+
+			a.val(+a.val() + 1);
 		});
 	}
 
@@ -151,12 +169,20 @@ $(function () {
 			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-user-email"]');
 			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-password"]');
 
-			// Валидация формы "Фильтр поиска" на странице "Каталог"
+			// Валидация полей формы "Фильтр поиска" на странице "Каталог"
 			$('.search-filter .search-filter__input').focusout(function () {
 				var amount = parseFloat($(this).val(), 10);
 				// Если не число, пустая строка или меньше нуля, то заменить
 				if (!(amount >= 0))
 					$(this).val(0);
+			});
+
+			// Валидация поля формы "Счётчик количества товаров" на странице "О продукте"
+			// Функция применима к элементу на любой другой странице
+			$('.products-amount__input').focusout(function () {
+				var amount = $(this).val();
+				if (!(amount >= 1) || amount % 1 != 0)
+					$(this).val(1);
 			});
 		}
 		
@@ -171,7 +197,7 @@ $(function () {
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;
-			})
+			});
 
 			// Валидация формы "Вход" на странице "Вход"
 			$('form[name="any-page__login-form_full"]').on('submit', function () {
@@ -182,7 +208,7 @@ $(function () {
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;
-			})
+			});
 
 			// Валидация формы "Фильтр поиска" на странице "Каталог"
 			$('.search-filter').on('submit', function () {
@@ -190,6 +216,13 @@ $(function () {
 				var max = parseFloat($(this).find('.search-filter__input[name="cost-to"]').val());
 				// Проверка на пустоту, логичность и неотрицательость
 				if (!(min <= max) || min < 0 || max < 0)
+					return false;
+			});
+
+			// Валидация формы "Положить в корзину" на странице "О продукте"
+			$('form[name="detailed-product-to-cart"]').on('submit', function () {
+				var amount = +$(this).find('.products-amount__input').val();
+				if (amount < 1 || amount % 1 !== 0)
 					return false;
 			})
 		}

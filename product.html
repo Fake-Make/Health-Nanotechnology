@@ -9,7 +9,6 @@
 	<link rel="alternate" href="https://allfont.ru/allfont.css?fonts=arial-narrow">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/script.js"></script>
-	<script src="js/product-validation.js"></script>
 	<title>Company - Интернет-магазин электронных сигарет</title>
 </head>
 
@@ -88,7 +87,7 @@
 					<img class="product__image" src="img/product-image-1.jpg" alt="Упс! Здесь было фото сигареты, но теперь его нет :(">
 					<span class="good-price good_price product__info-block-part product__info-price">820 <small class="good-price__currency">руб.</small></span>
 
-					<form class="product__info-block-part product__form" method="POST">
+					<form class="product__info-block-part product__form" name="detailed-product-to-cart" method="POST">
 						<span class="amount-tubmler product__amount-tumbler">
 							<button type="button" class="amount-tumbler__button amount-tumbler__button_left"></button>
 							<input type="number" class="search-filter__input products-amount__input" min="1" value="1">
