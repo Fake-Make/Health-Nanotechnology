@@ -66,27 +66,6 @@ function validateForEmptyness(form, input) {
 
 // Назначение элементам событий после загрузки документа
 $(function () {
-	// Починка флекс-отображения категорий при загрузке страницы
-	flexFix();
-	// Скрытие сайдбара при просмотре Mobile на внутренних страницах
-	sidebarHide();
-
-	// Настройка отображения при изменении размеров экрана
-	$(window).resize(function () {
-		if ($(window).width() > phoneSize) {
-			// Закрывашка меню при смене области просмотра Mobile -> Desktop
-			if ($('.menu-togglable').css('display') === 'flex') {
-				menuToggle('.menu-togglable');
-			}
-
-			// Возобновление отображения сайдбара при переходе Mobile -> Desktop
-			if ($('.sidebar').css('display') === 'none') {
-				$('.sidebar').removeAttr('style');
-			}
-		}
-		sidebarHide();
-	});
-
 	{	// Общие настройки для всего сайта
 		// Переключатель основного меню
 		$('.menu-toggler').on('click', function () {
@@ -122,6 +101,25 @@ $(function () {
 			else
 				$(this).addClass('user-info__input_filled-white')
 		})
+
+		// Настройка отображения при изменении размеров экрана
+		$(window).resize(function () {
+			if ($(window).width() > phoneSize) {
+				// Закрывашка меню при смене области просмотра Mobile -> Desktop
+				if ($('.menu-togglable').css('display') === 'flex') {
+					menuToggle('.menu-togglable');
+				}
+
+				// Возобновление отображения сайдбара при переходе Mobile -> Desktop
+				if ($('.sidebar').css('display') === 'none') {
+					$('.sidebar').removeAttr('style');
+				}
+			}
+			sidebarHide();
+		});
+
+		// Скрытие сайдбара при просмотре Mobile на внутренних страницах
+		sidebarHide();
 	}
 
 	{	// Группа специфических настроек
@@ -156,10 +154,19 @@ $(function () {
 
 			a.val(+a.val() + 1);
 		});
+
+		// Починка флекс-отображения категорий при загрузке страницы
+		flexFix();
 	}
 
 	{	// Секция валидации
 		{	// Группа функций для валидации полей при потере фокуса
+			// Валидация полей формы "Регистрация" на странице "Регистрация"
+			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-user-name"]');
+			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-email"]');
+			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-password"]');
+			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-password-confirm"]');
+
 			// Валидация полей формы "Обратная связь" на странице "Контакты"
 			validateForEmptyness('form[name="contats-page__feedback-form"]', 'input[name="feedback-author"]');
 			validateForEmptyness('form[name="contats-page__feedback-form"]', 'input[name="email"]');
@@ -187,6 +194,19 @@ $(function () {
 		}
 		
 		{	// Группа функций для валидации полей при отправке формы
+			// Валидация формы "Регистрация" на странице "Регистрация"
+			$('.registration-form').on('submit', function () {
+				var flag = 
+					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-password-confirm"]');
+						
+				// Отправляем форму, только если все требуемые поля валидны
+				if (flag)
+					return false;
+			});
+
 			// Валидация формы "Обратная связь" на странице "Контакты"
 			$('.registration-form').on('submit', function () {
 				var flag = 
@@ -220,7 +240,7 @@ $(function () {
 			});
 
 			// Валидация формы "Положить в корзину" на странице "О продукте"
-			$('form[name="detailed-product-to-cart"]').on('submit', function () {
+			$('form[name="product-page__product-to-cart-form"]').on('submit', function () {
 				var amount = +$(this).find('.products-amount__input').val();
 				if (amount < 1 || amount % 1 !== 0)
 					return false;
