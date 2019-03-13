@@ -147,6 +147,10 @@ $(function () {
 			validateForEmptyness('form[name="contats-page__feedback-form"]', 'input[name="email"]');
 			validateForEmptyness('form[name="contats-page__feedback-form"]', 'textarea[name="feedback-text"]');
 
+			// Валидация полей формы "Вход" на странице "Вход"
+			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-user-email"]');
+			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-password"]');
+
 			// Валидация формы "Фильтр поиска" на странице "Каталог"
 			$('.search-filter .search-filter__input').focusout(function () {
 				var amount = parseFloat($(this).val(), 10);
@@ -164,6 +168,17 @@ $(function () {
 					validate('form[name="contats-page__feedback-form"] input[name="email"]') +
 					validate('form[name="contats-page__feedback-form"] textarea[name="feedback-text"]');
 				
+				// Отправляем форму, только если все требуемые поля валидны
+				if (flag)
+					return false;
+			})
+
+			// Валидация формы "Вход" на странице "Вход"
+			$('form[name="any-page__login-form_full"]').on('submit', function () {
+				var flag = 
+					validate('form[name="any-page__login-form_full"] input[name="login-user-email"]') +
+					validate('form[name="any-page__login-form_full"] input[name="login-password"]');
+						
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;
