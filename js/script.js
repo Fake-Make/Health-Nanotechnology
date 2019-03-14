@@ -57,13 +57,6 @@ function validate(item) {
 	}
 }
 
-// Функция привязки валидаторов к полям	
-function validateForEmptyness(form, input) {
-	$(form + ' ' + input).focusout(function () {
-		validate(this);
-	});
-}
-
 // Назначение элементам событий после загрузки документа
 $(function () {
 	{ // Общие настройки для всего сайта
@@ -162,20 +155,20 @@ $(function () {
 	{ // Секция валидации
 		{ // Группа функций для валидации полей при потере фокуса
 			// Валидация полей формы "Регистрация" на странице "Регистрация"
-			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-user-name"]');
-			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-email"]');
-			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-password"]');
-			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-password-confirm"]');
+			$('form[name="registration-page__registration-form"]').find('input[name="registration-user-name"], input[name="registration-email"], input[name="registration-password"], input[name="registration-password-confirm"]').focusout(function () {
+				validate(this);
+			});
 
 			// Валидация полей формы "Обратная связь" на странице "Контакты"
-			validateForEmptyness('form[name="contats-page__feedback-form"]', 'input[name="feedback-author"]');
-			validateForEmptyness('form[name="contats-page__feedback-form"]', 'input[name="email"]');
-			validateForEmptyness('form[name="contats-page__feedback-form"]', 'textarea[name="feedback-text"]');
+			$('form[name="contats-page__feedback-form"]').find('input[name="feedback-author"], input[name="email"], textarea[name="feedback-text"]').focusout(function () {
+				validate(this);
+			});
 
 			// Валидация полей формы "Вход" на странице "Вход"
-			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-user-email"]');
-			validateForEmptyness('form[name="any-page__login-form_full"]', 'input[name="login-password"]');
-
+			$('form[name="any-page__login-form_full"]').find('input[name="login-user-email"], input[name="login-password"]').focusout(function () {
+				validate(this);
+			});
+			
 			// Валидация полей формы "Фильтр поиска" на странице "Каталог"
 			$('.search-filter .search-filter__input').focusout(function () {
 				var amount = parseFloat($(this).val(), 10);
@@ -197,9 +190,9 @@ $(function () {
 			// Валидация формы "Регистрация" на странице "Регистрация"
 			$('.registration-form').on('submit', function () {
 				var flag =
-					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') +
-					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') +
-					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') ||
+					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') ||
+					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') ||
 					validate('form[name="registration-page__registration-form"] input[name="registration-password-confirm"]');
 
 				// Отправляем форму, только если все требуемые поля валидны
@@ -210,8 +203,8 @@ $(function () {
 			// Валидация формы "Обратная связь" на странице "Контакты"
 			$('.registration-form').on('submit', function () {
 				var flag =
-					validate('form[name="contats-page__feedback-form"] input[name="feedback-author"]') +
-					validate('form[name="contats-page__feedback-form"] input[name="email"]') +
+					validate('form[name="contats-page__feedback-form"] input[name="feedback-author"]') ||
+					validate('form[name="contats-page__feedback-form"] input[name="email"]') ||
 					validate('form[name="contats-page__feedback-form"] textarea[name="feedback-text"]');
 
 				// Отправляем форму, только если все требуемые поля валидны
@@ -222,7 +215,7 @@ $(function () {
 			// Валидация формы "Вход" на странице "Вход"
 			$('form[name="any-page__login-form_full"]').on('submit', function () {
 				var flag =
-					validate('form[name="any-page__login-form_full"] input[name="login-user-email"]') +
+					validate('form[name="any-page__login-form_full"] input[name="login-user-email"]') ||
 					validate('form[name="any-page__login-form_full"] input[name="login-password"]');
 
 				// Отправляем форму, только если все требуемые поля валидны
