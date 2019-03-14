@@ -374,7 +374,8 @@ body {
 @media screen and (max-width: 480px) {
 	.header-logo {
 		width: 423px;
-		margin-right: 0;
+		margin-right: 1px;
+    margin-left: -1px;
 	}
 
 	.header-logo__image {
@@ -817,14 +818,14 @@ body {
 	.seo-article,
 	.product__description {
 		width: 425px;
-		margin-right: 8px;
-		margin-bottom: 29px;
+		margin-right: 9px;
+		margin-bottom: 28px;
 	}
 
 	.seo-article h2,
 	.product__description h2 {
 		font-size: 21px;
-		margin: -1px 0 13px 0;
+		margin: -2px 0 14px 0;
 	}
 
 	.seo-article p,
@@ -844,7 +845,7 @@ body {
 .sidebar {
 	float: left;
 	width: 176px;
-	margin-bottom: 42px;
+	margin-bottom: 43px;
 }
 
 .page-wrap {
@@ -899,7 +900,7 @@ body {
 
 .news__headline {
 	color: #058b7a;
-	margin: 0 0 19px 1px;
+	margin: -54px 0 20px 1px;
 }
 
 .news-list {
@@ -1628,7 +1629,7 @@ body {
 	}
 
 	.product__bread-crumbs {
-		margin: -20px 0 29px -7px;
+		margin: -20px 0 29px -8px;
 	}
 
 	.product {
@@ -1643,6 +1644,7 @@ body {
 
 	.product__headline {
 		margin-bottom: 9px;
+		margin-left: -4px;
 	}
 
 	.product__image {
@@ -1731,11 +1733,12 @@ body {
 .feedback-form {
 	display: flex;
 	flex-direction: column;
-	margin: 78px 0 47px 3px;
+	margin: 78px 0 48px 3px;
 }
 
 .feedback-form__headline {
-	margin-bottom: 24px;
+	margin:0 auto 23px -3px;
+	font-size: 17px;
 }
 
 .feedback-form__hint {
@@ -1751,7 +1754,7 @@ body {
 .error-box {
 	border: 1px solid #ffdcdc;
 	background: #fff1f1;
-	padding: 5px 31px 8px 13px;
+	padding: 5px 30px 8px 13px;
 	margin: 0 auto 20px -1px;
 }
 
@@ -1877,7 +1880,7 @@ body {
 
 	.feedback-form__error-hint {
 		margin-left: 6px;
-		margin-top: 6px;
+		margin-top: 7px;
 	}
 
 	.feedback-form__row {

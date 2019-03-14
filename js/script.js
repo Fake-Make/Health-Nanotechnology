@@ -127,7 +127,7 @@ $(function () {
 		$('form[name="contats-page__feedback-form"] .clear-inputs').on('click', function () {
 			// Удаление значений всех полей, кроме кнопок и сабмитов
 			// И возвращение изначального цвета границ полей
-			$('form[name="contats-page__feedback-form"]').find('input[type != "submit"][type != "button"], textarea[type="textarea"]').each(function (i, item) {
+			$('form[name="contats-page__feedback-form"]').find('input[type != "submit"][type != "button"], textarea').each(function (i, item) {
 				$(item).val("");
 				$(item).removeClass('incorrect-input-style');
 			});
