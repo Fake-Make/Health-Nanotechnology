@@ -66,7 +66,7 @@ function validateForEmptyness(form, input) {
 
 // Назначение элементам событий после загрузки документа
 $(function () {
-	{	// Общие настройки для всего сайта
+	{ // Общие настройки для всего сайта
 		// Переключатель основного меню
 		$('.menu-toggler').on('click', function () {
 			if ($(window).width() <= phoneSize) {
@@ -122,7 +122,7 @@ $(function () {
 		sidebarHide();
 	}
 
-	{	// Группа специфических настроек
+	{ // Группа специфических настроек
 		// Очистка полей при нажатии соответствующей кнопки
 		$('form[name="contats-page__feedback-form"] .clear-inputs').on('click', function () {
 			// Удаление значений всех полей, кроме кнопок и сабмитов
@@ -159,8 +159,8 @@ $(function () {
 		flexFix();
 	}
 
-	{	// Секция валидации
-		{	// Группа функций для валидации полей при потере фокуса
+	{ // Секция валидации
+		{ // Группа функций для валидации полей при потере фокуса
 			// Валидация полей формы "Регистрация" на странице "Регистрация"
 			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-user-name"]');
 			validateForEmptyness('form[name="registration-page__registration-form"]', 'input[name="registration-email"]');
@@ -192,16 +192,16 @@ $(function () {
 					$(this).val(1);
 			});
 		}
-		
-		{	// Группа функций для валидации полей при отправке формы
+
+		{ // Группа функций для валидации полей при отправке формы
 			// Валидация формы "Регистрация" на странице "Регистрация"
 			$('.registration-form').on('submit', function () {
-				var flag = 
+				var flag =
 					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') +
 					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') +
 					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') +
 					validate('form[name="registration-page__registration-form"] input[name="registration-password-confirm"]');
-						
+
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;
@@ -209,11 +209,11 @@ $(function () {
 
 			// Валидация формы "Обратная связь" на странице "Контакты"
 			$('.registration-form').on('submit', function () {
-				var flag = 
+				var flag =
 					validate('form[name="contats-page__feedback-form"] input[name="feedback-author"]') +
 					validate('form[name="contats-page__feedback-form"] input[name="email"]') +
 					validate('form[name="contats-page__feedback-form"] textarea[name="feedback-text"]');
-				
+
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;
@@ -221,10 +221,10 @@ $(function () {
 
 			// Валидация формы "Вход" на странице "Вход"
 			$('form[name="any-page__login-form_full"]').on('submit', function () {
-				var flag = 
+				var flag =
 					validate('form[name="any-page__login-form_full"] input[name="login-user-email"]') +
 					validate('form[name="any-page__login-form_full"] input[name="login-password"]');
-						
+
 				// Отправляем форму, только если все требуемые поля валидны
 				if (flag)
 					return false;

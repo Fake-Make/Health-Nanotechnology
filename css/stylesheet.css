@@ -177,7 +177,7 @@ li {
 	padding: 0;
 }
 
-ol li { 
+ol li {
 	list-style-position: inside;
 	list-style-image: none;
 	list-style-type: decimal;
@@ -375,7 +375,7 @@ body {
 	.header-logo {
 		width: 423px;
 		margin-right: 1px;
-    margin-left: -1px;
+		margin-left: -1px;
 	}
 
 	.header-logo__image {
@@ -1737,7 +1737,7 @@ body {
 }
 
 .feedback-form__headline {
-	margin:0 auto 23px -3px;
+	margin: 0 auto 23px -3px;
 	font-size: 17px;
 }
 
