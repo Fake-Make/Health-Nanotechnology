@@ -190,9 +190,9 @@ $(function () {
 			// Валидация формы "Регистрация" на странице "Регистрация"
 			$('.registration-form').on('submit', function () {
 				var flag =
-					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') ||
-					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') ||
-					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') ||
+					validate('form[name="registration-page__registration-form"] input[name="registration-user-name"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-email"]') +
+					validate('form[name="registration-page__registration-form"] input[name="registration-password"]') +
 					validate('form[name="registration-page__registration-form"] input[name="registration-password-confirm"]');
 
 				// Отправляем форму, только если все требуемые поля валидны
@@ -203,8 +203,8 @@ $(function () {
 			// Валидация формы "Обратная связь" на странице "Контакты"
 			$('.registration-form').on('submit', function () {
 				var flag =
-					validate('form[name="contats-page__feedback-form"] input[name="feedback-author"]') ||
-					validate('form[name="contats-page__feedback-form"] input[name="email"]') ||
+					validate('form[name="contats-page__feedback-form"] input[name="feedback-author"]') +
+					validate('form[name="contats-page__feedback-form"] input[name="email"]') +
 					validate('form[name="contats-page__feedback-form"] textarea[name="feedback-text"]');
 
 				// Отправляем форму, только если все требуемые поля валидны
